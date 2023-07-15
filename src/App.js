@@ -1,13 +1,11 @@
-import './App.css';
+// import './App.css';
+import GridExample from './/pages/students/home.jsx';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Welcome to Move Mentor! We're still working on this project. Stay tuned.
-        </p>
-      </header>
+    <div >
+
+      <GridExample />
     </div>
   );
 }

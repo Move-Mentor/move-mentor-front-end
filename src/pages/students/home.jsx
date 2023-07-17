@@ -1,9 +1,9 @@
 import React from 'react';
 import "./box.css";
 import Card from 'react-bootstrap/Card';
-import classImage from './homePageImages/home-class.png';
-import profileImage from './homePageImages/home-pro.png';
-import categoriesImage from './homePageImages/home-cat.png';
+import classImage from '../../images/home-classes.png';
+import profileImage from '../../images/home-profile.png';
+import categoriesImage from '../../images/home-categories.png';
 
 
 function StudentHomePage() {

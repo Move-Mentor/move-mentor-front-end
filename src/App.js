@@ -1,6 +1,7 @@
 import './App.css';
-import Header from './components/header';
-import Footer from './components/footer';
+// import Header from './components/header';
+// import Footer from './components/footer';
+import LandingPage from './pages/landing';
 
 function App() {
   return (
@@ -10,10 +11,13 @@ function App() {
           Welcome to Move Mentor! We're still working on this project. Stay tuned.
         </p>
       </header> */}
-      <Header />
-      <Footer />
+      {/* <Header /> */}
+      <LandingPage />
+      {/* <Footer /> */}
     </div>
   );
 }
 
 export default App;
+
+

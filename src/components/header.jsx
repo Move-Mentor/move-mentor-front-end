@@ -8,7 +8,7 @@ function Header() {
   return (
     <Navbar expand="lg" style={{backgroundColor: '#BCD5CF'}}>
       <Container>
-        <a href="https://www.example.com" target="_blank" rel="noopener noreferrer">
+        <a href="#home" >
           <Image src={HomeIcon} alt="Home icon to return home" fluid /></a>
       </Container>
     </Navbar>

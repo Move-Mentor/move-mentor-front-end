@@ -6,9 +6,9 @@ import image3 from '../../images/headstand.png';
 import './carousel.css';
 
 const images = [
-  { src: image1, name: "Allegra Curl", alternate: "" },
-  { src: image2, name: "Angel - Glorious", alternate: "" },
-  { src: image3, name: "Headstand", alternate: "" },
+  { src: image1, name: "Allegra Curl", category: "Inverts", alternate: "" },
+  { src: image2, name: "Angel - Glorious", category: "Climbs", alternate: "" },
+  { src: image3, name: "Headstand", category: "Floor", alternate: "" },
   // Add more image objects as needed
 ];
 
@@ -41,6 +41,7 @@ const CarouselComponent = () => {
       </Carousel>
       <Card.Footer>
         <div>Name: {images[activeIndex].name}</div>
+        <div>Category: {images[activeIndex].category}</div>
         <div>Alt: {images[activeIndex].alternate}</div>
       </Card.Footer>
     </Card>

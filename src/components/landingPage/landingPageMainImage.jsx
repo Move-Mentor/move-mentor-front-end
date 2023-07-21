@@ -1,5 +1,5 @@
 import Card from 'react-bootstrap/Card';
-import MainImage from '../images/landing_logo.png';
+import MainImage from '../../images/landing_logo.png';
 
 function LandingMainImage() {
   return (

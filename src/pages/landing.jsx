@@ -1,6 +1,5 @@
-
-import LandingMainImage from '../components/landingPageMainImage';
-import NavOptions from '../components/landingPageNavOptions';
+import LandingMainImage from '../components/landingPage/landingPageMainImage';
+import NavOptions from '../components/landingPage/landingPageNavOptions';
 
 function LandingPage() {
   return (

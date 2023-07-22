@@ -5,3 +5,7 @@
 .header-student {
   background-color: #bcd5cf; /* Green color for students (non-admins) */
 }
+
+.fallback-color {
+  background-color: #f1daae; /* Yelllow colour for a backup*/
+}

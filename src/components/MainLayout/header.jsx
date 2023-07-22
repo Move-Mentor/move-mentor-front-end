@@ -9,7 +9,7 @@ const Header = ({ userRole }) => {
   const headerClass = userRole === 'teacher' ? 'header-teacher' : 'header-student';
 
   return (
-    <Navbar className={headerClass} expand="lg">
+    <Navbar data-testid="nav" className={headerClass} expand="lg">
       <Container>
         <a href="#home">
           <Image src={HomeIcon} alt="Home icon to return home" fluid /></a>

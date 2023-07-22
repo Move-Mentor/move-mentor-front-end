@@ -1,0 +1,9 @@
+/* carouselStyles.css */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #f3b89c !important;
+}
+
+.card-footer {
+  text-align: center;
+}

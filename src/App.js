@@ -1,11 +1,13 @@
 import './App.css';
 import MainLayout from './components/MainLayout/Layout';
+import SingleMovePage from './pages/SingleMove/singleMove';
 
 const App = () => {
   return (
     <div>
       <MainLayout>
-        <p>Some Content Here</p>
+
+        <SingleMovePage />
       </MainLayout>
 
     </div>

@@ -4,8 +4,7 @@ import Header from '../components/MainLayout/header';
 
 describe('Header component', () => {
   test('renders with teacher role', async () => {
-    const { debug } = render(<Header userRole="teacher" />);
-    // debug();
+    render(<Header userRole="teacher" />);
     const navBar = screen.getByTestId('nav');
     expect(navBar).toHaveClass('header-teacher');
   });

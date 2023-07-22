@@ -20,7 +20,7 @@ const CarouselComponent = () => {
   };
 
   return (
-    <Card>
+    <Card >
       <Carousel
         interval={null}
         activeIndex={activeIndex}

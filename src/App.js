@@ -6,10 +6,8 @@ const App = () => {
   return (
     <div>
       <MainLayout>
-
         <SingleMovePage />
       </MainLayout>
-
     </div>
   );
 };

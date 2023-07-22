@@ -1,0 +1,18 @@
+/* Assuming your main layout container has a flex layout, you can use these styles: */
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  margin-top: auto;
+  background-color: #f1daae;
+  text-align: center;
+}

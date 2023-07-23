@@ -1,9 +1,10 @@
+import React from 'react';
 import CarouselComponent from '../../components/Carousel/carousel';
-import './singleMove.css';
-import SingleMoveNav from '../../components/AddToClass/single_move_nav_buttons';
-import AddToClass from '../../components/AddToClass/add_to_class';
+import './SingleMovePage.css';
+import SingleMoveNav from '../../components/SingleMoveNav/SingleMoveNav';
+import AddToClass from '../../components/AddToClass/AddToClass';
 
-function SingleMovePage() {
+function SingleMovePage({ userRole }) {
   return (
     <div className="main">
       <SingleMoveNav />
@@ -13,7 +14,7 @@ function SingleMovePage() {
         </div>
       </div>
       <div style={{textAlign: 'center'}}>
-        <AddToClass />
+        { userRole === 'teacher' && <AddToClass /> }
       </div>
     </div>
   );

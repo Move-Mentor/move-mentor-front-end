@@ -1,7 +1,7 @@
 import Button from 'react-bootstrap/Button';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Card from 'react-bootstrap/Card';
-import '../../pages/SingleMove/singleMove.css';
+import './SingleMoveNav.css';
 
 function SingleMoveNav() {
   return (

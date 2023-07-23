@@ -9,7 +9,6 @@ function NavOptionRegister() {
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={image1} alt="image1" />
       <Button style={{backgroundColor: '#F3B89C', border: 'none', color: 'black'}}>New Student Register</Button>
-      
     </Card>
   );
 };

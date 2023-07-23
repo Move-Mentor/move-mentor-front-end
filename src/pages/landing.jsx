@@ -1,11 +1,11 @@
-import LandingMainImage from '../components/landingPage/landingPageMainImage';
-import NavOptions from '../components/landingPage/landingPageNavOptions';
+// import LandingMainImage from '../components/LandingPage/LandingMainImage';
+import LandingNavOptions from '../components/LandingPage/LandingNavOptions';
 
 function LandingPage() {
   return (
     <div>
-      < LandingMainImage />
-      <NavOptions />
+      {/* < LandingMainImage /> */}
+      <LandingNavOptions />
 
     </div>
       

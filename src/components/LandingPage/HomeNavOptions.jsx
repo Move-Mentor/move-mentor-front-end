@@ -1,9 +1,8 @@
 //This is where the three cards will be rendered
-
-import './HomeNavOptions.css';
 import Image1 from '../../images/brassMonkeyExtend.png';
 import Image2 from '../../images/aphroditeVariation.png';
 import Image3 from '../../images/felixSplits.png';
+
 
 
 
@@ -47,7 +46,7 @@ const HomeNavOptions = () => {
     <div className="container">
       <div className="row">
         {cardsData.map((card, index) => (
-          <div key={index} className="col-md-4">
+          <div key={index} className="col-md-6">
             <Card {...card} />
           </div>
         ))}

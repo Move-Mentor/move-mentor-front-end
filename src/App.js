@@ -1,7 +1,7 @@
 import './App.css';
 // import Header from './components/header';
 // import Footer from './components/footer';
-import LandingNavOptions from './components/LandingPage/LandingNavOptions';
+import Home from './pages/Home';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         </p>
       </header> */}
       {/* <Header /> */}
-      <LandingNavOptions />
+      <Home />
       {/* <Footer /> */}
     </div>
   );

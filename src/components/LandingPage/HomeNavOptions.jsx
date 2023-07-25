@@ -1,8 +1,6 @@
-//This is where the three cards will be rendered
 import Image1 from '../../images/brassMonkeyExtend.png';
 import Image2 from '../../images/aphroditeVariation.png';
 import Image3 from '../../images/felixSplits.png';
-
 
 const cardsData = [
   {
@@ -27,8 +25,8 @@ const cardsData = [
 
 const Card = ({ name, image, route, color }) => {
   return (
-    <div className="card" style={{marginBottom: '20px'}}>
-      <img src={image} className="card-img-top" alt={name} style={{maxHeight: '20rem'}} />
+    <div className="card" style={{ marginBottom: '20px', marginTop: '40px'}}>
+      <img src={image} className="card-img-top" alt={name} style={{ maxHeight: '20rem' }} />
       <div style={{ backgroundColor: color, textAlign: 'center' }}>
         <a href={route} className="btn">
           {name}
@@ -38,16 +36,19 @@ const Card = ({ name, image, route, color }) => {
   );
 };
 
-
 const HomeNavOptions = () => {
   return (
     <div className="container">
       <div className="row">
-        {cardsData.map((card, index) => (
-          <div key={index} className="col-md-6">
-            <Card {...card} />
-          </div>
-        ))}
+        <div className="col-md-6">
+          <Card {...cardsData[0]} />
+        </div>
+        <div className="col-md-6">
+          <Card {...cardsData[1]} />
+        </div>
+        <div className="col-md-6 offset-md-3"> {/* Add offset-md-3 to center the third card */}
+          <Card {...cardsData[2]} />
+        </div>
       </div>
     </div>
   );

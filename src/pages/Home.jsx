@@ -9,12 +9,12 @@ function HomeLayout() {
     <div style={{ display: 'grid', gridTemplateRows: '1fr auto', minHeight: '100vh' }} >
      
         <CardGroup >
-          <Card style={{ backgroundColor: '#F1DAAE' }}>
+          <Card style={{ backgroundColor: '#F1DAAE', border: 'none'}}>
             <Card.Body>
               <HomeMainImage />
             </Card.Body>
           </Card>
-          <Card>
+          <Card style={{border: 'none'}}>
             <Card.Body>
               <HomeNavOptions />
             </Card.Body>

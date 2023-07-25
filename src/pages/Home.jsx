@@ -1,6 +1,6 @@
 import React from 'react';
-import HomeMainImage from '../components/LandingPage/HomeMainImage';
-import HomeNavOptions from '../components/LandingPage/HomeNavOptions';
+import HomeMainImage from '../components/HomePage/HomeMainImage';
+import HomeNavOptions from '../components/HomePage/HomeNavOptions';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 

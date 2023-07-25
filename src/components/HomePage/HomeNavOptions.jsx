@@ -8,25 +8,28 @@ const cardsData = [
     image: Image1,
     route: '/card1',
     color: '#f3b89c',
+    altTag: "Brass Monkey Extend",
   },
   {
     name: 'Student Login',
     image: Image2,
     route: '/card2',
     color: '#bcd5cf',
+    altTag: "Aphrodite Variaion",
   },
   {
     name: 'Teacher Login',
     image: Image3,
     route: '/card3',
     color: '#dec4f3',
+    altTag: "Splits - Felix",
   },
 ];
 
-const Card = ({ name, image, route, color }) => {
+const Card = ({ name, image, route, color, altTag}) => {
   return (
     <div className="card" style={{ marginBottom: '20px', marginTop: '40px'}}>
-      <img src={image} className="card-img-top" alt={name} style={{ maxHeight: '20rem' }} />
+      <img src={image} className="card-img-top" alt={altTag} style={{ maxHeight: '20rem' }} />
       <div style={{ backgroundColor: color, textAlign: 'center' }}>
         <a href={route} className="btn">
           {name}

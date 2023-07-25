@@ -4,8 +4,6 @@ import Image2 from '../../images/aphroditeVariation.png';
 import Image3 from '../../images/felixSplits.png';
 
 
-
-
 const cardsData = [
   {
     name: 'New Student Register',
@@ -29,8 +27,8 @@ const cardsData = [
 
 const Card = ({ name, image, route, color }) => {
   return (
-    <div className="card">
-      <img src={image} className="card-img-top" alt={name} />
+    <div className="card" style={{marginBottom: '20px'}}>
+      <img src={image} className="card-img-top" alt={name} style={{maxHeight: '20rem'}} />
       <div style={{ backgroundColor: color, textAlign: 'center' }}>
         <a href={route} className="btn">
           {name}

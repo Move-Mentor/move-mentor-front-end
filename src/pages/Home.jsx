@@ -3,7 +3,7 @@ import HomeMainImage from '../components/LandingPage/HomeMainImage';
 import HomeNavOptions from '../components/LandingPage/HomeNavOptions';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
-import Row from 'react-bootstrap/Row';
+// import Row from 'react-bootstrap/Row';
 
 
 // function TwoFullHeightCards() {
@@ -15,13 +15,14 @@ import Row from 'react-bootstrap/Row';
 //   );
 // };
 
+
 // export default TwoFullHeightCards;
 
 function HomeLayout() {
   return (
-    <CardGroup>
-      <Row xs={1} s={1} md={2} className="g-4">
-      <Card>
+    <CardGroup xs={1} s={1} md={1} lg={2}>
+      
+      <Card style={{backgroundColor:'#F1DAAE', textAlign: 'center'}}>
         <Card.Body>
           <HomeMainImage />
         </Card.Body>
@@ -31,7 +32,7 @@ function HomeLayout() {
           <HomeNavOptions />
         </Card.Body>
       </Card>
-      </Row>
+      {/* </Row> */}
     </CardGroup>
   );
 }

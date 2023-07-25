@@ -28,7 +28,7 @@ const cardsData = [
 
 const Card = ({ name, image, route, color, altTag}) => {
   return (
-    <div className="card" style={{ marginBottom: '20px', marginTop: '40px'}}>
+    <div className="card" style={{ marginBottom: '15px', marginTop: '30px'}}>
       <img src={image} className="card-img-top" alt={altTag} style={{ maxHeight: '20rem' }} />
       <div style={{ backgroundColor: color, textAlign: 'center' }}>
         <a href={route} className="btn">

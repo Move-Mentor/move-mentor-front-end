@@ -1,20 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import MainLayout from './components/MainLayout/Layout';
-import SingleMovePage from './pages/SingleMove/SingleMovePage';
+import Home from './pages/Home';
 
 const App = () => {
-  // Assume you have a state to determine the user's role
-  const [userRole] = useState('student'); // Set the initial state value to the user's role (e.g., 'teacher' or 'student')
+
 
   return (
     <div>
-      <MainLayout>
-        <SingleMovePage userRole={userRole} />
-      </MainLayout>
+      <Home />
     </div>
   );
 };
 
 export default App;
-

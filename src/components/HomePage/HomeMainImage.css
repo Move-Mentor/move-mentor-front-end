@@ -1,0 +1,11 @@
+.main-img-card {
+  background-color: #f1daae !important;
+  text-align: center !important;
+  border: none !important;
+}
+
+@media (min-width: 1200px) {
+  .main-img-card {
+    margin-top: 5rem !important;
+  }
+}

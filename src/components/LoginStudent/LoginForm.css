@@ -1,0 +1,23 @@
+.form-top-space {
+  margin-top: 20rem;
+}
+
+.btn-login {
+  background-color: #f3b89c !important;
+  border: none !important;
+  color: #000000 !important;
+  margin-right: 20px !important;
+}
+
+.btn-back {
+  background-color: #f1daae !important;
+  border: none !important;
+  color: #000000 !important;
+  margin-right: 20px !important;
+}
+
+@media (max-width: 1375px) {
+  .form-top-space {
+    margin-top: 1rem;
+  }
+}

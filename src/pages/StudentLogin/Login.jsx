@@ -1,6 +1,6 @@
 import React from 'react';
 import HomeMainImage from '../../components/HomePage/HomeMainImage';
-// import HomeNavOptions from '../../components/HomePage/HomeNavOptions';
+
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import LoginForm from '../../components/LoginStudent/LoginForm';
@@ -17,8 +17,6 @@ function HomeLayout() {
           </Card>
           <Card style={{border: 'none'}}>
             <Card.Body>
-              {/* <HomeNavOptions /> */}
-              <p>Yoooo! put your components here</p>
               <LoginForm />
             </Card.Body>
           </Card>

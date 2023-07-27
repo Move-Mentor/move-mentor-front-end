@@ -2,10 +2,11 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
+import './LoginForm.css';
 
 function LoginForm() {
   return (
-    <Form>
+    <Form className="form-top-space"> 
       <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
         <Form.Label column sm={2}>
           Email:
@@ -32,8 +33,8 @@ function LoginForm() {
 
       <Form.Group as={Row} className="mb-3">
         <Col sm={{ span: 10, offset: 2 }}>
-          <Button type="submit" style={{backgroundColor: '#F3B89C', border: 'none', color: '#000000', marginRight: '20px'}}>Login</Button>
-          <Button type="submit" style={{backgroundColor: '#F1DAAE', border: 'none', color: '#000000', marginRight: '20px'}}>Back to Sign Up</Button>
+          <Button className="btn-login" type="submit" >Login</Button>
+          <Button className="btn-back" type="submit">Back to Sign Up</Button>
         </Col>
       </Form.Group>
     </Form>

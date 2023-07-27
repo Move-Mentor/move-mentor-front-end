@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import Home from './pages/Home';
+import Login from './pages/StudentLogin/Login';
 
 const App = () => {
 
 
   return (
     <div>
-      <Home />
+      <Login />
     </div>
   );
 };

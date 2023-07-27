@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css';
-import Login from './pages/StudentLogin/Login';
+// import Login from './pages/StudentLogin/Login';
+import Home from './pages/Home';
 
 const App = () => {
 
 
   return (
     <div>
-      <Login />
+      {/* <Login /> */}
+      <Home />
     </div>
   );
 };

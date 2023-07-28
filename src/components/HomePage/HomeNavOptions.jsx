@@ -41,6 +41,7 @@ const Card = ({ name, image, route, color, altTag}) => {
 
 const HomeNavOptions = () => {
   return (
+    
     <div className="container">
       <div className="row">
         <div className="col-md-6">

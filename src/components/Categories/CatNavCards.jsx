@@ -1,49 +1,84 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import classImage from '../../images/optionsClassMoves.png';
-import profileImage from '../../images/optionsSearch.png';
-import categoriesImage from '../../images/optionsCategories.png';
+import "./CatNavCards.css";
+
+
+
+import aerials from '../../images/optionsClassMoves.png';
+import climbs from '../../images/categoryClimbsAngelBasic.png';
+import floor from '../../images/categoryFloorBodyRoll.png';
+import inverts from '../../images/categoryInvertStraddle.png';
+import sits from '../../images/categorySitsMartini.png';
+import spins from '../../images/categorySpinsBackwardsSunwheel.png';
 
 const cardsData = [
   {
-    name: 'Class',
-    image: classImage,
+    name: 'Aerials',
+    image: aerials,
     route: '/card1',
-    color: '#f3b89c',
-    altTag: "Brass Monkey Extend",
+    color: '#bcd5cf',
+    altTag: "Aerial Invert",
   },
   {
-    name: 'Profile',
-    image: profileImage,
+    name: 'Climbs',
+    image: climbs,
     route: '/login-student',
     color: '#bcd5cf',
-    altTag: "Aphrodite Variation",
+    altTag: "Star Chaser",
   },
   {
-    name: 'All Moves',
-    image: categoriesImage,
+    name: 'Floor',
+    image: floor,
     route: '/CategoriesMain',
-    color: '#dec4f3',
-    altTag: "Splits - Felix",
+    color: '#bcd5cf',
+    altTag: "Bianca",
+  },
+  {
+    name: 'Inverts',
+    image: inverts,
+    route: '/CategoriesMain',
+    color: '#bcd5cf',
+    altTag: "Bianca",
+  },
+  {
+    name: 'Sits',
+    image: sits,
+    route: '/CategoriesMain',
+    color: '#bcd5cf',
+    altTag: "Bianca",
+  },
+  {
+    name: 'Spins',
+    image: spins,
+    route: '/CategoriesMain',
+    color: '#bcd5cf',
+    altTag: "Bianca",
+  },
+  {
+    name: 'Splits',
+    image: floor,
+    route: '/CategoriesMain',
+    color: '#bcd5cf',
+    altTag: "Bianca",
   },
 ];
 
 const Card = ({ name, image, route, color, altTag }) => {
   return (
-    <div className="card" style={{ marginBottom: '15px', marginTop: '30px' }}>
-      <img src={image} className="card-img-top" alt={altTag} style={{ maxHeight: '20rem' }} />
-      <div style={{ backgroundColor: color, textAlign: 'center' }}>
-        <Link to={route} className="btn">
+    <div className="card" style={{ marginBottom: '15px'}}>
+      <Link to={route}>
+        <img src={image} className="card-img-top" alt={altTag} style={{ maxHeight: '25rem' }} />
+        <div style={{ backgroundColor: color, textAlign: 'center' }}>
           {name}
-        </Link>
-      </div>
+        </div>
+      </Link>
     </div>
   );
 };
 
-const HomeNavOptions = () => {
+const OptionsNav = () => {
   return (
-    <div className="container">
+    <div className="category-grid">
       <div className="row">
         <div className="col-md-4">
           <Card {...cardsData[0]} />
@@ -55,8 +90,19 @@ const HomeNavOptions = () => {
           <Card {...cardsData[2]} />
         </div>
       </div>
+      <div className="row">
+        <div className="col-md-4">
+          <Card {...cardsData[3]} />
+        </div>
+        <div className="col-md-4">
+          <Card {...cardsData[4]} />
+        </div>
+        <div className="col-md-4">
+          <Card {...cardsData[5]} />
+        </div>
+      </div>
     </div>
   );
 };
 
-export default HomeNavOptions;
+export default OptionsNav;

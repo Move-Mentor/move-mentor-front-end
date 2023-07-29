@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import OptionsMain from './pages/Options/OptionsMain';
 import Aerials from './pages/Categories/Aerials';
 import Climbs from './pages/Categories/Climbs';
+import Floor from './pages/Categories/Floor';
 
 const App = () => {
 
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/OptionsMain" element={<OptionsMain />} />
           <Route path="/Aerials" element={<Aerials />} />
           <Route path="/Climbs" element={<Climbs />} />
+          <Route path="/Floor" element={<Floor />} />
         </Routes>
       </BrowserRouter>
     </div >

@@ -63,7 +63,7 @@ const FloorList = () => {
         </div> 
       </div>
       <div className="row">
-        <div className="col-md-4">
+        <div className="col-md-12">
           <Card {...cardsData[3]} />
         </div>
       </div>

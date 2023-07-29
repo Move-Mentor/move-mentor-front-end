@@ -1,3 +1,14 @@
+.main-body-layout {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+}
+
+.left-side-image-card {
+  background-color: #f1daae !important;
+  border: none !important;
+}
+
 .App {
   text-align: center;
 }

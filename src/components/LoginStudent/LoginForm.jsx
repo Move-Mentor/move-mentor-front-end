@@ -9,7 +9,7 @@ function LoginForm() {
   return (
     <Form className="form-top-space"> 
       <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-        <Form.Label column sm={2}>
+        <Form.Label data-testid="email"  column sm={2}>
           Email:
         </Form.Label>
         <Col sm={10}>
@@ -18,7 +18,7 @@ function LoginForm() {
       </Form.Group>
 
       <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
-        <Form.Label column sm={2}>
+        <Form.Label data-testid="password" column sm={2}>
           Password:
         </Form.Label>
         <Col sm={10}>

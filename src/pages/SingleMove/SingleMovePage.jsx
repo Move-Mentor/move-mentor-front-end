@@ -4,7 +4,7 @@ import './SingleMovePage.css';
 import SingleMoveNav from '../../components/SingleMoveNav/SingleMoveNav';
 import AddToClass from '../../components/AddToClass/AddToClass';
 import Footer from '../../components/MainLayout/Footer';
-import Header from '../../components/MainLayout/header';
+import Header from '../../components/MainLayout/Header';
 
 function SingleMovePage({ userRole }) {
   return (

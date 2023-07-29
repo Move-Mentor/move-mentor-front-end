@@ -1,7 +1,6 @@
 import React from 'react';
 import '../../App.css';
 import HomeMainImage from '../../components/HomePage/HomeMainImage';
-
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import LoginForm from '../../components/LoginStudent/LoginForm';

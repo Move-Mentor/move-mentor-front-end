@@ -8,6 +8,7 @@ import OptionsMain from './pages/Options/OptionsMain';
 import Aerials from './pages/Categories/Aerials';
 import Climbs from './pages/Categories/Climbs';
 import Floor from './pages/Categories/Floor';
+import Inverts from './pages/Categories/Inverts';
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/Aerials" element={<Aerials />} />
           <Route path="/Climbs" element={<Climbs />} />
           <Route path="/Floor" element={<Floor />} />
+          <Route path="/Inverts" element={<Inverts />} />
         </Routes>
       </BrowserRouter>
     </div >

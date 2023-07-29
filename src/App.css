@@ -9,6 +9,11 @@
   border: none !important;
 }
 
+.left-side-image-card-student {
+  background-color: #bcd5cf !important;
+  border: none !important;
+}
+
 .App {
   text-align: center;
 }

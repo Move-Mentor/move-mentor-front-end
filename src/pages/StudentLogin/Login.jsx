@@ -11,7 +11,7 @@ function HomeLayout() {
     <div className="main-body-layout">
      
         <CardGroup >
-          <Card className="left-side-image-card">
+          <Card className="left-side-image-card-student">
             <Card.Body>
               <HomeMainImage />
             </Card.Body>

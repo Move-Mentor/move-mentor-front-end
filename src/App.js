@@ -11,6 +11,7 @@ import Floor from './pages/Categories/Floor';
 import Inverts from './pages/Categories/Inverts';
 import Sits from './pages/Categories/Sits';
 import Spins from './pages/Categories/Spins';
+import Splits from './pages/Categories/Splits';
 
 const App = () => {
 
@@ -31,6 +32,7 @@ const App = () => {
           <Route path="/Inverts" element={<Inverts />} />
           <Route path="/Sits" element={<Sits />} />
           <Route path="/Spins" element={<Spins />} />
+          <Route path="/Splits" element={<Splits />} />
         </Routes>
       </BrowserRouter>
     </div >

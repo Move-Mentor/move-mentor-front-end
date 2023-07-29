@@ -1,7 +1,10 @@
 .main-img-card {
-  background-color: #f1daae !important;
+  background-color: transparent !important;
   text-align: center !important;
   border: none !important;
+}
+--bs-card-bg {
+  background-color: none !important;
 }
 
 @media (min-width: 1200px) {

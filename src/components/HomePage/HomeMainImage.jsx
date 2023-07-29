@@ -5,7 +5,7 @@ import './HomeMainImage.css';
 function HomeMainImage() {
   return (
     <Card className="main-img-card">
-      <Card.Body >
+      <Card.Body>
         <img src={MainImage} alt="white silhouette of a pole dancer"/>
       </Card.Body>
     </Card>

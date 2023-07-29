@@ -13,7 +13,7 @@ const cardsData = [
   {
     name: 'Student Login',
     image: Image2,
-    route: '/card2',
+    route: '/Login',
     color: '#bcd5cf',
     altTag: "Aphrodite Variaion",
   },
@@ -41,6 +41,7 @@ const Card = ({ name, image, route, color, altTag}) => {
 
 const HomeNavOptions = () => {
   return (
+    
     <div className="container">
       <div className="row">
         <div className="col-md-6">

@@ -21,3 +21,9 @@
 .card-text {
   text-align: center;
 }
+
+@media (max-width: 1668px) {
+  .grid {
+    margin-top: 0.1rem;
+  }
+}

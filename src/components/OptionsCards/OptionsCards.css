@@ -1,0 +1,23 @@
+.box {
+  margin: 10px;
+}
+
+.grid {
+  min-height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
+  margin-top: 10rem;
+}
+
+.card-img-top {
+  width: 100% !important;
+  height: auto;
+}
+
+.card-text {
+  text-align: center;
+}

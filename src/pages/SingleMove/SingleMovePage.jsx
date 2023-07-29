@@ -3,7 +3,6 @@ import CarouselComponent from '../../components/Carousel/carousel';
 import './SingleMovePage.css';
 import SingleMoveNav from '../../components/SingleMoveNav/SingleMoveNav';
 import AddToClass from '../../components/AddToClass/AddToClass';
-// import Header from '../../components/MainLayout/Header';
 import Footer from '../../components/MainLayout/Footer';
 import Header from '../../components/MainLayout/Header';
 

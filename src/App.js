@@ -4,7 +4,7 @@ import Login from './pages/StudentLogin/Login';
 import Home from './pages/Home';
 import SingleMovePage from './pages/SingleMove/SingleMovePage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// import Options from './pages/Options/Options';
+import OptionsMain from './pages/Options/OptionsMain';
 
 const App = () => {
 
@@ -18,6 +18,7 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path="/login-student" element={<Login />} />
           <Route path="/SingleMovePage" element={<SingleMovePage />} />
+          <Route path="/OptionsMain" element={<OptionsMain />} />
         </Routes>
       </BrowserRouter>
     </div >

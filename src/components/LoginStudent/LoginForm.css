@@ -5,8 +5,15 @@
 .btn-login {
   background-color: #f3b89c !important;
   border: none !important;
-  color: #000000 !important;
   margin-right: 20px !important;
+}
+
+.btn-login:hover {
+  background-color: #f1daae !important;
+}
+
+a {
+  color: black !important;
 }
 
 .btn-back {
@@ -21,3 +28,8 @@
     margin-top: 1rem;
   }
 }
+
+.card-group > .card {
+  --bs-card-group-margin: 0rem;
+}
+/*this removes a weird orange line that shows up on mobile*/

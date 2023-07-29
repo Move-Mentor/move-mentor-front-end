@@ -8,7 +8,6 @@ import LoginForm from '../../components/LoginStudent/LoginForm';
 function HomeLayout() {
   return (
     <div className="main-body-layout">
-     
         <CardGroup >
           <Card className="left-side-image-card-student">
             <Card.Body>

@@ -1,11 +1,32 @@
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import './LoginForm.css';
+import { Link } from 'react-router-dom';
+
+const navRoutes = [
+  {
+    name: 'Sign in',
+    route: '/OptionsMain'
+  },
+]
+
+const Nav = ({ name, route }) => {
+  return (
+    <Button className="btn-login">
+        <Link to={route}>
+          {name}
+        </Link>
+    </Button>
+  );
+};
 
 
-function LoginForm() {
+
+
+const LoginForm = () => {
   return (
     <Form className="form-top-space"> 
       <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
@@ -34,10 +55,11 @@ function LoginForm() {
 
       <Form.Group as={Row} className="mb-3">
         <Col sm={{ span: 10, offset: 2 }}>
-          <Button className="btn-login" type="submit" >Login</Button>
-          <Button className="btn-back" href={"/"}type="submit">Back to Sign Up</Button>
+          <Nav {...navRoutes[0]} />
+          <Button className="btn-back" href={"/"} type="submit">Back to Sign Up</Button>
         </Col>
       </Form.Group>
+     
     </Form>
   );
 }

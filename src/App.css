@@ -60,6 +60,6 @@ a {
 
 @media (max-width: 1375px) {
   .card-group {
-    display: block !important; /*This makes the cards wrap wround sooner*/
+    display: block !important; /*This makes the cards wrap around sooner*/
   }
 }

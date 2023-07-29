@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "./OptionsCards.css";
-
 import classImage from '../../images/optionsClassMoves.png';
 import profileImage from '../../images/optionsSearch.png';
 import categoriesImage from '../../images/optionsCategories.png';
@@ -11,7 +9,7 @@ const cardsData = [
     name: 'Class',
     image: classImage,
     route: '/card1',
-    color: '#bcd5cf',
+    color: '#f3b89c',
     altTag: "Brass Monkey Extend",
   },
   {
@@ -25,27 +23,27 @@ const cardsData = [
     name: 'All Moves',
     image: categoriesImage,
     route: '/CategoriesMain',
-    color: '#bcd5cf',
+    color: '#dec4f3',
     altTag: "Splits - Felix",
   },
 ];
 
 const Card = ({ name, image, route, color, altTag }) => {
   return (
-    <div className="card" style={{ marginBottom: '15px'}}>
-      <Link to={route}>
-        <img src={image} className="card-img-top" alt={altTag} style={{ maxHeight: '25rem' }} />
-        <div style={{ backgroundColor: color, textAlign: 'center' }}>
+    <div className="card" style={{ marginBottom: '15px', marginTop: '30px' }}>
+      <img src={image} className="card-img-top" alt={altTag} style={{ maxHeight: '20rem' }} />
+      <div style={{ backgroundColor: color, textAlign: 'center' }}>
+        <Link to={route} className="btn">
           {name}
-        </div>
-      </Link>
+        </Link>
+      </div>
     </div>
   );
 };
 
-const OptionsNav = () => {
+const HomeNavOptions = () => {
   return (
-    <div className="grid">
+    <div className="container">
       <div className="row">
         <div className="col-md-4">
           <Card {...cardsData[0]} />
@@ -61,4 +59,4 @@ const OptionsNav = () => {
   );
 };
 
-export default OptionsNav;
+export default HomeNavOptions;

@@ -1,19 +1,19 @@
 import React from 'react';
-import OptionsCards from '../../components/OptionsCards/OptionsCards';
+// import CatNavCards from '../../components/Categories/CatNavCards';
 import '../SingleMove/SingleMovePage.css';
 import Footer from '../../components/MainLayout/Footer';
 import Header from '../../components/MainLayout/header';
 import '../../App.css';
 
 
-function OptionsLayout() {
+function CategoriesLayout() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header />
-      <OptionsCards />
-      <Footer />
+      {/* <CatNavCards /> */}
+      < Footer />
     </div>
   );
 }
 
-export default OptionsLayout;
+export default CategoriesLayout;

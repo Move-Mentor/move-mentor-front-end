@@ -35,7 +35,7 @@ function LoginForm() {
       <Form.Group as={Row} className="mb-3">
         <Col sm={{ span: 10, offset: 2 }}>
           <Button className="btn-login" type="submit" >Login</Button>
-          <Button className="btn-back" href={"/Home"}type="submit">Back to Sign Up</Button>
+          <Button className="btn-back" href={"/"}type="submit">Back to Sign Up</Button>
         </Col>
       </Form.Group>
     </Form>

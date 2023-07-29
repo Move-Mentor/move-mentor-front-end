@@ -5,6 +5,7 @@ import { Image } from 'react-bootstrap';
 import './Header.css';
 
 
+
 const Header = ({ userRole }) => {
   const headerClass = userRole === 'teacher' ? 'header-teacher' : 'header-student';
 

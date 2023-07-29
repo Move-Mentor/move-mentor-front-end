@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import Image1 from '../../images/brassMonkeyExtend.png';
 import Image2 from '../../images/aphroditeVariation.png';
 import Image3 from '../../images/felixSplits.png';
@@ -15,7 +17,7 @@ const cardsData = [
     image: Image2,
     route: '/login-student',
     color: '#bcd5cf',
-    altTag: "Aphrodite Variaion",
+    altTag: "Aphrodite Variation",
   },
   {
     name: 'Teacher Login',
@@ -26,14 +28,14 @@ const cardsData = [
   },
 ];
 
-const Card = ({ name, image, route, color, altTag}) => {
+const Card = ({ name, image, route, color, altTag }) => {
   return (
-    <div className="card" style={{ marginBottom: '15px', marginTop: '30px'}}>
+    <div className="card" style={{ marginBottom: '15px', marginTop: '30px' }}>
       <img src={image} className="card-img-top" alt={altTag} style={{ maxHeight: '20rem' }} />
       <div style={{ backgroundColor: color, textAlign: 'center' }}>
-        <a href={route} className="btn">
+        <Link to={route} className="btn">
           {name}
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -41,7 +43,6 @@ const Card = ({ name, image, route, color, altTag}) => {
 
 const HomeNavOptions = () => {
   return (
-    
     <div className="container">
       <div className="row">
         <div className="col-md-6">
@@ -50,7 +51,7 @@ const HomeNavOptions = () => {
         <div className="col-md-6">
           <Card {...cardsData[1]} />
         </div>
-        <div className="col-md-6 offset-md-3"> {/* Add offset-md-3 to center the third card */}
+        <div className="col-md-6 offset-md-3">
           <Card {...cardsData[2]} />
         </div>
       </div>

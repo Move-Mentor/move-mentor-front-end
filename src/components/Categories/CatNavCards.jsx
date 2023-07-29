@@ -1,15 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./CatNavCards.css";
-
-
-
 import aerials from '../../images/optionsClassMoves.png';
 import climbs from '../../images/categoryClimbsAngelBasic.png';
 import floor from '../../images/categoryFloorBodyRoll.png';
 import inverts from '../../images/categoryInvertStraddle.png';
 import sits from '../../images/categorySitsMartini.png';
 import spins from '../../images/categorySpinsBackwardsSunwheel.png';
+import splits from '../../images/felixSplits.png';
 
 const cardsData = [
   {
@@ -56,7 +54,7 @@ const cardsData = [
   },
   {
     name: 'Splits',
-    image: floor,
+    image: splits,
     route: '/CategoriesMain',
     color: '#bcd5cf',
     altTag: "Bianca",
@@ -100,6 +98,13 @@ const OptionsNav = () => {
         <div className="col-md-4">
           <Card {...cardsData[5]} />
         </div>
+      </div>
+      <div className="row">
+
+        <div className="col-md-12">
+          <Card {...cardsData[6]} />
+        </div>
+
       </div>
     </div>
   );

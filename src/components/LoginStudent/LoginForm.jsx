@@ -9,20 +9,32 @@ import { Link } from 'react-router-dom';
 const navRoutes = [
   {
     name: 'Sign in',
-    route: '/OptionsMain'
+    route: '/OptionsMain',
+    color: '#f3b89c'
+  },
+  {
+    name: 'Back to Options',
+    route: '/',
+    color: '#f1daae'
   },
 ]
 
-const Nav = ({ name, route }) => {
+
+const Nav = ({ name, route, color }) => {
+  const buttonStyle = {
+    backgroundColor: color,
+    border: 'none',
+    marginRight: '20px '
+  };
+
   return (
-    <Button className="btn-login">
-        <Link to={route}>
-          {name}
-        </Link>
+    <Button style={buttonStyle}>
+      <Link to={route}>
+        {name}
+      </Link>
     </Button>
   );
 };
-
 
 
 
@@ -52,14 +64,12 @@ const LoginForm = () => {
           <Form.Check label="Remember me" />
         </Col>
       </Form.Group>
-
       <Form.Group as={Row} className="mb-3">
         <Col sm={{ span: 10, offset: 2 }}>
           <Nav {...navRoutes[0]} />
-          <Button className="btn-back" href={"/"} type="submit">Back to Sign Up</Button>
+          <Nav {...navRoutes[1]} />
         </Col>
       </Form.Group>
-     
     </Form>
   );
 }

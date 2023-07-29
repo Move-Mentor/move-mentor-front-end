@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../App.css';
 import HomeMainImage from '../../components/HomePage/HomeMainImage';
 
 import Card from 'react-bootstrap/Card';
@@ -7,10 +8,10 @@ import LoginForm from '../../components/LoginStudent/LoginForm';
 
 function HomeLayout() {
   return (
-    <div style={{ display: 'grid', gridTemplateRows: '1fr auto', minHeight: '100vh' }} >
+    <div className="main-body-layout">
      
         <CardGroup >
-          <Card style={{ backgroundColor: '#BCD5CF', border: 'none'}}>
+          <Card className="left-side-image-card">
             <Card.Body>
               <HomeMainImage />
             </Card.Body>

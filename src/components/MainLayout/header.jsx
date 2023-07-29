@@ -2,15 +2,15 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import HomeIcon from '../../images/home_icon.png';
 import { Image } from 'react-bootstrap';
-import './Header.css';
+import './header.css';
 
 
 
-const Header = ({ userRole }) => {
-  const HeaderClass = userRole === 'teacher' ? 'Header-teacher' : 'Header-student';
+const header = ({ userRole }) => {
+  const headerClass = userRole === 'teacher' ? 'header-teacher' : 'header-student';
 
   return (
-    <Navbar data-testid="nav" className={HeaderClass} expand="lg">
+    <Navbar data-testid="nav" className={headerClass} expand="lg">
       <Container>
         <a href="#home">
           <Image src={HomeIcon} alt="Home icon to return home" fluid /></a>
@@ -20,4 +20,4 @@ const Header = ({ userRole }) => {
 }
 
 
-export default Header;
+export default header;

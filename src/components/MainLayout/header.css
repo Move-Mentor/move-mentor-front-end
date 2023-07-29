@@ -1,8 +1,8 @@
-.Header-teacher {
+.header-teacher {
   background-color: #dec4f3; /* Purple color for teachers (admins) */
 }
 
-.Header-student {
+.header-student {
   background-color: #bcd5cf; /* Green color for students (non-admins) */
 }
 

@@ -1,5 +1,6 @@
 .box {
   margin: 10px;
+  width: 25rem;
 }
 
 .grid {
@@ -9,7 +10,6 @@
   flex-direction: row;
   margin-left: auto;
   margin-right: auto;
-  width: 55%;
   margin-top: 10rem;
 }
 
@@ -25,5 +25,33 @@
 @media (max-width: 1668px) {
   .grid {
     margin-top: 0.1rem;
+  }
+}
+
+@media (max-width: 1284px) {
+  .box {
+    margin-top: 5rem;
+  }
+}
+
+@media (max-width: 838px) {
+  .box {
+    margin-top: 5rem;
+    width: 15rem;
+  }
+}
+
+@media (max-width: 519px) {
+  .box {
+    margin-top: 5rem;
+    width: 14rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .box {
+    margin-top: 2rem;
+    width: 24rem;
+    margin-left: 3rem;
   }
 }

@@ -1,72 +1,31 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./CatNavCards.css";
-import aerials from '../../images/optionsClassMoves.png';
-import climbs from '../../images/categoryClimbsAngelBasic.png';
-import floor from '../../images/categoryFloorBodyRoll.png';
-import inverts from '../../images/categoryInvertStraddle.png';
-import sits from '../../images/categorySitsMartini.png';
-import spins from '../../images/categorySpinsBackwardsSunwheel.png';
-import splits from '../../images/felixSplits.png';
+import aerials1 from '../../images/optionsClassMoves.png';
+import aerials2 from '../../images/categoryAerialsGracie.png';
+
 
 const cardsData = [
   {
-    name: 'Aerials',
-    image: aerials,
+    name: 'Aerial Invert',
+    image: aerials1,
     route: '/SingleMovePage',
-    color: '#bcd5cf',
     altTag: "Aerial Invert",
   },
   {
-    name: 'Climbs',
-    image: climbs,
-    route: '/login-student',
-    color: '#bcd5cf',
-    altTag: "Star Chaser",
-  },
-  {
-    name: 'Floor',
-    image: floor,
-    route: '/CategoriesMain',
-    color: '#bcd5cf',
-    altTag: "Bianca",
-  },
-  {
-    name: 'Inverts',
-    image: inverts,
-    route: '/CategoriesMain',
-    color: '#bcd5cf',
-    altTag: "Bianca",
-  },
-  {
-    name: 'Sits',
-    image: sits,
-    route: '/CategoriesMain',
-    color: '#bcd5cf',
-    altTag: "Bianca",
-  },
-  {
-    name: 'Spins',
-    image: spins,
-    route: '/CategoriesMain',
-    color: '#bcd5cf',
-    altTag: "Bianca",
-  },
-  {
-    name: 'Splits',
-    image: splits,
-    route: '/CategoriesMain',
-    color: '#bcd5cf',
-    altTag: "Bianca",
+    name: 'Gracie',
+    image: aerials2,
+    route: '/SingleMovePage',
+    altTag: "Aerial Invert",
   },
 ];
 
-const Card = ({ name, image, route, color, altTag }) => {
+const Card = ({ name, image, route, altTag }) => {
   return (
     <div className="card" style={{ marginBottom: '15px'}}>
       <Link to={route}>
         <img src={image} className="card-img-top" alt={altTag} style={{ maxHeight: '25rem' }} />
-        <div style={{ backgroundColor: color, textAlign: 'center' }}>
+        <div style={{ textAlign: 'center' }}>
           {name}
         </div>
       </Link>
@@ -85,27 +44,11 @@ const AerialsList = () => {
           <Card {...cardsData[1]} />
         </div>
         <div className="col-md-4">
-          <Card {...cardsData[2]} />
+          <Card {...cardsData[0]} />
         </div>
       </div>
-      <div className="row">
-        <div className="col-md-4">
-          <Card {...cardsData[3]} />
-        </div>
-        <div className="col-md-4">
-          <Card {...cardsData[4]} />
-        </div>
-        <div className="col-md-4">
-          <Card {...cardsData[5]} />
-        </div>
-      </div>
-      <div className="row">
-
-        <div className="col-md-12">
-          <Card {...cardsData[6]} />
-        </div>
-
-      </div>
+      
+     
     </div>
   );
 };

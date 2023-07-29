@@ -2,11 +2,11 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import HomeIcon from '../../images/home_icon.png';
 import { Image } from 'react-bootstrap';
-import './Header.css';
+import './header.css';
 
 
 
-const Header = ({ userRole }) => {
+const header = ({ userRole }) => {
   const headerClass = userRole === 'teacher' ? 'header-teacher' : 'header-student';
 
   return (
@@ -20,4 +20,4 @@ const Header = ({ userRole }) => {
 }
 
 
-export default Header;
+export default header;

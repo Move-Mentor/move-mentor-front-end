@@ -12,21 +12,21 @@ const cardsData = [
     image: classImage,
     route: '/card1',
     color: '#bcd5cf',
-    altTag: "Brass Monkey Extend",
+    altTag: "Aerial Invert",
   },
   {
     name: 'Profile',
     image: profileImage,
     route: '/login-student',
     color: '#bcd5cf',
-    altTag: "Aphrodite Variation",
+    altTag: "Star Chaser",
   },
   {
     name: 'All Moves',
     image: categoriesImage,
     route: '/CategoriesMain',
     color: '#bcd5cf',
-    altTag: "Splits - Felix",
+    altTag: "Bianca",
   },
 ];
 

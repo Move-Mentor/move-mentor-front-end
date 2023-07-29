@@ -6,6 +6,7 @@ import SingleMovePage from './pages/SingleMove/SingleMovePage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import OptionsMain from './pages/Options/OptionsMain';
 import Aerials from './pages/Categories/Aerials';
+import Climbs from './pages/Categories/Climbs';
 
 const App = () => {
 
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/SingleMovePage" element={<SingleMovePage />} />
           <Route path="/OptionsMain" element={<OptionsMain />} />
           <Route path="/Aerials" element={<Aerials />} />
+          <Route path="/Climbs" element={<Climbs />} />
         </Routes>
       </BrowserRouter>
     </div >

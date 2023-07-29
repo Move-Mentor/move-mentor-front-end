@@ -1,22 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "./CatNavCards.css";
-import aerials1 from '../../images/optionsClassMoves.png';
-import aerials2 from '../../images/categoryAerialsGracie.png';
+import "../CatNavCards.css";
+import climbs1 from '../../../images/categoryClimbsAngelBasic.png';
+import climbs2 from '../../../images/categoryClimbsAngelSad.png';
 
 
 const cardsData = [
   {
-    name: 'Aerial Invert',
-    image: aerials1,
+    name: 'Angel - Basic',
+    image: climbs1,
     route: '/SingleMovePage',
-    altTag: "Aerial Invert",
+    altTag: "Angel - Basic",
   },
   {
-    name: 'Gracie',
-    image: aerials2,
+    name: 'Angel - Sad',
+    image: climbs2,
     route: '/SingleMovePage',
-    altTag: "Aerial Invert",
+    altTag: "Angel - Sad",
   },
 ];
 

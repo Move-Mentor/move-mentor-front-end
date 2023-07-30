@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import HomeIcon from '../../images/home_icon.png';
@@ -12,8 +14,9 @@ const header = ({ userRole }) => {
   return (
     <Navbar data-testid="nav" className={headerClass} expand="lg">
       <Container>
-        <a href="#home">
-          <Image src={HomeIcon} alt="Home icon to return home" fluid /></a>
+        <Link to={'/OptionsMain'}>
+          <Image src={HomeIcon} alt="Home icon to return home" fluid />
+        </Link>
       </Container>
     </Navbar>
   );

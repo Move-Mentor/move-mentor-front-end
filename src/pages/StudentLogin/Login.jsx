@@ -20,7 +20,6 @@ function HomeLayout() {
             </Card.Body>
           </Card>
         </CardGroup>
-      
       {/* Empty div with "auto" height to push the cards to the bottom */}
       <div style={{ height: 'auto' }}></div>
     </div>

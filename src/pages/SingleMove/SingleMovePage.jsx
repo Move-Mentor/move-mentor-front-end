@@ -10,7 +10,9 @@ function SingleMovePage({ userRole }) {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header />
-      <SingleMoveNav />
+      <div style={{textAlign: 'center' }}>
+        <SingleMoveNav />
+      </div>
       <div className="container mt-4 d-flex justify-content-center">
         <div className="col-md-6 col-lg-6 col-xl-6">
           <CarouselComponent />

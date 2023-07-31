@@ -8,9 +8,9 @@ import categoriesImage from '../../images/optionsCategories.png';
 
 const cardsData = [
   {
-    name: 'Class',
+    name: 'Lessons',
     image: classImage,
-    route: '/card1',
+    route: '/Lessons',
     color: '#bcd5cf',
     altTag: "Aerial Invert",
   },

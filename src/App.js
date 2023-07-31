@@ -13,6 +13,7 @@ import Inverts from './pages/Categories/Inverts';
 import Sits from './pages/Categories/Sits';
 import Spins from './pages/Categories/Spins';
 import Splits from './pages/Categories/Splits';
+import Lessons from './pages/Lessons/Lessons';
 
 const App = () => {
 
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/Sits" element={<Sits />} />
           <Route path="/Spins" element={<Spins />} />
           <Route path="/Splits" element={<Splits />} />
+          <Route path="/Lessons" element={<Lessons />} />
         </Routes>
       </BrowserRouter>
     </div >

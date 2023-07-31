@@ -1,19 +1,19 @@
 import React from 'react';
-import CatNavCards from '../../components/Categories/CatNavCards';
+import Monday from '../../components/Lessons/MondayCards';
 import '../SingleMove/SingleMovePage.css';
 import Footer from '../../components/MainLayout/Footer';
 import Header from '../../components/MainLayout/Header';
 import '../../App.css';
 
 
-function OptionsLayout() {
+function MondayLayout() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header />
-      <CatNavCards />
+      <Monday />
       <Footer />
     </div>
   );
 }
 
-export default OptionsLayout;
+export default MondayLayout;

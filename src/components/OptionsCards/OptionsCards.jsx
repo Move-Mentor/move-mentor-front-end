@@ -25,17 +25,17 @@ const cardsData = [
     name: 'All Moves',
     image: categoriesImage,
     route: '/CategoriesMain',
-    color: '#bcd5cf',
     altTag: "Bianca",
   },
 ];
 
-const Card = ({ name, image, route, color, altTag }) => {
+const Card = ({ name, image, route, altTag, userRole  }) => {
+  const headerClass = userRole === 'teacher' ? 'header-teacher' : 'header-student';
   return (
     <div className="card" style={{ marginBottom: '15px'}}>
       <Link to={route}>
         <img src={image} className="card-img-top" alt={altTag} style={{ maxHeight: '25rem' }} />
-        <div style={{ backgroundColor: color, textAlign: 'center' }}>
+        <div className={headerClass} style={{textAlign: 'center' }}>
           {name}
         </div>
       </Link>

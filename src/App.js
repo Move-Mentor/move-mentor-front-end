@@ -14,6 +14,7 @@ import Sits from './pages/Categories/Sits';
 import Spins from './pages/Categories/Spins';
 import Splits from './pages/Categories/Splits';
 import Lessons from './pages/Lessons/Lessons';
+import Monday from './pages/Lessons/MondayIntro';
 
 const App = () => {
 
@@ -35,7 +36,8 @@ const App = () => {
           <Route path="/Sits" element={<Sits />} />
           <Route path="/Spins" element={<Spins />} />
           <Route path="/Splits" element={<Splits />} />
-          <Route path="/Lessons" element={<Lessons />} />
+          <Route path="/lessons" element={<Lessons />} />
+          <Route path="/monday" element={<Monday />} />
         </Routes>
       </BrowserRouter>
     </div >

@@ -14,7 +14,7 @@ const cardsData = [
     name: 'Monday: Intro',
     time: '6pm-7pm',
     image: aerials,
-    route: '/Aerials',
+    route: '/monday',
     color: '#DEC4F3',
     altTag: "Aerial Invert",
   },

@@ -31,14 +31,14 @@ export const cardsData = [
 
 const Card = ({ name, image, route, color, altTag }) => {
   return (
+    <Link to={route} className="btn">
     <div className="card" style={{ marginBottom: '15px', marginTop: '30px', marginRight: '15px' }}>
-      <img src={image} alt={altTag} style={{ maxHeight: '20rem' }} />
-      <div style={{ backgroundColor: color, textAlign: 'center' }}>
-        <Link to={route} className="btn">
+        <img src={image} alt={altTag} style={{ maxHeight: '20rem' }} />
+        <div style={{ backgroundColor: color, textAlign: 'center' }}>
           {name}
-        </Link>
-      </div>
+        </div>
     </div>
+    </Link>
   );
 };
 

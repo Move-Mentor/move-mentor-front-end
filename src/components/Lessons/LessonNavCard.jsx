@@ -51,28 +51,28 @@ const cardsData = [
     name: 'Thursday: Mixed',
     time: '6:40pm-7:40pm',
     image: spins,
-    route: '/Floor',
+    route: '/ThursdayMixed',
     altTag: "Bianca",
   },
   {
     name: 'Friday: Mixed',
     time: '5pm-6pm',
     image: splits,
-    route: '/Floor',
+    route: '/FridayMixed',
     altTag: "Bianca",
   },
   {
     name: 'Saturday: Conditioning',
     time: '9:10am-9:55am',
     image: spins,
-    route: '/Floor',
+    route: '/SaturdayCond',
     altTag: "Bianca",
   },
   {
     name: 'Saturday: Mixed',
     time: '10am-11am',
     image: splits,
-    route: '/Floor',
+    route: '/SaturdayMixed',
     altTag: "Bianca",
   }
 ];

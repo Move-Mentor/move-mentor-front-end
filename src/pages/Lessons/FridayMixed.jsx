@@ -1,5 +1,5 @@
 import React from 'react';
-import TuesdayMix from '../../components/Lessons/TuesdayMixCard';
+import FridayMixedCard from '../../components/Lessons/FridayMixed';
 import '../SingleMove/SingleMovePage.css';
 import Footer from '../../components/MainLayout/Footer';
 import Header from '../../components/MainLayout/Header';
@@ -7,7 +7,7 @@ import LessonsNav from './LessonsNav';
 import '../../App.css';
 
 
-function TuesdayMixLayout() {
+function FridayMixedLayout() {
   return (
     <div className="main-div">
       <Header />
@@ -15,12 +15,12 @@ function TuesdayMixLayout() {
         <LessonsNav />
       </div>
       <div>
-        <TuesdayMix />
+        <FridayMixedCard />
       </div>
         <Footer />
     </div>
   );
 }
 
-export default TuesdayMixLayout;
+export default FridayMixedLayout;
 

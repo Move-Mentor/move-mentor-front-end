@@ -15,9 +15,8 @@ function MondayLayout() {
         <LessonsNav />
       </div>
       <div>
-      <Monday />
+        <Monday />
       </div>
-      
       <Footer />
     </div>
   );

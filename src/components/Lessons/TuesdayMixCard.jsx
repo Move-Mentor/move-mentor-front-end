@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import "../Categories/CatNavCards.css";
 import aerials1 from '../../images/categoryAerialsGracie.png';
 import aerials2 from '../../images/aphroditeVariation.png';
+import '../../App.css';
 
 
 const cardsData = [
@@ -25,7 +26,7 @@ const Card = ({ name, image, route, altTag }) => {
     <div className="card" style={{ marginBottom: '15px'}}>
       <Link to={route}>
         <img src={image} className="card-img-top" alt={altTag} style={{ maxHeight: '25rem' }} />
-        <div style={{ textAlign: 'center' }}>
+        <div className="card-btn-color">
           {name}
         </div>
       </Link>

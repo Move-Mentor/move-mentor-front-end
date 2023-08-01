@@ -17,6 +17,8 @@ import Lessons from './pages/Lessons/Lessons';
 import Monday from './pages/Lessons/MondayIntro';
 import TuesdayMix from './pages/Lessons/TuesdayMixed';
 import TuesdayChoreo from './pages/Lessons/TuesdayChoreo';
+import WednesdayMixed1 from './pages/Lessons/WednesdayMixed1';
+import WednesdayMixed2 from './pages/Lessons/WednesdayMixed2';
 
 const App = () => {
 
@@ -42,6 +44,8 @@ const App = () => {
           <Route path="/Monday" element={<Monday />} />
           <Route path="/TuesdayMix" element={<TuesdayMix />} />
           <Route path="/TuesdayChoreo" element={<TuesdayChoreo />} />
+          <Route path="/WednesdayMixed1" element={<WednesdayMixed1 />} />
+          <Route path="/WednesdayMixed2" element={<WednesdayMixed2 />} />
         </Routes>
       </BrowserRouter>
     </div >

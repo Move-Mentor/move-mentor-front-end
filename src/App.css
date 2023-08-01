@@ -21,6 +21,22 @@
   min-height: 100vh;
 }
 
+.card-btn-color {
+  background-color: #f3b89c;
+  color: #000000;
+  text-align: center;
+}
+
+.lesson-card-btn-color {
+  background-color: #dec4f3;
+  text-align: center;
+}
+
+.all-moves-and-classes-nav {
+  color: #117b62;
+  margin-top: 2rem;
+}
+
 a {
   text-decoration: none !important;
 }

@@ -8,6 +8,7 @@ import inverts from '../../images/categoryInvertStraddle.png';
 import sits from '../../images/categorySitsMartini.png';
 import spins from '../../images/categorySpinsBackwardsSunwheel.png';
 import splits from '../../images/felixSplits.png';
+import '../../App.css';
 
 
 const cardsData = [
@@ -16,7 +17,6 @@ const cardsData = [
     time: '6pm-7pm',
     image: aerials,
     route: '/Monday',
-    color: '#DEC4F3',
     altTag: "Aerial Invert",
   },
   {
@@ -24,7 +24,6 @@ const cardsData = [
     time: '6:10pm-7:10pm',
     image: climbs,
     route: '/TuesdayMix',
-    color: '#DEC4F3',
     altTag: "Star Chaser",
   },
   {
@@ -32,23 +31,20 @@ const cardsData = [
     time: '7:15pm-8:15pm',
     image: floor,
     route: '/TuesdayChoreo ',
-    color: '#DEC4F3',
     altTag: "Bianca",
   },
   {
     name: 'Wednesday: Mixed',
     time: '4:40pm-5:40pm',
     image: inverts,
-    route: '/Floor',
-    color: '#DEC4F3',
+    route: '/WednesdayMixed1',
     altTag: "Bianca",
   },
   {
     name: 'Wednesday: Mixed',
     time: '6pm-7pm',
     image: sits,
-    route: '/Floor',
-    color: '#DEC4F3',
+    route: '/WednesdayMixed2',
     altTag: "Bianca",
   },
   {
@@ -56,7 +52,6 @@ const cardsData = [
     time: '6:40pm-7:40pm',
     image: spins,
     route: '/Floor',
-    color: '#DEC4F3',
     altTag: "Bianca",
   },
   {
@@ -64,7 +59,6 @@ const cardsData = [
     time: '5pm-6pm',
     image: splits,
     route: '/Floor',
-    color: '#DEC4F3',
     altTag: "Bianca",
   },
   {
@@ -72,7 +66,6 @@ const cardsData = [
     time: '9:10am-9:55am',
     image: spins,
     route: '/Floor',
-    color: '#DEC4F3',
     altTag: "Bianca",
   },
   {
@@ -80,17 +73,16 @@ const cardsData = [
     time: '10am-11am',
     image: splits,
     route: '/Floor',
-    color: '#DEC4F3',
     altTag: "Bianca",
   }
 ];
 
-const Card = ({ name, time, image, route, color, altTag }) => {
+const Card = ({ name, time, image, route, altTag }) => {
   return (
     <div className="card" style={{ marginBottom: '15px'}}>
       <Link to={route}>
         <img src={image} className="card-img-top" alt={altTag} style={{ maxHeight: '25rem' }} />
-        <footer style={{ backgroundColor: color, textAlign: 'center' }}>
+        <footer className="lesson-card-btn-color">
           <div>
             {name}
           </div>

@@ -34,7 +34,7 @@ const Card = ({ name, image, route, altTag }) => {
   );
 };
 
-const TuesdayChoreoCard = () => {
+const WednesdayMixed1Card = () => {
   return (
     <div className="category-grid">
       <div className="row">
@@ -54,4 +54,4 @@ const TuesdayChoreoCard = () => {
   );
 };
 
-export default TuesdayChoreoCard;
+export default WednesdayMixed1Card;

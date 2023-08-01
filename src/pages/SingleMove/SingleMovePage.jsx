@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../../components/MainLayout/Footer';
-import Header from '../../components/MainLayout/Header';
+// import Header from '../../components/MainLayout/Header';
 import CarouselComponent from '../../components/Carousel/carousel';
 import './SingleMovePage.css';
 import SingleMoveNav from '../../components/SingleMoveNav/SingleMoveNav';
@@ -10,7 +10,7 @@ import '../../App.css';
 function SingleMovePage({ userRole }) {
   return (
     <div className="main-div">
-      <Header />
+      {/* <Header /> */}
       <div style={{textAlign: 'center' }}>
         <SingleMoveNav />
       </div>

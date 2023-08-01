@@ -19,6 +19,30 @@ const cardsData = [
     route: '/SingleMovePage',
     altTag: "Aerial Invert",
   },
+  {
+    name: 'Aerial Invert',
+    image: aerials1,
+    route: '/SingleMovePage',
+    altTag: "Aerial Invert",
+  },
+  {
+    name: 'Gracie',
+    image: aerials2,
+    route: '/SingleMovePage',
+    altTag: "Aerial Invert",
+  },
+  {
+    name: 'Aerial Invert',
+    image: aerials1,
+    route: '/SingleMovePage',
+    altTag: "Aerial Invert",
+  },
+  {
+    name: 'Gracie',
+    image: aerials2,
+    route: '/SingleMovePage',
+    altTag: "Aerial Invert",
+  }
 ];
 
 const Card = ({ name, image, route, altTag }) => {

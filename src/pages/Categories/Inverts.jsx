@@ -2,14 +2,14 @@ import React from 'react';
 import CatInverts from '../../components/Categories/Inverts/CatInverts';
 import '../SingleMove/SingleMovePage.css';
 import Footer from '../../components/MainLayout/Footer';
-import Header from '../../components/MainLayout/Header';
+// import Header from '../../components/MainLayout/Header';
 import '../../App.css';
 
 
 function OptionsLayout() {
   return (
     <div className="main-div">
-      <Header />
+      {/* <Header /> */}
       <CatInverts />
       <Footer />
     </div>

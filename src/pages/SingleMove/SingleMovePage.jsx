@@ -6,13 +6,15 @@ import './SingleMovePage.css';
 import SingleMoveNav from '../../components/SingleMoveNav/SingleMoveNav';
 import AddToClass from '../../components/AddToClass/AddToClass';
 
-function SingleMovePage(props) {
-  const { userRole } = props;
-  // fetch from API ..
-  let classes = [];
-  const classesResponse = fetch('https://api.movementor.com/classes').then(async (response) => {
-    classes = await response.json();
-  })
+
+function SingleMovePage({ userRole }) {
+// function SingleMovePage(props) {
+  // const { userRole } = props;
+  // // fetch from API ..
+  // let classes = [];
+  // const classesResponse = fetch('https://api.movementor.com/classes').then(async (response) => {
+  //   classes = await response.json();
+  // })
   // const classes = [
   //   {
   //     id: '',

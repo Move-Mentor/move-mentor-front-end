@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Image1 from '../../images/brassMonkeyExtend.png';
 import Image2 from '../../images/aphroditeVariation.png';
 import Image3 from '../../images/felixSplits.png';
+import '../../App.css';
 
 export const cardsData = [
   {
@@ -10,28 +11,28 @@ export const cardsData = [
     image: Image1,
     route: '/card1',
     color: '#f3b89c',
-    altTag: "Brass Monkey Extend",
+    altTag: 'Brass Monkey Extend',
   },
   {
     name: 'Student Login',
     image: Image2,
     route: '/login-student',
     color: '#bcd5cf',
-    altTag: "Aphrodite Variation",
+    altTag: 'Aphrodite Variation',
   },
   {
     name: 'Teacher Login',
     image: Image3,
     route: '/card3',
     color: '#dec4f3',
-    altTag: "Splits - Felix",
+    altTag: 'Splits - Felix',
   },
 ];
 
 const Card = ({ name, image, route, color, altTag }) => {
   return (
-    <div className="card" style={{ marginBottom: '15px', marginTop: '30px' }}>
-      <img src={image} className="card-img-top" alt={altTag} style={{ maxHeight: '20rem' }} />
+    <div className="card" style={{ marginBottom: '15px', marginTop: '30px', marginRight: '15px' }}>
+      <img src={image} alt={altTag} style={{ maxHeight: '20rem' }} />
       <div style={{ backgroundColor: color, textAlign: 'center' }}>
         <Link to={route} className="btn">
           {name}
@@ -43,21 +44,12 @@ const Card = ({ name, image, route, color, altTag }) => {
 
 const HomeNavOptions = () => {
   return (
-    <div className="container">
-      <div className="row">
-        {/* <div className="col-md-6">
-          <Card
-            name={cardsData[0].name}
-            image={cardsData[0].image}
-            route={cardsData[0].route}
-            color={cardsData[0].color}
-            altTag={cardsData[0].altTag}
-            />
-        </div> */}
-        {cardsData.map((cardData) => (
+    <div className="d-flex flex-wrap justify-content-center">
+      {cardsData.map((cardData, index) => (
+        <div key={index} className="col-md-6">
           <Card {...cardData} />
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 };

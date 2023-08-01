@@ -8,7 +8,7 @@ import '../../App.css';
 
 function TuesdayMixLayout() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div className="main-div">
       <Header />
       <TuesdayMix />
       <Footer />

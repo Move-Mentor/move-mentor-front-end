@@ -8,7 +8,7 @@ import categoriesImage from '../../images/optionsCategories.png';
 
 const cardsData = [
   {
-    name: 'Lessons!!',
+    name: 'Lessons',
     image: classImage,
     route: '/Lessons',
     color: '#F3B89C',
@@ -36,7 +36,7 @@ const Card = ({ name, image, route, altTag, color }) => {
     <div className="card" style={{ marginBottom: '15px'}}>
       <Link to={route}>
         <img src={image} className="card-img-top" alt={altTag} style={{ maxHeight: '25rem' }} />
-        <div style={{textAlign: 'center', backgroundColor: {color} }}>
+        <div style={{textAlign: 'center', backgroundColor: color }}>
           {name}
         </div>
       </Link>

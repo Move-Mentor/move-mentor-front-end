@@ -8,7 +8,7 @@ import '../../App.css';
 
 function AerialsLayout() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div className="main-div">
       <Header />
       <CatAerials />
       <Footer />

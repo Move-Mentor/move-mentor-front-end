@@ -2,7 +2,7 @@ import React from 'react';
 import WednesdayMixed2Card from '../../components/Lessons/WednesdayMixed2';
 import '../SingleMove/SingleMovePage.css';
 import Footer from '../../components/MainLayout/Footer';
-import Header from '../../components/MainLayout/Header';
+// import Header from '../../components/MainLayout/Header';
 import LessonsNav from './LessonsNav';
 import '../../App.css';
 
@@ -10,7 +10,7 @@ import '../../App.css';
 function WednesdayMixed1Layout() {
   return (
     <div className="main-div">
-      <Header />
+      {/* <Header /> */}
       <div style={{textAlign: 'center' }}>
         <LessonsNav />
       </div>

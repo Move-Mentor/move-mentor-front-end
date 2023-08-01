@@ -1,7 +1,7 @@
 import React from 'react';
 import Monday from '../../components/Lessons/MondayCards';
 import '../SingleMove/SingleMovePage.css';
-import Header from '../../components/MainLayout/Header';
+// import Header from '../../components/MainLayout/Header';
 import Footer from '../../components/MainLayout/Footer';
 import LessonsNav from './LessonsNav';
 import '../../App.css';
@@ -10,7 +10,7 @@ import '../../App.css';
 function MondayLayout() {
   return (
     <div className="main-div">
-      <Header />
+      {/* <Header /> */}
       <div style={{textAlign: 'center' }}>
         <LessonsNav />
       </div>

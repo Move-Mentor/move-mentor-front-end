@@ -79,7 +79,7 @@ const cardsData = [
 
 const Card = ({ name, time, image, route, altTag }) => {
   return (
-    <div className="card" style={{ marginBottom: '15px'}}>
+    <div className="card" style={{ margin: '15px'}}>
       <Link to={route}>
         <img src={image} className="card-img-top" alt={altTag} style={{ maxHeight: '25rem' }} />
         <footer className="lesson-card-btn-color">
@@ -97,40 +97,12 @@ const Card = ({ name, time, image, route, altTag }) => {
 
 const OptionsNav = () => {
   return (
-    <div className="category-grid">
-      <div className="row">
-        <div className="col-md-4">
-          <Card {...cardsData[0]} />
+    <div className="d-flex flex-wrap justify-content-center">
+      {cardsData.map((cardData, index) => (
+        <div key={index} className="col-md-3">
+          <Card {...cardData} />
         </div>
-        <div className="col-md-4">
-          <Card {...cardsData[1]} />
-        </div>
-        <div className="col-md-4">
-          <Card {...cardsData[2]} />
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-md-4">
-          <Card {...cardsData[3]} />
-        </div>
-        <div className="col-md-4">
-          <Card {...cardsData[4]} />
-        </div>
-        <div className="col-md-4">
-          <Card {...cardsData[5]} />
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-md-4">
-          <Card {...cardsData[6]} />
-        </div>
-        <div className="col-md-4">
-          <Card {...cardsData[7]} />
-        </div>
-        <div className="col-md-4">
-          <Card {...cardsData[8]} />
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

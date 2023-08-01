@@ -15,6 +15,8 @@ import Spins from './pages/Categories/Spins';
 import Splits from './pages/Categories/Splits';
 import Lessons from './pages/Lessons/Lessons';
 import Monday from './pages/Lessons/MondayIntro';
+import TuesdayMix from './pages/Lessons/TuesdayMixed';
+import TuesdayChoreo from './pages/Lessons/TuesdayChoreo';
 
 const App = () => {
 
@@ -25,7 +27,7 @@ const App = () => {
         <Routes>
           {/* index is going to be the default page that's rendered */}
           <Route index element={<Home />} />
-          <Route path="/login-student" element={<Login />} />
+          <Route path="/LoginStudent" element={<Login />} />
           <Route path="/SingleMovePage" element={<SingleMovePage />} />
           <Route path="/OptionsMain" element={<OptionsMain />} />
           <Route path="/CategoriesMain" element={<CategoriesMain />} />
@@ -36,8 +38,10 @@ const App = () => {
           <Route path="/Sits" element={<Sits />} />
           <Route path="/Spins" element={<Spins />} />
           <Route path="/Splits" element={<Splits />} />
-          <Route path="/lessons" element={<Lessons />} />
-          <Route path="/monday" element={<Monday />} />
+          <Route path="/Lessons" element={<Lessons />} />
+          <Route path="/Monday" element={<Monday />} />
+          <Route path="/TuesdayMix" element={<TuesdayMix />} />
+          <Route path="/TuesdayChoreo" element={<TuesdayChoreo />} />
         </Routes>
       </BrowserRouter>
     </div >

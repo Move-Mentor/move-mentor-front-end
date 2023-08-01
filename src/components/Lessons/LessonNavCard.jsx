@@ -9,12 +9,13 @@ import sits from '../../images/categorySitsMartini.png';
 import spins from '../../images/categorySpinsBackwardsSunwheel.png';
 import splits from '../../images/felixSplits.png';
 
+
 const cardsData = [
   {
     name: 'Monday: Intro',
     time: '6pm-7pm',
     image: aerials,
-    route: '/monday',
+    route: '/Monday',
     color: '#DEC4F3',
     altTag: "Aerial Invert",
   },
@@ -22,7 +23,7 @@ const cardsData = [
     name: 'Tuesday: Mixed',
     time: '6:10pm-7:10pm',
     image: climbs,
-    route: '/Climbs',
+    route: '/TuesdayMix',
     color: '#DEC4F3',
     altTag: "Star Chaser",
   },
@@ -30,7 +31,7 @@ const cardsData = [
     name: 'Tuesday: Choreo',
     time: '7:15pm-8:15pm',
     image: floor,
-    route: '/Floor',
+    route: '/TuesdayChoreo ',
     color: '#DEC4F3',
     altTag: "Bianca",
   },
@@ -89,6 +90,7 @@ const Card = ({ name, time, image, route, color, altTag }) => {
     <div className="card" style={{ marginBottom: '15px'}}>
       <Link to={route}>
         <img src={image} className="card-img-top" alt={altTag} style={{ maxHeight: '25rem' }} />
+        
         <footer style={{ backgroundColor: color, textAlign: 'center' }}>
           <div>
             {name}

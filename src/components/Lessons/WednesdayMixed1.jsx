@@ -23,7 +23,7 @@ const cardsData = [
 
 const Card = ({ name, image, route, altTag }) => {
   return (
-    <div className="card" style={{ marginBottom: '15px'}}>
+    <div className="card" style={{ margin: '15px'}}>
       <Link to={route}>
         <img src={image} className="card-img-top" alt={altTag} style={{ maxHeight: '25rem' }} />
         <div className="card-btn-color">
@@ -36,20 +36,12 @@ const Card = ({ name, image, route, altTag }) => {
 
 const WednesdayMixed1Card = () => {
   return (
-    <div className="category-grid">
-      <div className="row">
-        <div className="col-md-4">
-          <Card {...cardsData[0]} />
+    <div className="d-flex flex-wrap justify-content-center">
+      {cardsData.map((cardData, index) => (
+        <div key={index} className="col-md-3">
+          <Card {...cardData} />
         </div>
-        <div className="col-md-4">
-          <Card {...cardsData[1]} />
-        </div>
-        <div className="col-md-4">
-          <Card {...cardsData[0]} />
-        </div>
-      </div>
-      
-     
+      ))}
     </div>
   );
 };

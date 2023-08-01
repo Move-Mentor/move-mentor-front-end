@@ -90,7 +90,6 @@ const Card = ({ name, time, image, route, color, altTag }) => {
     <div className="card" style={{ marginBottom: '15px'}}>
       <Link to={route}>
         <img src={image} className="card-img-top" alt={altTag} style={{ maxHeight: '25rem' }} />
-        
         <footer style={{ backgroundColor: color, textAlign: 'center' }}>
           <div>
             {name}

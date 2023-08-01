@@ -5,10 +5,11 @@ import CarouselComponent from '../../components/Carousel/carousel';
 import './SingleMovePage.css';
 import SingleMoveNav from '../../components/SingleMoveNav/SingleMoveNav';
 import AddToClass from '../../components/AddToClass/AddToClass';
+import '../../App.css';
 
 function SingleMovePage({ userRole }) {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div className="main-div">
       <Header />
       <div style={{textAlign: 'center' }}>
         <SingleMoveNav />

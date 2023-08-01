@@ -26,22 +26,6 @@
   }
 }
 
-/* 768 - 1688 */
-
-/* @media (max-width: 838px) {
-  .grid {
-    margin-top: 1rem;
-    width: 25rem;
-  }
-} */
-
-/* @media (max-width: 519px) {
-  .grid {
-    margin-top: 5rem;
-    width: 14rem;
-  }
-} */
-
 @media (max-width: 767px) {
   .category-grid {
     margin-top: 2rem;

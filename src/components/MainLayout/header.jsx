@@ -8,7 +8,7 @@ import './Header.css';
 
 
 
-const header = ({ userRole }) => {
+const Header = ({ userRole }) => {
   const headerClass = userRole === 'teacher' ? 'header-teacher' : 'header-student';
 
   return (
@@ -23,4 +23,4 @@ const header = ({ userRole }) => {
 }
 
 
-export default header;
+export default Header;

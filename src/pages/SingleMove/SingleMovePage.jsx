@@ -1,6 +1,6 @@
 import React from 'react';
-import Footer from '../../components/MainLayout/Footer';
 import Header from '../../components/MainLayout/Header';
+import Footer from '../../components/MainLayout/Footer';
 import CarouselComponent from '../../components/Carousel/carousel';
 import './SingleMovePage.css';
 import SingleMoveNav from '../../components/SingleMoveNav/SingleMoveNav';

@@ -4,7 +4,7 @@ import Image1 from '../../images/brassMonkeyExtend.png';
 import Image2 from '../../images/aphroditeVariation.png';
 import Image3 from '../../images/felixSplits.png';
 
-const cardsData = [
+export const cardsData = [
   {
     name: 'New Student Register',
     image: Image1,
@@ -45,15 +45,18 @@ const HomeNavOptions = () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-md-6">
-          <Card {...cardsData[0]} />
-        </div>
-        <div className="col-md-6">
-          <Card {...cardsData[1]} />
-        </div>
-        <div className="col-md-6 offset-md-3">
-          <Card {...cardsData[2]} />
-        </div>
+        {/* <div className="col-md-6">
+          <Card
+            name={cardsData[0].name}
+            image={cardsData[0].image}
+            route={cardsData[0].route}
+            color={cardsData[0].color}
+            altTag={cardsData[0].altTag}
+            />
+        </div> */}
+        {cardsData.map((cardData) => (
+          <Card {...cardData} />
+        ))}
       </div>
     </div>
   );

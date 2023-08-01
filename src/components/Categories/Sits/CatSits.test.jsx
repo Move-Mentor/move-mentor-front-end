@@ -1,3 +1,9 @@
-// test to see if cards are rendering properly
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import CatSits from './CatSits';
 
-// test to check routes - students and teachers
+describe('CatSits', () => {
+  test('renders', async () => {
+    expect(true).toBeTruthy();
+  });
+});

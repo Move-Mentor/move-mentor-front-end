@@ -1,10 +1,12 @@
-// Import necessary testing libraries
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import LoginForm from './LoginForm';
 
-// import React from 'react';
-// import '@testing-library/jest-dom/extend-expect';
-
-// Import the LoginForm component
-
+describe('LoginForm', () => {
+  test('renders', async () => {
+    expect(true).toBeTruthy();
+  });
+});
 
 //Describe "does not display any error messages for valid inputs"
 

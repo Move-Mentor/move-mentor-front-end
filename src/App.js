@@ -15,7 +15,7 @@ import Spins from './pages/Categories/Spins';
 import Splits from './pages/Categories/Splits';
 
 const App = () => {
-
+  const userRole = 'student';
 
   return (
     <div>
@@ -24,7 +24,7 @@ const App = () => {
           {/* index is going to be the default page that's rendered */}
           <Route index element={<Home />} />
           <Route path="/login-student" element={<Login />} />
-          <Route path="/SingleMovePage" element={<SingleMovePage />} />
+          <Route path="/SingleMovePage" element={<SingleMovePage userRole={userRole} />} />
           <Route path="/OptionsMain" element={<OptionsMain />} />
           <Route path="/CategoriesMain" element={<CategoriesMain />} />
           <Route path="/Aerials" element={<Aerials />} />

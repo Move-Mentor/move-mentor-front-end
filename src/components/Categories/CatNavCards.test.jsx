@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import CatClimbs from './CatClimbs';
+import CatNavCards from './CatNavCards';
 
-describe('CatClimbs', () => {
+describe('CatNavCards', () => {
   test('renders', async () => {
     expect(true).toBeTruthy();
   });

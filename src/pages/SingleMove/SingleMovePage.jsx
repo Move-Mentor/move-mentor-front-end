@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../../components/MainLayout/Header';
+// import Header from '../../components/MainLayout/Header';
 import Footer from '../../components/MainLayout/Footer';
 import CarouselComponent from '../../components/Carousel/carousel';
 import './SingleMovePage.css';
@@ -30,7 +30,7 @@ function SingleMovePage({ userRole }) {
   // ];
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <Header />
+      {/* <Header /> */}
       <div style={{textAlign: 'center' }}>
         <SingleMoveNav />
       </div>

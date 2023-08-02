@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import HeaderTop from './HeaderTop';
-import {MemoryRouter} from '@testing-library/jest-dom';
+import { MemoryRouter } from 'react-router-dom';
 
 describe('Header component', () => {
   test('renders with teacher role', async () => {
@@ -11,9 +11,10 @@ describe('Header component', () => {
   });
 
   test('renders with student role', async () => {
-    render(<HeaderTop userRole="student" />);
+    render(<MemoryRouter><HeaderTop userRole="student" /></MemoryRouter>);
     const navBar = screen.getByTestId('nav');
     expect(navBar).toHaveClass('header-student');
   });
 });
+
 

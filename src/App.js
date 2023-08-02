@@ -8,12 +8,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import OptionsMain from './pages/Options/OptionsMain';
 import CategoriesMain from './pages/Categories/CategoriesMain';
 import CategoriesDetail from './pages/Categories/CategoriesDetail';
-import Climbs from './pages/Categories/Climbs';
-import Floor from './pages/Categories/Floor';
-import Inverts from './pages/Categories/Inverts';
-import Sits from './pages/Categories/Sits';
-import Spins from './pages/Categories/Spins';
-import Splits from './pages/Categories/Splits';
 
 const App = () => {
   const userRole = 'student';
@@ -29,12 +23,6 @@ const App = () => {
           <Route path="/OptionsMain" element={<OptionsMain />} />
           <Route path="/categories" element={<CategoriesMain />} />
           <Route path="/categories/:name" element={<CategoriesDetail />} />
-          <Route path="/Climbs" element={<Climbs />} />
-          <Route path="/Floor" element={<Floor />} />
-          <Route path="/Inverts" element={<Inverts />} />
-          <Route path="/Sits" element={<Sits />} />
-          <Route path="/Spins" element={<Spins />} />
-          <Route path="/Splits" element={<Splits />} />
         </Routes>
       </BrowserRouter>
     </div >

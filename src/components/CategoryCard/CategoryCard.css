@@ -10,11 +10,6 @@
   margin-bottom: 1rem;
 }
 
-.card-img-top {
-  width: 100% !important;
-  height: auto;
-}
-
 .card-text {
   text-align: center;
 }
@@ -25,23 +20,6 @@
     /* width: 25rem; */
   }
 }
-
-/* 768 - 1688 */
-
-/* @media (max-width: 838px) {
-  .grid {
-    margin-top: 1rem;
-    width: 25rem;
-  }
-} */
-
-/* @media (max-width: 519px) {
-  .grid {
-    margin-top: 5rem;
-    width: 14rem;
-  }
-} */
-
 @media (max-width: 767px) {
   .category-grid {
     margin-top: 2rem;

@@ -1,32 +1,30 @@
-import aerials from '../../images/optionsClassMoves.png';
-import climbs from '../../images/categoryClimbsAngelBasic.png';
-import floor from '../../images/categoryFloorBodyRoll.png';
-import inverts from '../../images/categoryInvertStraddle.png';
-import sits from '../../images/categorySitsMartini.png';
-import spins from '../../images/categorySpinsBackwardsSunwheel.png';
-import splits from '../../images/felixSplits.png';
-import climbs3 from '../../images/categoryClimbsAngelBasic.png';
-import climbs4 from '../../images/categoryClimbsAngelSad.png';
-import floor1 from '../../images/categoryFloorBackArch.png';
-import floor2 from '../../images/categoryFloorBodyRoll.png';
-import floor3 from '../../images/categoryFloorBackBend.png';
-import floor4 from '../../images/categoryFloorBackBend.png';
-import invert1 from '../../images/categoryInvertBrassMonkeyOpen.png';
-import invert2 from '../../images/categoryInvertStraddle.png';
-import sits1 from '../../images/categorySitsAlana.png';
-import sits2 from '../../images/categorySitsBasic.png';
-import sits3 from '../../images/categorySitsBasicBendBack.png';
-import spins1 from '../../images/categorySpinsBackwardsSunwheel.png';
-import spins2 from '../../images/categorySpinsBoomerangeSplitGrip.png';
-import spins3 from '../../images/categorySpinsSandra.png';
-import splits1 from '../../images/categorySplitsBrassSplit.png';
-import splits2 from '../../images/felixSplits.png';
-
-
-
+import aerials from './images/optionsClassMoves.png';
+import climbs from './images/categoryClimbsAngelBasic.png';
+import floor from './images/categoryFloorBodyRoll.png';
+import inverts from './images/categoryInvertStraddle.png';
+import sits from './images/categorySitsMartini.png';
+import spins from './images/categorySpinsBackwardsSunwheel.png';
+import splits from './images/felixSplits.png';
+import climbs3 from './images/categoryClimbsAngelBasic.png';
+import climbs4 from './images/categoryClimbsAngelSad.png';
+import floor1 from './images/categoryFloorBackArch.png';
+import floor2 from './images/categoryFloorBodyRoll.png';
+import floor3 from './images/categoryFloorBackBend.png';
+import floor4 from './images/categoryFloorBackBend.png';
+import invert1 from './images/categoryInvertBrassMonkeyOpen.png';
+import invert2 from './images/categoryInvertStraddle.png';
+import sits1 from './images/categorySitsAlana.png';
+import sits2 from './images/categorySitsBasic.png';
+import sits3 from './images/categorySitsBasicBendBack.png';
+import spins1 from './images/categorySpinsBackwardsSunwheel.png';
+import spins2 from './images/categorySpinsBoomerangeSplitGrip.png';
+import spins3 from './images/categorySpinsSandra.png';
+import splits1 from './images/categorySplitsBrassSplit.png';
+import splits2 from './images/felixSplits.png';
 
 export const categories = [
   {
+    id: 'aerials',
     name: 'Aerials',
     image: aerials,
     route: '/categories/aerials',
@@ -48,6 +46,7 @@ export const categories = [
     ]
   },
   {
+    id: 'climbs',
     name: 'Climbs',
     image: climbs,
     route: '/categories/climbs',
@@ -70,6 +69,7 @@ export const categories = [
       ]
   },
   {
+    id: 'floor',
     name: 'Floor',
     image: floor,
     route: '/categories/floor',
@@ -103,6 +103,7 @@ export const categories = [
     ]
   },
   {
+    id: 'inverts',
     name: 'Inverts',
     image: inverts,
     route: '/categories/inverts',
@@ -124,6 +125,7 @@ export const categories = [
     ]
   },
   {
+    id: 'sits',
     name: 'Sits',
     image: sits,
     route: '/categories/sits',
@@ -151,6 +153,7 @@ export const categories = [
     ]
   },
   {
+    id: 'spins',
     name: 'Spins',
     image: spins,
     route: '/categories/spins',
@@ -178,6 +181,7 @@ export const categories = [
     ]
   },
   {
+    id: 'splits',
     name: 'Splits',
     image: splits,
     route: '/categories/splits',

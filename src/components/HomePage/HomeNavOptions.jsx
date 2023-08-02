@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Image1 from '../../images/brassMonkeyExtend.png';
+
 import Image2 from '../../images/aphroditeVariation.png';
 import Image3 from '../../images/felixSplits.png';
 import '../../App.css';

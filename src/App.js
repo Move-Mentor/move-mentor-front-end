@@ -7,7 +7,7 @@ import SingleMovePage from './pages/SingleMove/SingleMovePage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import OptionsMain from './pages/Options/OptionsMain';
 import CategoriesMain from './pages/Categories/CategoriesMain';
-import Aerials from './pages/Categories/Aerials';
+import CategoriesDetail from './pages/Categories/CategoriesDetail';
 import Climbs from './pages/Categories/Climbs';
 import Floor from './pages/Categories/Floor';
 import Inverts from './pages/Categories/Inverts';
@@ -27,8 +27,8 @@ const App = () => {
           <Route path="/login-student" element={<Login />} />
           <Route path="/SingleMovePage" element={<SingleMovePage userRole={userRole} />} />
           <Route path="/OptionsMain" element={<OptionsMain />} />
-          <Route path="/CategoriesMain" element={<CategoriesMain />} />
-          <Route path="/Aerials" element={<Aerials />} />
+          <Route path="/categories" element={<CategoriesMain />} />
+          <Route path="/categories/:name" element={<CategoriesDetail />} />
           <Route path="/Climbs" element={<Climbs />} />
           <Route path="/Floor" element={<Floor />} />
           <Route path="/Inverts" element={<Inverts />} />

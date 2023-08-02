@@ -1,17 +1,15 @@
 import React from 'react';
-import CatSits from '../../components/Categories/Sits/CatSits';
-import '../SingleMove/SingleMovePage.css';
 import Footer from '../../components/MainLayout/Footer';
+import LessonNavCard from '../../components/Lessons/LessonNavCard';
 import '../../App.css';
 
-
-function OptionsLayout() {
+function LessonsPage() {
   return (
     <div className="main-div">
-      <CatSits />
+        <LessonNavCard />
       <Footer />
     </div>
   );
 }
 
-export default OptionsLayout;
+export default LessonsPage;

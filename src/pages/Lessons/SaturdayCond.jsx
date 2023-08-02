@@ -1,0 +1,24 @@
+import React from 'react';
+import SaturdayCondCard from '../../components/Lessons/SaturdayCond';
+import '../SingleMove/SingleMovePage.css';
+import Footer from '../../components/MainLayout/Footer';
+import LessonsNav from './LessonsNav';
+import '../../App.css';
+
+
+function FridayMixedLayout() {
+  return (
+    <div className="main-div">
+      <div style={{textAlign: 'center' }}>
+        <LessonsNav />
+      </div>
+      <div>
+        <SaturdayCondCard />
+      </div>
+        <Footer />
+    </div>
+  );
+}
+
+export default FridayMixedLayout;
+

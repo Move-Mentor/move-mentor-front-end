@@ -2,18 +2,16 @@ import React from 'react';
 import CatAerials from '../../components/Categories/Aerials/CatAerials';
 import '../SingleMove/SingleMovePage.css';
 import Footer from '../../components/MainLayout/Footer';
-import Header from '../../components/MainLayout/Header';
 import '../../App.css';
 
 
-function OptionsLayout() {
+function AerialsLayout() {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <Header />
+    <div className="main-div">
       <CatAerials />
       <Footer />
     </div>
   );
 }
 
-export default OptionsLayout;
+export default AerialsLayout;

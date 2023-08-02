@@ -34,7 +34,7 @@ const Card = ({ name, image, route, altTag }) => {
   );
 };
 
-const FloorList = () => {
+const InvertsList = () => {
   return (
     <div className="category-grid">
       <div className="row">
@@ -51,4 +51,4 @@ const FloorList = () => {
   );
 };
 
-export default FloorList;
+export default InvertsList;

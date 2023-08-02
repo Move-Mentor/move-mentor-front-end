@@ -53,9 +53,7 @@ const SpinsList = () => {
         <div className="col-md-4">
           <Card {...cardsData[2]} />
         </div>
-        
       </div>
-      
     </div>
   );
 };

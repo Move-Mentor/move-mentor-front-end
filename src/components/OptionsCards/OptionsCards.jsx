@@ -8,34 +8,35 @@ import categoriesImage from '../../images/optionsCategories.png';
 
 const cardsData = [
   {
-    name: 'Class',
+    name: 'Lessons',
     image: classImage,
-    route: '/card1',
-    color: '#bcd5cf',
+    route: '/Lessons',
+    color: '#F3B89C',
     altTag: "Aerial Invert",
   },
   {
     name: 'Profile',
     image: profileImage,
     route: '/login-student',
-    color: '#bcd5cf',
+    color: '#F3B89C',
     altTag: "Star Chaser",
   },
   {
     name: 'All Moves',
     image: categoriesImage,
     route: '/CategoriesMain',
-    color: '#bcd5cf',
+    color: '#F3B89C',
     altTag: "Bianca",
   },
 ];
 
-const Card = ({ name, image, route, color, altTag }) => {
+const Card = ({ name, image, route, altTag, color }) => {
+  
   return (
     <div className="card" style={{ marginBottom: '15px'}}>
       <Link to={route}>
         <img src={image} className="card-img-top" alt={altTag} style={{ maxHeight: '25rem' }} />
-        <div style={{ backgroundColor: color, textAlign: 'center' }}>
+        <div style={{textAlign: 'center', backgroundColor: color }}>
           {name}
         </div>
       </Link>

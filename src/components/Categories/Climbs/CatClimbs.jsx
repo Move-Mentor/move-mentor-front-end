@@ -33,7 +33,7 @@ const Card = ({ name, image, route, altTag }) => {
   );
 };
 
-const AerialsList = () => {
+const ClimbsList = () => {
   return (
     <div className="category-grid">
       <div className="row">
@@ -53,4 +53,4 @@ const AerialsList = () => {
   );
 };
 
-export default AerialsList;
+export default ClimbsList;

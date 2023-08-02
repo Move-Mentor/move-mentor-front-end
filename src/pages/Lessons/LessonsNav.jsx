@@ -4,22 +4,22 @@ import CardGroup from 'react-bootstrap/CardGroup';
 import Card from 'react-bootstrap/Card';
 import '../../App.css';
 
-function SingleMoveNav() {
+function ClassesNav() {
   return (
     <CardGroup>
-      <Card style={{border: 'none'}}>
-        <Link to={'/CategoriesMain'}>
-          <div className="all-moves-and-classes-nav" variant="link">All Moves</div>
-        </Link>
-      </Card>
       <Card style={{border: 'none'}}>
         <Link to={'/Lessons'}>
           <div className="all-moves-and-classes-nav" variant="link">Classes</div>
         </Link>
       </Card>
+      <Card style={{border: 'none'}}>
+        <Link to={'/CategoriesMain'}>
+          <div className="all-moves-and-classes-nav" variant="link">All Moves</div>
+        </Link>
+      </Card>
     </CardGroup>
   )}
 
-  export default SingleMoveNav;
+  export default ClassesNav;
 
   

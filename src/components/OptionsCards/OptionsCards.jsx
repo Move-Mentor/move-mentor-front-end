@@ -17,7 +17,7 @@ const cardsData = [
   {
     name: 'Profile',
     image: profileImage,
-    route: '/login-student',
+    route: '/users/login/student',
     color: '#F3B89C',
     altTag: "Star Chaser",
   },

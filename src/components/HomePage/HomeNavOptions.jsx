@@ -15,7 +15,7 @@ const cardsData = [
   {
     name: 'Student Login',
     image: Image2,
-    route: '/login-student',
+    route: '/users/login/student',
     color: '#bcd5cf',
     altTag: "Aphrodite Variation",
   },

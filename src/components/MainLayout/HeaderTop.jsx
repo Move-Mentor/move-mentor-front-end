@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 
 const HeaderTop = ({ userRole }) => {
   const headerClass = userRole === 'teacher' ? 'header-teacher' : 'header-student';
-
   return (
     <Navbar data-testid="nav" className={headerClass} expand="lg">
       <Link to={"/OptionsMain"}>

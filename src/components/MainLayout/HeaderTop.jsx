@@ -12,7 +12,7 @@ const HeaderTop = ({ userRole }) => {
   return (
     <Navbar data-testid="nav" className={headerClass} expand="lg">
       <Link to={"/OptionsMain"}>
-          <Image src={HomeIcon} alt="Home icon to return home" fluid />
+          <Image src={HomeIcon} className="home-icon" alt="Home icon to return home" fluid />
       </Link>
     </Navbar>
   );

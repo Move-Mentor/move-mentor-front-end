@@ -9,3 +9,7 @@
 .fallback-color {
   background-color: #f1daae; /* Yelllow colour for a backup*/
 }
+
+.home-icon {
+  margin-left: 4rem;
+}

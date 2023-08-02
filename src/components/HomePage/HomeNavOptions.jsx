@@ -8,7 +8,7 @@ import '../../App.css';
 export const cardsData = [
   {
     name: 'New Student Register',
-    image: Image1,
+    image: 'https://movementor.s3.ap-southeast-2.amazonaws.com/Climbs/ClimbsFigurehead.png',
     route: '/card1',
     color: '#f3b89c',
     altTag: 'Brass Monkey Extend',

@@ -2,6 +2,7 @@ import React from "react";
 import "../SingleMove/SingleMovePage.css";
 import HeaderTop from "../../components/MainLayout/HeaderTop";
 import Footer from "../../components/MainLayout/Footer";
+import SingleMoveNav from "../../components/SingleMoveNav/SingleMoveNav";
 import { Link } from "react-router-dom";
 import { categories } from "../../categories";
 
@@ -34,7 +35,10 @@ function CategoriesDetail() {
   return (
     <div>
       <HeaderTop />
-      <div className="main-div">
+      <div className="single-move-div">
+        <div style={{ textAlign: "center" }}>
+          <SingleMoveNav />
+        </div>
         <div className="d-flex flex-wrap justify-content-center">
           {category.moves.map((move, index) => (
             <div key={index} className="col-md-3">

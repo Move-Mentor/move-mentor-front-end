@@ -25,25 +25,27 @@ const cardsData = [
     name: "All Moves",
     image: categoriesImage,
     route: "/categories",
-    color: "#bcd5cf",
+    color: "#F3B89C",
     altTag: "Bianca",
   },
 ];
 
 const Card = ({ name, image, route, altTag, color }) => {
   return (
-    <div className="card" style={{ margin: "15px" }}>
-      <Link to={route}>
-        <img
-          src={image}
-          className="card-img-top"
-          alt={altTag}
-          style={{ maxHeight: "25rem" }}
-        />
-        <div style={{ backgroundColor: color, textAlign: "center" }}>
-          {name}
-        </div>
-      </Link>
+    <div className="grid">
+      <Card>
+        <Link to={route}>
+          <img
+            src={image}
+            className="card-img-top"
+            alt={altTag}
+            style={{ maxHeight: "25rem" }}
+          />
+          <div style={{ backgroundColor: color, textAlign: "center" }}>
+            {name}
+          </div>
+        </Link>
+      </Card>
     </div>
   );
 };

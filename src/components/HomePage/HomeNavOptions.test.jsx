@@ -16,18 +16,6 @@ describe("HomeNavOptions", () => {
     for (const option of navOptions) {
       expect(screen.getByText(option.name)).toBeTruthy();
     }
-
-    // // Check the first card
-    // const card1 = screen.getByText(navOptions[0].name);
-    // expect(card1).toHaveAttribute('href', navOptions[0].route);
-
-    // // Check the second card
-    // const card2 = screen.getByText(navOptions[1].name);
-    // expect(card2).toHaveAttribute('href', navOptions[1].route);
-
-    // // Check the third card
-    // const card3 = screen.getByText(navOptions[2].name);
-    // expect(card3).toHaveAttribute('href', navOptions[2].route);
   });
 });
 
@@ -39,16 +27,9 @@ describe("Image has an alt tag for accessibility", () => {
       </MemoryRouter>
     );
 
-    // Check the first card
-    const card1Image = screen.getByAltText("Brass Monkey Extend");
-    expect(card1Image).toBeInTheDocument();
-
-    // Check the second card
-    const card2Image = screen.getByAltText("Aphrodite Variation");
-    expect(card2Image).toBeInTheDocument();
-
-    // Check the third card
-    const card3Image = screen.getByAltText("Splits - Felix");
-    expect(card3Image).toBeInTheDocument();
+    // Check all cards
+    for (const option of navOptions) {
+      expect(screen.getByAltText(option.altTag)).toBeTruthy();
+    }
   });
 });

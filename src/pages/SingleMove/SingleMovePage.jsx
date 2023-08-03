@@ -29,23 +29,25 @@ function SingleMovePage({ userRole }) {
   //   }
   // ];
   return (
-    <div className="main-div">
+    <div>
       <HeaderTop />
-      <div style={{ textAlign: "center" }}>
-        <SingleMoveNav />
-      </div>
-      <div className="container mt-4 d-flex justify-content-center">
-        <div className="col-md-6 col-lg-6 col-xl-6">
-          <CarouselComponent />
+      <div className="single-move-div">
+        <div style={{ textAlign: "center" }}>
+          <SingleMoveNav />
         </div>
+        <div className="container mt-4 d-flex justify-content-center">
+          <div className="col-md-6 col-lg-6 col-xl-6">
+            <CarouselComponent />
+          </div>
+        </div>
+        <div style={{ textAlign: "center" }}>
+          {userRole === "teacher" && <AddToClass />}
+        </div>
+        {/* {classes.map(class => (
+          <ClassCard class={class} />
+        ))} */}
+        <Footer />
       </div>
-      <div style={{ textAlign: "center" }}>
-        {userRole === "teacher" && <AddToClass />}
-      </div>
-      {/* {classes.map(class => (
-        <ClassCard class={class} />
-      ))} */}
-      <Footer />
     </div>
   );
 }

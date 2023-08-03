@@ -1,9 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Dropdown } from "react-bootstrap";
+import axios from 'axios';
 import "./RegisterForm.css";
+
+const api = process.env.REACT_APP_DATABASE_URL;
 
 const SelectClassToggle = () => {
   const [selectedValue, setSelectedValue] = useState("Select your Class");
+  const [lessons, setLessons] = useState([]);
+
+  useEffect(() => {
+    axios
+    .get(`${api}/lessons/all`)
+    .then((response) => response.data)
+    .then((lessonsData) => {
+      setLessons(lessonsData);
+    })
+    .catch((error) => {
+      console.error("Error fetching lessons data:", error);
+    });
+  }, []);
 
   const handleSelect = (eventKey, event) => {
     setSelectedValue(event.target.textContent);
@@ -16,9 +32,11 @@ const SelectClassToggle = () => {
       </Dropdown.Toggle>
 
       <Dropdown.Menu>
-        <Dropdown.Item eventKey="1">Monday</Dropdown.Item>
-        <Dropdown.Item eventKey="2">Tuesday</Dropdown.Item>
-        <Dropdown.Item eventKey="3">Wednesday Mixed: 6pm-7pm</Dropdown.Item>
+        {lessons.map((lesson) => (
+          <Dropdown.Item key={lesson._id} eventKey={lesson._id}>
+            {lesson.lessonName} {lesson.lessonDay} {lesson.lessonTime}
+          </Dropdown.Item>
+        ))}
       </Dropdown.Menu>
     </Dropdown>
   );

@@ -18,8 +18,8 @@ const App = () => {
           <Route path="/login-student" element={<Login />} />
           <Route path="/SingleMovePage" element={<SingleMovePage userRole={userRole} />} />
           <Route path="/OptionsMain" element={<OptionsMain />} />
-          <Route path="/categories" element={<CategoriesMain />} />
-          <Route path="/categories/:name" element={<CategoriesDetail />} />
+          <Route path="/moves/categories" element={<CategoriesMain />} />
+          <Route path="/moves/categories/:category" element={<CategoriesDetail />} />
         </Routes>
       </BrowserRouter>
     </div >

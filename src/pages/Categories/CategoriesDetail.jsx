@@ -1,5 +1,6 @@
 import React from "react";
 import "../SingleMove/SingleMovePage.css";
+import HeaderTop from "../../components/MainLayout/HeaderTop";
 import Footer from "../../components/MainLayout/Footer";
 import { Link } from "react-router-dom";
 import { categories } from "../../categories";
@@ -31,18 +32,18 @@ function CategoriesDetail() {
   console.log(category);
 
   return (
-    <div
-      style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
-    >
-      <p>Yoooo</p>
-      <div className="d-flex flex-wrap justify-content-center">
-        {category.moves.map((move, index) => (
-          <div key={index} className="col-md-3">
-            <Card {...move} />
-          </div>
-        ))}
+    <div>
+      <HeaderTop />
+      <div className="main-div">
+        <div className="d-flex flex-wrap justify-content-center">
+          {category.moves.map((move, index) => (
+            <div key={index} className="col-md-3">
+              <Card {...move} />
+            </div>
+          ))}
+        </div>
+        <Footer />
       </div>
-      <Footer />
     </div>
   );
 }

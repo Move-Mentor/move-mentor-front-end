@@ -1,18 +1,19 @@
-import React from "react";
-import OptionsCards from "../../components/OptionsCards/OptionsCards";
-import "../SingleMove/SingleMovePage.css";
-import HeaderTop from "../../components/MainLayout/HeaderTop";
-import Footer from "../../components/MainLayout/Footer";
-import "../../App.css";
+import '../SingleMove/SingleMovePage.css';
+import Footer from '../../components/MainLayout/Footer';
+import HeaderTop from '../../components/MainLayout/HeaderTop';
+import '../../App.css';
+import { useToken } from '../../contexts/TokenContext';
 
-function OptionsLayout() {
+const OptionsLayout = () => {
+  const { role } = useToken();
+
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <HeaderTop />
-      <div className="main-div">
-        <OptionsCards />
-        <Footer />
-      </div>
+      {/* <OptionsCards /> */}
+      {role === 'student' && <p>Student Content Goes Here - we need to render the student options cards.</p>}
+      {role === 'teacher' && <p>Teacher Content Goes Here - we need to render the teacher cards.</p>}
+      <Footer />
     </div>
   );
 }

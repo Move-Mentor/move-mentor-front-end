@@ -18,10 +18,10 @@ const App = () => {
         <Routes>
           {/* index is going to be the default page that's rendered */}
           <Route index element={<Home />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/users/login" element={<Login />} />
           <Route path="/register-student" element={<Register />} />
           <Route path="/SingleMovePage" element={<SingleMovePage userRole={userRole} />} />
-          <Route path="/OptionsMain" element={<OptionsMain />} />
+          <Route path="/options" element={<OptionsMain />} />
           <Route path="/categories" element={<CategoriesMain />} />
           <Route path="/categories/:name" element={<CategoriesDetail />} />
           <Route path="/lessons" element={<LessonsMain />} />

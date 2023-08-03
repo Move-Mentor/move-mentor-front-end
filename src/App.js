@@ -21,9 +21,9 @@ const App = () => {
           <Route path="/users/login" element={<Login />} />
           <Route path="/register-student" element={<Register />} />
           <Route path="/SingleMovePage" element={<SingleMovePage userRole={userRole} />} />
-          <Route path="/options" element={<OptionsMain />} />
-          <Route path="/categories" element={<CategoriesMain />} />
-          <Route path="/categories/:name" element={<CategoriesDetail />} />
+          <Route path="/OptionsMain" element={<OptionsMain />} />
+          <Route path="/moves/categories" element={<CategoriesMain />} />
+          <Route path="/moves/categories/:category" element={<CategoriesDetail />} />
           <Route path="/lessons" element={<LessonsMain />} />
           <Route path="/lessons/:name" element={<LessonsDetail />} />
         </Routes>

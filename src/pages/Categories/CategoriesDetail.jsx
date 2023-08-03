@@ -1,53 +1,58 @@
-import React from "react";
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
 import "../SingleMove/SingleMovePage.css";
 import HeaderTop from "../../components/MainLayout/HeaderTop";
 import Footer from "../../components/MainLayout/Footer";
-import SingleMoveNav from "../../components/SingleMoveNav/SingleMoveNav";
-import { Link } from "react-router-dom";
-import { categories } from "../../categories";
 
-import { useParams } from "react-router-dom";
-
-const Card = ({ name, image, route, altTag }) => {
+const CategoryMoveCard = ({ move }) => {
   return (
     <div className="card" style={{ margin: "15px" }}>
-      <Link to={route}>
+      {/* <Link to={single move}> */}
         <img
-          src={image}
+          src={move.moveImage}
           className="card-img-top"
-          alt={altTag}
+          alt={move.moveName}
           style={{ maxHeight: "25rem" }}
         />
-        <div style={{ textAlign: "center" }}>{name}</div>
-      </Link>
+        <div style={{ textAlign: "center" }}>{move.moveName}</div>
+      {/* </Link> */}
     </div>
   );
 };
 
-function CategoriesDetail() {
-  let params = useParams();
-  console.log(params.name);
-  const category = categories.find(function (cat) {
-    return cat.id === params.name;
-  });
-  console.log(category);
+const api = process.env.REACT_APP_DATABASE_URL
+
+// Function to fetch categories and display their associated moves
+export const CategoriesDetail = () => {
+  const { category } = useParams();
+  const [categoryData, setCategoryData] = useState([]);
+
+  useEffect(() => {
+    axios.get(`${api}/moves/categories/${encodeURIComponent(category)}`)
+      .then((response) => {
+        setCategoryData(response.data);
+        console.log(response.data);  // log received data in the console for testing
+      })
+      .catch((error) => {
+        console.error('Error fetching category data:', error);
+        setCategoryData([]);
+      });
+  }, [category]);
 
   return (
     <div>
       <HeaderTop />
-      <div className="single-move-div">
-        <div style={{ textAlign: "center" }}>
-          <SingleMoveNav />
-        </div>
+        {categoryData && (
         <div className="d-flex flex-wrap justify-content-center">
-          {category.moves.map((move, index) => (
-            <div key={index} className="col-md-3">
-              <Card {...move} />
+          {categoryData.map((move) => (
+            <div className="col-md-3">
+              <CategoryMoveCard key={move._id} move={move} />
             </div>
           ))}
         </div>
+        )}
         <Footer />
-      </div>
     </div>
   );
 }

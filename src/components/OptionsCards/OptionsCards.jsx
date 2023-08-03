@@ -24,7 +24,7 @@ const cardsData = [
   {
     name: "All Moves",
     image: categoriesImage,
-    route: "/categories",
+    route: "/moves/categories",
     color: "#bcd5cf",
     altTag: "Bianca",
   },

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import CategoryCard from './CategoryCard';
 
-const api = process.env.REACT_APP_BACKEND_URL
+const api = process.env.REACT_APP_DATABASE_URL
 
 export const CategoryFetch = () => {
   const [moves, setMoves] = useState([]);

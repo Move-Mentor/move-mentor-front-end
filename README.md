@@ -1,3 +1,9 @@
+# Move Mentor
+
+As a pole teacher: plan your lessons by allocating moves to each class.
+
+As a student: view the moves assigned, view, and remember what was taught.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

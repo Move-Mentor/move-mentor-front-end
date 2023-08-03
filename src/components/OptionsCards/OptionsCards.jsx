@@ -8,17 +8,17 @@ import categoriesImage from "../../images/optionsCategories.png";
 
 const cardsData = [
   {
-    name: "Class",
+    name: "Lessons",
     image: classImage,
-    route: "/card1",
-    color: "#bcd5cf",
+    route: "/Lessons",
+    color: "#F3B89C",
     altTag: "Aerial Invert",
   },
   {
     name: "Profile",
     image: profileImage,
-    route: "/login-student",
-    color: "#bcd5cf",
+    route: "/users/login/student",
+    color: "#F3B89C",
     altTag: "Star Chaser",
   },
   {
@@ -30,7 +30,7 @@ const cardsData = [
   },
 ];
 
-const Card = ({ name, image, route, color, altTag }) => {
+const Card = ({ name, image, route, altTag, color }) => {
   return (
     <div className="card" style={{ margin: "15px" }}>
       <Link to={route}>

@@ -1,6 +1,6 @@
 import React from "react";
-
 import "../SingleMove/SingleMovePage.css";
+import HeaderTop from "../../components/MainLayout/HeaderTop";
 import Footer from "../../components/MainLayout/Footer";
 import "../../App.css";
 import { categories } from "../../categories";
@@ -8,10 +8,9 @@ import CategoryCard from "../../components/CategoryCard/CategoryCard";
 
 function CategoriesMain() {
   return (
-    <div
-      style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
-    >
-      <div className="d-flex flex-wrap justify-content-center">
+    <div>
+      <HeaderTop />
+      <div className="main-div">
         {categories.map((category, index) => (
           <div key={index} className="col-md-3">
             <CategoryCard {...category} />

@@ -15,8 +15,42 @@
   border: none !important;
 }
 
+.main-div {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.card-btn-color {
+  background-color: #f3b89c;
+  color: #000000;
+  text-align: center;
+}
+
+.lesson-card-btn-color {
+  background-color: #dec4f3;
+  text-align: center;
+}
+
+.all-moves-and-classes-nav {
+  color: #117b62;
+  margin-top: 2rem;
+}
+
 a {
   text-decoration: none !important;
+}
+
+.header-teacher {
+  background-color: #dec4f3; /* Purple color for teachers (admins) */
+}
+
+.header-student {
+  background-color: #bcd5cf; /* Green color for students (non-admins) */
+}
+
+.fallback-color {
+  background-color: #f1daae; /* Yelllow colour for a backup*/
 }
 
 .App {
@@ -32,17 +66,6 @@ a {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {

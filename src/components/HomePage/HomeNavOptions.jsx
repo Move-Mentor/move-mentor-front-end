@@ -10,7 +10,7 @@ export const navOptions = [
     name: "New Student Register",
     image:
       "https://movementor.s3.ap-southeast-2.amazonaws.com/Climbs/ClimbsFigurehead.png",
-    route: "/card1",
+    route: "/register-student",
     color: "#f3b89c",
     altTag: "Brass Monkey Extend",
   },

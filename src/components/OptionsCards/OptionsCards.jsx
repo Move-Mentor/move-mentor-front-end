@@ -1,42 +1,46 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import "./OptionsCards.css";
 
-import classImage from '../../images/optionsClassMoves.png';
-import profileImage from '../../images/optionsSearch.png';
-import categoriesImage from '../../images/optionsCategories.png';
+import classImage from "../../images/optionsClassMoves.png";
+import profileImage from "../../images/optionsSearch.png";
+import categoriesImage from "../../images/optionsCategories.png";
 
 const cardsData = [
   {
-    name: 'Lessons',
+    name: "Class",
     image: classImage,
-    route: '/Lessons',
-    color: '#F3B89C',
+    route: "/card1",
+    color: "#bcd5cf",
     altTag: "Aerial Invert",
   },
   {
-    name: 'Profile',
+    name: "Profile",
     image: profileImage,
-    route: '/users/login/student',
-    color: '#F3B89C',
+    route: "/login-student",
+    color: "#bcd5cf",
     altTag: "Star Chaser",
   },
   {
-    name: 'All Moves',
+    name: "All Moves",
     image: categoriesImage,
-    route: '/CategoriesMain',
-    color: '#F3B89C',
+    route: "/categories",
+    color: "#bcd5cf",
     altTag: "Bianca",
   },
 ];
 
-const Card = ({ name, image, route, altTag, color }) => {
-  
+const Card = ({ name, image, route, color, altTag }) => {
   return (
-    <div className="card" style={{ marginBottom: '15px'}}>
+    <div className="card" style={{ margin: "15px" }}>
       <Link to={route}>
-        <img src={image} className="card-img-top" alt={altTag} style={{ maxHeight: '25rem' }} />
-        <div style={{textAlign: 'center', backgroundColor: color }}>
+        <img
+          src={image}
+          className="card-img-top"
+          alt={altTag}
+          style={{ maxHeight: "25rem" }}
+        />
+        <div style={{ backgroundColor: color, textAlign: "center" }}>
           {name}
         </div>
       </Link>
@@ -46,18 +50,12 @@ const Card = ({ name, image, route, altTag, color }) => {
 
 const OptionsNav = () => {
   return (
-    <div className="grid">
-      <div className="row">
-        <div className="col-md-4">
-          <Card {...cardsData[0]} />
+    <div className="d-flex flex-wrap justify-content-center">
+      {cardsData.map((cardData, index) => (
+        <div key={index} className="col-md-3">
+          <Card {...cardData} />
         </div>
-        <div className="col-md-4">
-          <Card {...cardsData[1]} />
-        </div>
-        <div className="col-md-4">
-          <Card {...cardsData[2]} />
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

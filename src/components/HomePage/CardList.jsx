@@ -1,26 +1,26 @@
-import React from 'react';
-import Card from './Card'; // Import the Card component from the Card.js file
-import './LandingNavOptions.css';
+import React from "react";
+import Card from "./Card"; // Import the Card component from the Card.js file
+import "./LandingNavOptions.css";
 
-import Image1 from '../../images/brassMonkeyExtend.png';
-import Image2 from '../../images/aphroditeVariation.png';
-import Image3 from '../../images/felixSplits.png';
+import Image1 from "../../images/brassMonkeyExtend.png";
+import Image2 from "../../images/aphroditeVariation.png";
+import Image3 from "../../images/felixSplits.png";
 
 const cardsData = [
   {
-    name: 'New Student Register',
+    name: "New Student Register",
     image: Image1,
-    route: '/card1',
+    route: "/card1",
   },
   {
-    name: 'Student Login',
+    name: "Student Login",
     image: Image2,
-    route: '/card2',
+    route: "/login-student",
   },
   {
-    name: 'Teacher Login',
+    name: "Teacher Login",
     image: Image3,
-    route: '/card3',
+    route: "/card3",
   },
 ];
 

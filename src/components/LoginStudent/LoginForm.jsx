@@ -1,48 +1,43 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import './LoginForm.css';
-import { Link } from 'react-router-dom';
+import React from "react";
+import Button from "react-bootstrap/Button";
+import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
+import "./LoginForm.css";
+import { Link } from "react-router-dom";
 
 const navRoutes = [
   {
-    name: 'Sign in',
-    route: '/OptionsMain',
-    color: '#f3b89c'
+    name: "Sign in",
+    route: "/OptionsMain",
+    color: "#f3b89c",
   },
   {
-    name: 'Back to Options',
-    route: '/',
-    color: '#f1daae'
+    name: "Back to Options",
+    route: "/",
+    color: "#f1daae",
   },
-]
-
+];
 
 const Nav = ({ name, route, color }) => {
   const buttonStyle = {
     backgroundColor: color,
-    border: 'none',
-    marginRight: '20px '
+    border: "none",
+    marginRight: "20px ",
   };
 
   return (
     <Button style={buttonStyle}>
-      <Link to={route}>
-        {name}
-      </Link>
+      <Link to={route}>{name}</Link>
     </Button>
   );
 };
 
-
-
 const LoginForm = () => {
   return (
-    <Form className="form-top-space"> 
+    <Form className="form-top-space">
       <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
-        <Form.Label data-testid="email"  column sm={2}>
+        <Form.Label data-testid="email" column sm={2}>
           Email:
         </Form.Label>
         <Col sm={10}>
@@ -58,7 +53,7 @@ const LoginForm = () => {
           <Form.Control type="password" placeholder="Your Password" />
         </Col>
       </Form.Group>
-      
+
       <Form.Group as={Row} className="mb-3" controlId="formHorizontalCheck">
         <Col sm={{ span: 10, offset: 2 }}>
           <Form.Check label="Remember me" />
@@ -72,6 +67,6 @@ const LoginForm = () => {
       </Form.Group>
     </Form>
   );
-}
+};
 
 export default LoginForm;

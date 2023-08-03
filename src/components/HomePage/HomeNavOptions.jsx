@@ -1,60 +1,59 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Image1 from '../../images/brassMonkeyExtend.png';
-import Image2 from '../../images/aphroditeVariation.png';
-import Image3 from '../../images/felixSplits.png';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const cardsData = [
+import Image2 from "../../images/aphroditeVariation.png";
+import Image3 from "../../images/felixSplits.png";
+import "../../App.css";
+
+export const navOptions = [
   {
-    name: 'New Student Register',
-    image: Image1,
-    route: '/card1',
-    color: '#f3b89c',
+    name: "New Student Register",
+    image:
+      "https://movementor.s3.ap-southeast-2.amazonaws.com/Climbs/ClimbsFigurehead.png",
+    route: "/card1",
+    color: "#f3b89c",
     altTag: "Brass Monkey Extend",
   },
   {
-    name: 'Student Login',
+    name: "Student Login",
     image: Image2,
-    route: '/users/login/student',
-    color: '#bcd5cf',
+    route: "/login-student",
+    color: "#bcd5cf",
     altTag: "Aphrodite Variation",
   },
   {
-    name: 'Teacher Login',
+    name: "Teacher Login",
     image: Image3,
-    route: '/card3',
-    color: '#dec4f3',
+    route: "/card3",
+    color: "#dec4f3",
     altTag: "Splits - Felix",
   },
 ];
 
 const Card = ({ name, image, route, color, altTag }) => {
   return (
-    <div className="card" style={{ marginBottom: '15px', marginTop: '30px' }}>
-      <img src={image} className="card-img-top" alt={altTag} style={{ maxHeight: '20rem' }} />
-      <div style={{ backgroundColor: color, textAlign: 'center' }}>
-        <Link to={route} className="btn">
+    <Link to={route} className="btn" data-testid="home-nav-card">
+      <div
+        className="card"
+        style={{ marginBottom: "15px", marginTop: "30px", marginRight: "15px" }}
+      >
+        <img src={image} alt={altTag} style={{ maxHeight: "20rem" }} />
+        <div style={{ backgroundColor: color, textAlign: "center" }}>
           {name}
-        </Link>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
 const HomeNavOptions = () => {
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-md-6">
-          <Card {...cardsData[0]} />
+    <div className="d-flex flex-wrap justify-content-center">
+      {navOptions.map((option, index) => (
+        <div key={index} className="col-md-6">
+          <Card {...option} />
         </div>
-        <div className="col-md-6">
-          <Card {...cardsData[1]} />
-        </div>
-        <div className="col-md-6 offset-md-3">
-          <Card {...cardsData[2]} />
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

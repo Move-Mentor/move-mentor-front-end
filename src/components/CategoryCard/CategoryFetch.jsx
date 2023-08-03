@@ -28,7 +28,7 @@ export const CategoryFetch = () => {
   }, [moves])
 
   return (
-    <div className="col-md-3">
+    <div>
       {uniqueCategories.map((category) => (
         <CategoryCard key={category} category={category} />
       ))}

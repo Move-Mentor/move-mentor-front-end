@@ -15,12 +15,12 @@ const cardsData = [
   {
     name: "Student Login",
     image: Image2,
-    route: "/login-student",
+    route: "/login",
   },
   {
     name: "Teacher Login",
     image: Image3,
-    route: "/card3",
+    route: "/login",
   },
 ];
 

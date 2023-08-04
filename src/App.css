@@ -15,6 +15,33 @@
   border: none !important;
 }
 
+.left-side-image-card-teacher {
+  background-color: #dec4f3;
+  border: none !important;
+}
+
+.background-teacher {
+  background-color: transparent !important;
+  text-align: center !important;
+  border: none !important;
+}
+
+.background-student {
+  background-color: transparent !important;
+  text-align: center !important;
+  border: none !important;
+}
+
+--bs-card-bg {
+  background-color: none !important;
+}
+
+@media (min-width: 1200px) {
+  .main-img-card {
+    margin-top: 5rem !important;
+  }
+}
+
 .main-div {
   margin-top: 2rem;
   display: flex;

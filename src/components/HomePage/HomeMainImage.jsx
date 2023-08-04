@@ -1,15 +1,18 @@
-import Card from 'react-bootstrap/Card';
-import MainImage from '../../images/landing_logo.png';
-import './HomeMainImage.css';
+import Card from "react-bootstrap/Card";
+import MainImage from "../../images/landing_logo.png";
+import "../../App.css";
 
-function HomeMainImage() {
+const HomeMainImage = ({ userRole }) => {
+  const imageClass =
+    userRole === "teacher" ? "background-teacher" : "background-student";
+
   return (
-    <Card className="main-img-card">
+    <Card className={imageClass}>
       <Card.Body>
-        <img src={MainImage} alt="white silhouette of a pole dancer"/>
+        <img src={MainImage} alt="white silhouette of a pole dancer" />
       </Card.Body>
     </Card>
   );
-}
+};
 
 export default HomeMainImage;

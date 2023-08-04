@@ -1,4 +1,4 @@
-import Login from './pages/StudentLogin/Login';
+import Login from './pages/Login/Login';
 import Register from './pages/RegisterStudent/Register';
 import Home from './pages/Home';
 import SingleMovePage from './pages/SingleMove/SingleMovePage';
@@ -18,10 +18,10 @@ const App = () => {
         <Routes>
           {/* index is going to be the default page that's rendered */}
           <Route index element={<Home />} />
-          <Route path="/login-student" element={<Login />} />
+          <Route path="/users/login" element={<Login />} />
           <Route path="/register-student" element={<Register />} />
           <Route path="/SingleMovePage" element={<SingleMovePage userRole={userRole} />} />
-          <Route path="/OptionsMain" element={<OptionsMain />} />
+          <Route path="/options" element={<OptionsMain />} />
           <Route path="/moves/categories" element={<CategoriesMain />} />
           <Route path="/moves/categories/:category" element={<CategoriesDetail />} />
           <Route path="/lessons" element={<LessonsMain />} />

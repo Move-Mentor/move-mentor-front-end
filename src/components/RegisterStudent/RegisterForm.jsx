@@ -1,15 +1,18 @@
+import { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import "./RegisterForm.css";
-import { Link } from "react-router-dom";
+import axios from 'axios';
+import { Link, useNavigate } from "react-router-dom";
 import SelectClassToggle from "./SelectClassToggle";
+import { useToken } from "../../contexts/TokenContext"
 
 const navRoutes = [
   {
     name: "Sign Up",
-    route: "/OptionsMain",
+    route: "/options",
     color: "#f3b89c",
   },
   {
@@ -33,7 +36,58 @@ const Nav = ({ name, route, color }) => {
   );
 };
 
+const api = process.env.REACT_APP_DATABASE_URL;
+
 const RegisterForm = () => {
+  const { setToken } = useToken(); 
+  const [registered, setRegistered] = useState(false);
+  const [role, setRole] = useState(''); 
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({ 
+    firstName: "", 
+    lastName: "",
+    email: "",
+    password: "",
+    selectedLessonId: "",
+  });
+
+  useEffect(() => {
+    // If student is successfully registered, redirect to /options page
+    if (registered) {
+      navigate("/options");
+    }
+  }, [registered, navigate]);
+
+  // Handle actions on form submission
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post(`${api}/users/signup/${role}`, formData)
+      const { token } = response.data;
+
+      // Save the token in local storage
+      localStorage.setItem(`${role}Token`, token); // Use the role in the localstorage key 
+      setToken(token, role); // Update the token state and set the role
+
+      // Set the registered state of the student to trigger a redirect to the options page after successful registration
+      setRegistered(true);
+    } catch (error) {
+      console.error('Registration failed:', error);
+    }
+  };
+      
+  // Function to handle form field changes
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  // Function to handle lesson selection
+  const handleLessonSelect = (lessonId) => {
+    setFormData((prevData) => ({ ...prevData, selectedLessonId: lessonId }));
+  };
+
+
   return (
     <Form className="form-top-space">
       {/* FIRST NAME */}

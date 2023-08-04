@@ -71,7 +71,7 @@ const LoginForm = () => {
 
       } catch (studentError) {
         // Set the error message from the server response in the error state
-        setError(studentError.response?.data?.Error || 'Unknown error');
+        setError(studentError.response?.data?.Error || 'There was an error with your login. Please try again.');
       }
     }
   };

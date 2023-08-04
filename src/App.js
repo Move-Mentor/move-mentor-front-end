@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import OptionsMain from './pages/Options/OptionsMain';
 import CategoriesMain from './pages/Categories/CategoriesMain';
 import CategoriesDetail from './pages/Categories/CategoriesDetail';
+import LessonsMain from './pages/Lessons/LessonsMain';
+import LessonsDetail from './pages/Lessons/LessonsDetail';
 
 const App = () => {
   const userRole = 'student';
@@ -22,6 +24,8 @@ const App = () => {
           <Route path="/OptionsMain" element={<OptionsMain />} />
           <Route path="/categories" element={<CategoriesMain />} />
           <Route path="/categories/:name" element={<CategoriesDetail />} />
+          <Route path="/lessons" element={<LessonsMain />} />
+          <Route path="/lessons/:name" element={<LessonsDetail />} />
         </Routes>
       </BrowserRouter>
     </div >

@@ -9,7 +9,7 @@ const HeaderTop = ({ userRole }) => {
     userRole === "teacher" ? "header-teacher" : "header-student";
   return (
     <Navbar data-testid="nav" className={headerClass} expand="lg">
-      <Link to={"/OptionsMain"}>
+      <Link to={"/options"}>
         <Image
           src={HomeIcon}
           className="home-icon"

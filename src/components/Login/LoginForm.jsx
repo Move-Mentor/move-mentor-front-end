@@ -21,7 +21,7 @@ const LoginForm = () => {
   useEffect(() => {
     // If user is logged in, redirect to /options page
     if (loggedIn) {
-      navigate("/OptionsMain");
+      navigate("/options");
     }
   }, [loggedIn, navigate]);
 

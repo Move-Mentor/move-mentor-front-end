@@ -1,4 +1,5 @@
 import Login from './pages/StudentLogin/Login';
+import Register from './pages/RegisterStudent/Register';
 import Home from './pages/Home';
 import SingleMovePage from './pages/SingleMove/SingleMovePage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -16,6 +17,7 @@ const App = () => {
           {/* index is going to be the default page that's rendered */}
           <Route index element={<Home />} />
           <Route path="/login-student" element={<Login />} />
+          <Route path="/register-student" element={<Register />} />
           <Route path="/SingleMovePage" element={<SingleMovePage userRole={userRole} />} />
           <Route path="/OptionsMain" element={<OptionsMain />} />
           <Route path="/categories" element={<CategoriesMain />} />

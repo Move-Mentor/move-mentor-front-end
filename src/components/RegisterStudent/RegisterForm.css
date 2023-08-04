@@ -1,0 +1,18 @@
+.form-top-space {
+  margin-top: 20rem;
+}
+
+a {
+  color: black !important;
+}
+
+@media (max-width: 1375px) {
+  .form-top-space {
+    margin-top: 1rem;
+  }
+}
+
+.card-group > .card {
+  --bs-card-group-margin: 0rem;
+}
+/*this removes a weird orange line that shows up on mobile*/

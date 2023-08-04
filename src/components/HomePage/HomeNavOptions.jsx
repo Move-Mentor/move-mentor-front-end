@@ -17,14 +17,14 @@ export const navOptions = [
   {
     name: "Student Login",
     image: Image2,
-    route: "/login-student",
+    route: "/login",
     color: "#bcd5cf",
     altTag: "Aphrodite Variation",
   },
   {
     name: "Teacher Login",
     image: Image3,
-    route: "/card3",
+    route: "/login",
     color: "#dec4f3",
     altTag: "Splits - Felix",
   },

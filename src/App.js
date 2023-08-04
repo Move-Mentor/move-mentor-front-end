@@ -18,7 +18,7 @@ const App = () => {
         <Routes>
           {/* index is going to be the default page that's rendered */}
           <Route index element={<Home />} />
-          <Route path="/login-student" element={<Login />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/register-student" element={<Register />} />
           <Route path="/SingleMovePage" element={<SingleMovePage userRole={userRole} />} />
           <Route path="/OptionsMain" element={<OptionsMain />} />

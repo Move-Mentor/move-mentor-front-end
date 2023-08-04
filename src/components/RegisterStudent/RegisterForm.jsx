@@ -72,7 +72,10 @@ const RegisterForm = () => {
           Password:
         </Form.Label>
         <Col sm={10}>
-          <Form.Control type="password" placeholder="A secure password" />
+          <Form.Control
+            type="password"
+            placeholder="A secure password with 8 or more characters"
+          />
         </Col>
       </Form.Group>
       {/* /PASSWORD */}

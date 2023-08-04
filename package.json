@@ -14,7 +14,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "REACT_APP_DATABASE_URL=https://move-mentor-backend-7b2e10d24b58.herokuapp.com react-scripts start", 
+    "start-dev": "REACT_APP_BACKEND_URL=http://localhost:3001 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

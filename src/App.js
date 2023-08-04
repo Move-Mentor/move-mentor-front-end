@@ -22,6 +22,8 @@ const App = () => {
           <Route path="/register-student" element={<Register />} />
           <Route path="/SingleMovePage" element={<SingleMovePage userRole={userRole} />} />
           <Route path="/OptionsMain" element={<OptionsMain />} />
+          <Route path="/moves/categories" element={<CategoriesMain />} />
+          <Route path="/moves/categories/:category" element={<CategoriesDetail />} />
           <Route path="/categories" element={<CategoriesMain />} />
           <Route path="/categories/:name" element={<CategoriesDetail />} />
           <Route path="/lessons" element={<LessonsMain />} />

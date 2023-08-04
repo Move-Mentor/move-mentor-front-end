@@ -2,6 +2,14 @@
   margin-top: 20rem;
 }
 
+.register-dropdown {
+  background-color: #dec4f3 !important;
+  color: #000000 !important;
+  border: none !important;
+  margin-left: 8.5rem;
+  margin-bottom: 2rem;
+}
+
 a {
   color: black !important;
 }

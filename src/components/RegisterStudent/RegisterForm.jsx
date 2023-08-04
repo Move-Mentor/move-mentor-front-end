@@ -1,14 +1,14 @@
-import React from "react";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import "./RegisterForm.css";
 import { Link } from "react-router-dom";
+import SelectClassToggle from "./SelectClassToggle";
 
 const navRoutes = [
   {
-    name: "Sign in",
+    name: "Sign Up",
     route: "/OptionsMain",
     color: "#f3b89c",
   },
@@ -36,29 +36,48 @@ const Nav = ({ name, route, color }) => {
 const RegisterForm = () => {
   return (
     <Form className="form-top-space">
+      {/* FIRST NAME */}
+      <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
+        <Form.Label data-testid="firstName" column sm={2}>
+          First Name:
+        </Form.Label>
+        <Col sm={10}>
+          <Form.Control type="firstName" placeholder="Your first name" />
+        </Col>
+      </Form.Group>
+      {/* /FIRST NAME */}
+      {/* LAST NAME */}
+      <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
+        <Form.Label data-testid="lastName" column sm={2}>
+          Last Name:
+        </Form.Label>
+        <Col sm={10}>
+          <Form.Control type="LastName" placeholder="Your last name" />
+        </Col>
+      </Form.Group>
+      {/* /LAST NAME */}
+      {/* EMAIL */}
       <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
         <Form.Label data-testid="email" column sm={2}>
           Email:
         </Form.Label>
         <Col sm={10}>
-          <Form.Control type="email" placeholder="Your Email" />
+          <Form.Control type="email" placeholder="Your email" />
         </Col>
       </Form.Group>
-
+      {/* /EMAIL */}
+      {/* PASSWORD */}
       <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
         <Form.Label data-testid="password" column sm={2}>
           Password:
         </Form.Label>
         <Col sm={10}>
-          <Form.Control type="password" placeholder="Your Password" />
+          <Form.Control type="password" placeholder="A secure password" />
         </Col>
       </Form.Group>
+      {/* /PASSWORD */}
+      <SelectClassToggle />
 
-      <Form.Group as={Row} className="mb-3" controlId="formHorizontalCheck">
-        <Col sm={{ span: 10, offset: 2 }}>
-          <Form.Check label="Remember me" />
-        </Col>
-      </Form.Group>
       <Form.Group as={Row} className="mb-3">
         <Col sm={{ span: 10, offset: 2 }}>
           <Nav {...navRoutes[0]} />

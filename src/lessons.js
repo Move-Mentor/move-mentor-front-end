@@ -24,17 +24,16 @@ import splits2 from './images/felixSplits.png';
 
 export const lessons = [
   {
-    id: 'aerials',
+    id: 'monintro',
     name: 'Monday Intro: 6pm-7pm',
-    time: '6pm-7pm',
     image: aerials,
-    route: '/categories/aerials',
+    route: '/lessons/monintro',
     color: '#F3B89C',
     altTag: "Aerial Invert",
     moves: [
       {
         name: 'Aerial Invert',
-        image: splits,
+        image: climbs3,
         route: '/SingleMovePage',
         altTag: "Aerial Invert",
       },
@@ -47,10 +46,10 @@ export const lessons = [
     ]
   },
   {
-    id: 'climbs',
+    id: 'tuesmix',
     name: 'Tuesday Mixed: 6:10pm-7:10pm',
     image: climbs,
-    route: '/categories/climbs',
+    route: '/lessons/tuesmix',
     color: '#F3B89C',
     altTag: "Star Chaser",
     moves:
@@ -70,10 +69,33 @@ export const lessons = [
       ]
   },
   {
-    id: 'floor',
+    id: 'tueschor',
     name: 'Tuesday Choreo: 7:15pm-8:15pm',
+    image: climbs,
+    route: '/lessons/tueschor',
+    color: '#F3B89C',
+    altTag: "Star Chaser",
+    moves:
+      [
+        {
+          name: 'Angel - Basic',
+          image: climbs3,
+          route: '/SingleMovePage',
+          altTag: "Angel - Basic",
+        },
+        {
+          name: 'Angel - Sad',
+          image: climbs4,
+          route: '/SingleMovePage',
+          altTag: "Angel - Sad",
+        },
+      ]
+  },
+  {
+    id: 'wedmix',
+    name: 'Wednesday Mix: 4:40pm-5:40pm',
     image: floor,
-    route: '/categories/floor',
+    route: '/lessons/wedmix',
     color: '#F3B89C',
     altTag: "Bianca",
     moves: [
@@ -104,10 +126,10 @@ export const lessons = [
     ]
   },
   {
-    id: 'Wednesday Mixed: 4:40pm-5:40pm',
-    name: 'Inverts',
+    id: 'wedmixtwo',
+    name: 'Wednesday Mix: 6pm-7pm',
     image: inverts,
-    route: '/categories/inverts',
+    route: '/lessons/wedmixtwo',
     color: '#F3B89C',
     altTag: "Bianca",
     moves: [
@@ -126,10 +148,10 @@ export const lessons = [
     ]
   },
   {
-    id: 'sits',
-    name: 'Wednesday Mixed: 6pm-7pm',
+    id: 'thurmix',
+    name: 'Thursday Mixed: 6:40pm-7:40pm',
     image: sits,
-    route: '/categories/sits',
+    route: '/lessons/thurmix',
     color: '#F3B89C',
     altTag: "Bianca",
     moves: [
@@ -154,10 +176,10 @@ export const lessons = [
     ]
   },
   {
-    id: 'spins',
-    name: 'Thursday Mixed: 6:40pm-7:40pm',
+    id: 'frimix',
+    name: 'Friday Mixed: 5pm-6pm',
     image: spins,
-    route: '/categories/spins',
+    route: '/lessons/frimix',
     color: '#F3B89C',
     altTag: "Bianca",
     moves: [
@@ -182,32 +204,10 @@ export const lessons = [
     ]
   },
   {
-    id: 'splits',
-    name: 'Friday Mixed: 5pm-6pm',
-    image: splits,
-    route: '/categories/splits',
-    color: '#F3B89C',
-    altTag: "Bianca",
-    moves: [
-      {
-        name: 'Brass Split',
-        image: splits1,
-        route: '/SingleMovePage',
-        altTag: "Brass Split",
-      },
-      {
-        name: 'Felix Splits',
-        image: splits2,
-        route: '/SingleMovePage',
-        altTag: 'Felix Splits',
-      }
-    ]
-  },
-  {
-    id: 'splits',
+    id: 'satcond',
     name: 'Saturday Cond: 9:10am-9:55am',
     image: splits,
-    route: '/categories/splits',
+    route: '/lessons/satcond',
     color: '#F3B89C',
     altTag: "Bianca",
     moves: [
@@ -226,10 +226,10 @@ export const lessons = [
     ]
   },
   {
-    id: 'splits',
+    id: 'satmix',
     name: 'Saturday Mixed: 10am-11am',
     image: splits,
-    route: '/categories/splits',
+    route: '/lessons/satmix',
     color: '#F3B89C',
     altTag: "Bianca",
     moves: [
@@ -246,5 +246,5 @@ export const lessons = [
         altTag: 'Felix Splits',
       }
     ]
-  },
+  }
 ];

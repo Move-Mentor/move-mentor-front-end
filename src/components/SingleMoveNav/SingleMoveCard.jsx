@@ -5,7 +5,7 @@ export const SingleMoveCard = ({ move }) => {
   return (
     <div className="card" style={{ margin: "15px" }}>
       <img src={move.moveImage} alt={move.moveName}/>
-      <div style={{ backgroundColor: '#bcd5cf', textAlign: "center" }}>
+      <div style={{ backgroundColor: '#f3b89c', textAlign: "center" }}>
         {move.moveName}
       </div>
       <p>{move.moveAlternativeName}</p>

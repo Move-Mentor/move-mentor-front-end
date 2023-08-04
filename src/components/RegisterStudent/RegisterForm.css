@@ -6,7 +6,7 @@
   background-color: #dec4f3 !important;
   color: #000000 !important;
   border: none !important;
-  margin-left: 8.5rem;
+  margin-left: 4.8rem;
   margin-bottom: 2rem;
 }
 
@@ -24,3 +24,9 @@ a {
   --bs-card-group-margin: 0rem;
 }
 /*this removes a weird orange line that shows up on mobile*/
+
+@media (max-width: 600px) {
+  .register-dropdown {
+    margin-left: 3.5rem;
+  }
+}

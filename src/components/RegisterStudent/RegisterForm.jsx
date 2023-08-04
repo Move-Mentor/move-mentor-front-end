@@ -76,7 +76,14 @@ const RegisterForm = () => {
         </Col>
       </Form.Group>
       {/* /PASSWORD */}
-      <SelectClassToggle />
+      <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
+        <Form.Label data-testid="password" column sm={1}>
+          Class:
+        </Form.Label>
+        <Col sm={11}>
+          <SelectClassToggle />
+        </Col>
+      </Form.Group>
 
       <Form.Group as={Row} className="mb-3">
         <Col sm={{ span: 10, offset: 2 }}>

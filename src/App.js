@@ -1,4 +1,4 @@
-import Login from './pages/StudentLogin/Login';
+import Login from './pages/Login/Login';
 import Register from './pages/RegisterStudent/Register';
 import Home from './pages/Home';
 import SingleMovePage from './pages/SingleMove/SingleMovePage';

@@ -5,7 +5,7 @@ import "./RegisterForm.css";
 
 const api = process.env.REACT_APP_DATABASE_URL;
 
-const SelectClassToggle = () => {
+const SelectClassToggle = ({ onLessonSelect }) => {
   const [selectedValue, setSelectedValue] = useState("Select your Class");
   const [lessons, setLessons] = useState([]);
 
@@ -22,7 +22,9 @@ const SelectClassToggle = () => {
   }, []);
 
   const handleSelect = (eventKey, event) => {
+    const lessonId = eventKey;
     setSelectedValue(event.target.textContent);
+    onLessonSelect(lessonId)
   };
 
   return (

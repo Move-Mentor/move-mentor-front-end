@@ -6,7 +6,7 @@ export const navOptions = [
   {
     name: "New Student Register",
     image: "https://movementor.s3.ap-southeast-2.amazonaws.com/Inverts/invertsBrassMonkeyExtend.png",
-    route: "/register-student",
+    route: "/users/signup/student",
     color: "#f3b89c",
     altTag: "Brass Monkey Extend",
   },

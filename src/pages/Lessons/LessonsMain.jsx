@@ -1,6 +1,5 @@
 import React from "react";
 import HeaderTop from "../../components/MainLayout/HeaderTop";
-import "../SingleMove/SingleMovePage.css";
 import Footer from "../../components/MainLayout/Footer";
 import "../../App.css";
 import { lessons } from "../../lessons";

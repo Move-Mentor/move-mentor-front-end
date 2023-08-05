@@ -1,5 +1,4 @@
 import React from "react";
-import "../SingleMove/SingleMovePage.css";
 import HeaderTop from "../../components/MainLayout/HeaderTop";
 import Footer from "../../components/MainLayout/Footer";
 import SingleMoveNav from "../../components/SingleMoveNav/SingleMoveNav";

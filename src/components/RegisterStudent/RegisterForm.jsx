@@ -12,7 +12,7 @@ import { useToken } from "../../contexts/TokenContext"
 const api = process.env.REACT_APP_DATABASE_URL;
 
 const RegisterForm = () => {
-  const { setToken } = useToken(); 
+  const { storeCredentials } = useToken(); 
   const [registered, setRegistered] = useState(false);
   const [error, setError] = useState('');
   const navigate = useNavigate();
@@ -40,7 +40,7 @@ const RegisterForm = () => {
 
       // Save the token in local storage
       localStorage.setItem(`studentToken`, token); // Use the role in the localstorage key 
-      setToken(token, "student"); // Update the token state and set the role
+      storeCredentials(token, "student"); // Update the token state and set the role
 
       // Set the registered state of the student to trigger a redirect to the options page after successful registration
       setRegistered(true);
@@ -70,7 +70,7 @@ const RegisterForm = () => {
   return (
     <Form className="form-top-space" onSubmit={handleFormSubmit}>
       {/* FIRST NAME */}
-      <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
+      <Form.Group as={Row} className="mb-3" controlId="formHorizontalfirstName">
         <Form.Label data-testid="firstName" column sm={2}>
           First Name:
         </Form.Label>
@@ -86,7 +86,7 @@ const RegisterForm = () => {
       </Form.Group>
       {/* /FIRST NAME */}
       {/* LAST NAME */}
-      <Form.Group as={Row} className="mb-3" controlId="formHorizontalEmail">
+      <Form.Group as={Row} className="mb-3" controlId="formHorizontallastName">
         <Form.Label data-testid="lastName" column sm={2}>
           Last Name:
         </Form.Label>
@@ -134,7 +134,7 @@ const RegisterForm = () => {
       </Form.Group>
       {/* /PASSWORD */}
       {/* /LESSON */}
-      <Form.Group as={Row} className="mb-3" controlId="formHorizontalPassword">
+      <Form.Group as={Row} className="mb-3" controlId="formHorizontalLesson">
         <Form.Label data-testid="password" column sm={1}>
           Class:
         </Form.Label>

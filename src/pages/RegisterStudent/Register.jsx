@@ -7,9 +7,9 @@ import RegisterForm from "../../components/RegisterStudent/RegisterForm";
 
 function HomeLayout() {
   return (
-    <div className="main-body-layout">
+    <div className="login-page main-body-layout ">
       <CardGroup>
-        <Card className="left-side-image-card-student">
+        <Card className="card-left-side-image-student">
           <Card.Body>
             <HomeMainImage />
           </Card.Body>

@@ -3,8 +3,14 @@
 //import { useParams } from "react-router-dom";
 import HeaderTop from "../../components/MainLayout/HeaderTop";
 import Footer from "../../components/MainLayout/Footer";
+<<<<<<< HEAD
 //import { useToken } from "../../contexts/TokenContext";
 // import Accord from "../../components/AddToClass/AddToClass";
+=======
+import { useToken } from "../../contexts/TokenContext";
+import Accord from "../../components/AddToClass/AddToClass";
+import CategoryNav from "../../components/CategoryNav/CategoryNav";
+>>>>>>> a00577bea539bd5a929a667a048f33dbbcc83f90
 
 // const CategoryMoveCard = ({ move, role }) => {
 //   return (
@@ -75,7 +81,12 @@ function CategoriesDetail() {
   return (
     <div>
       <HeaderTop />
+<<<<<<< HEAD
       <div className="main-div">
+=======
+      <CategoryNav />
+      {categoryData && (
+>>>>>>> a00577bea539bd5a929a667a048f33dbbcc83f90
         <div className="d-flex flex-wrap justify-content-center">
           <CategoryMovesFetch />
         </div>

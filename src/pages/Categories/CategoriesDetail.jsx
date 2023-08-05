@@ -5,6 +5,7 @@ import HeaderTop from "../../components/MainLayout/HeaderTop";
 import Footer from "../../components/MainLayout/Footer";
 import { useToken } from "../../contexts/TokenContext";
 import Accord from "../../components/AddToClass/AddToClass";
+import CategoryNav from "../../components/CategoryNav/CategoryNav";
 
 const CategoryMoveCard = ({ move, role }) => {
   return (
@@ -52,6 +53,7 @@ export const CategoriesDetail = () => {
   return (
     <div>
       <HeaderTop />
+      <CategoryNav />
       {categoryData && (
         <div className="d-flex flex-wrap justify-content-center">
           {categoryData.map((move) => (

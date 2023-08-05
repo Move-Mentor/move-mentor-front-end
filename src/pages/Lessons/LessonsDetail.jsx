@@ -1,7 +1,7 @@
 import React from "react";
 import HeaderTop from "../../components/MainLayout/HeaderTop";
 import Footer from "../../components/MainLayout/Footer";
-import SingleMoveNav from "../../components/SingleMoveNav/SingleMoveNav";
+import CategoryNav from "../../components/CategoryNav/CategoryNav";
 import { Link } from "react-router-dom";
 import { lessons } from "../../lessons";
 
@@ -36,7 +36,7 @@ function LessonsDetail() {
       <HeaderTop />
       <div className="single-move-div">
         <div style={{ textAlign: "center" }}>
-          <SingleMoveNav />
+          <CategoryNav />
         </div>
         <div className="d-flex flex-wrap justify-content-center">
           {lesson.moves.map((move, index) => (

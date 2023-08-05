@@ -1,18 +1,7 @@
-.box {
+/* .box {
   margin: 10px;
   width: 25rem;
-}
-
-.grid {
-  min-height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 8rem;
-  max-width: 1320px;
-}
+} */
 
 .card-img-top {
   width: 100% !important;

@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import CategoryCard from './CategoryCard';
+import { useEffect, useState } from "react";
+import axios from "axios";
+import CategoryCard from "./CategoryCard";
 
-const api = process.env.REACT_APP_DATABASE_URL
+const api = process.env.REACT_APP_DATABASE_URL;
 
 export const CategoryFetch = () => {
   const [moves, setMoves] = useState([]);
@@ -10,11 +10,12 @@ export const CategoryFetch = () => {
 
   // Fetching categories data from moves
   useEffect(() => {
-    axios.get(`${api}/moves/categories`)
-    .then((response) => response.data)
-    .then((moves) => {
-      setMoves(moves);
-    });
+    axios
+      .get(`${api}/moves/categories`)
+      .then((response) => response.data)
+      .then((moves) => {
+        setMoves(moves);
+      });
   }, []);
 
   // Creating a set to store unique categories
@@ -25,13 +26,13 @@ export const CategoryFetch = () => {
     });
     // Convert the set back to an array and store it in state
     setUniqueCategories(Array.from(categorySet));
-  }, [moves])
+  }, [moves]);
 
   return (
-    <div>
+    <div className="category-card-container">
       {uniqueCategories.map((category) => (
         <CategoryCard key={category} category={category} />
       ))}
     </div>
-  )
-}
+  );
+};

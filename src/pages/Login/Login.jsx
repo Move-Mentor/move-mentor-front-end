@@ -5,14 +5,14 @@ import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import LoginForm from "../../components/Login/LoginForm";
 
-const HomeLayout = ({ userRole }) => {
+const Login = ({ loginAsRole }) => {
   const imageClass =
-    userRole === "teacher"
+    loginAsRole === "teacher"
       ? "left-side-image-card-teacher"
       : "left-side-image-card-student";
 
   return (
-    <div className="main-body-layout">
+    <div className={`main-body-layout`}>
       <CardGroup>
         <Card data-testid="log" className={imageClass}>
           <Card.Body>
@@ -21,7 +21,7 @@ const HomeLayout = ({ userRole }) => {
         </Card>
         <Card style={{ border: "none" }}>
           <Card.Body>
-            <LoginForm />
+            <LoginForm loginAsRole={loginAsRole} />
           </Card.Body>
         </Card>
       </CardGroup>
@@ -31,4 +31,4 @@ const HomeLayout = ({ userRole }) => {
   );
 };
 
-export default HomeLayout;
+export default Login;

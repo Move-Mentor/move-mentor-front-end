@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useToken } from '../../contexts/TokenContext';
 import axios from 'axios';
 import { useLessonContext } from '../../contexts/LessonContext';
+// import LessonCard from './LessonCard';
 
 const api = process.env.REACT_APP_DATABASE_URL;
 
@@ -36,6 +37,8 @@ const LessonFetch = () => {
         const response = await axios.get(endpoint, config);
         // Ensure that lessons are available and the response contains a lessons array
         if (response.data.lessons && Array.isArray(response.data.lessons)) {
+          console.log(setLessons)
+          console.info(setLessons)
           setLessons(response.data.lessons);
         } else {
           // Invalid response, handle it accordingly

@@ -45,6 +45,7 @@ export const LessonProvider = ({ children }) => {
     setLessons([...lessons]);
   }
 
+  
   return (
     <LessonContext.Provider value={{ lessons, toggleMoveInLesson }}>
       {children}

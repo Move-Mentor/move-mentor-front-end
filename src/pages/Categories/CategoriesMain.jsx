@@ -1,9 +1,8 @@
 import React from "react";
 import HeaderTop from "../../components/MainLayout/HeaderTop";
-import "../SingleMove/SingleMovePage.css";
 import Footer from "../../components/MainLayout/Footer";
 import "../../App.css";
-import { CategoryFetch } from '../../components/CategoryCard/CategoryFetch'
+import { CategoryFetch } from "../../components/CategoryCard/CategoryFetch";
 
 function CategoriesMain() {
   return (

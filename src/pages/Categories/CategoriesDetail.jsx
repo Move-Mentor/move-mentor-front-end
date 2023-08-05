@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import HeaderTop from "../../components/MainLayout/HeaderTop";
 import Footer from "../../components/MainLayout/Footer";
 import { useToken } from "../../contexts/TokenContext";
+import Accord from "../../components/AddToClass/AddToClass";
 
 const CategoryMoveCard = ({ move, role }) => {
   return (
@@ -16,7 +17,11 @@ const CategoryMoveCard = ({ move, role }) => {
       />
       <div style={{ textAlign: "center" }}>{move.moveName}</div>
       {/* Teacher Actions */}
-      {role === "teacher" && <div>Add Move button goes here</div>}
+      {role === "teacher" && (
+        <div>
+          <Accord />
+        </div>
+      )}
     </div>
   );
 };

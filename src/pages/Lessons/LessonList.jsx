@@ -1,13 +1,13 @@
 import Footer from '../../components/MainLayout/Footer';
 import HeaderTop from '../../components/MainLayout/HeaderTop';
 import '../../App.css';
-import LessonList from '../../components/Lessons/LessonList';
+import LessonFetch from '../../components/Lessons/LessonFetch';
 
 function LessonListPage() {
   return (
     <div className="main-div">
       <HeaderTop />
-      <LessonList />
+      <LessonFetch />
       <Footer />
     </div>
   );

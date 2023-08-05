@@ -5,7 +5,7 @@ const studentCardsData = [
   {
     name: 'Lesson Moves',
     image: "https://movementor.s3.ap-southeast-2.amazonaws.com/OptionsNavigation/optionsClassMoves.png",
-    route: '/lessonmoves',
+    route: '/lessonlist',
     color: '#bcd5cf',
     altTag: 'Lesson Moves',
   },
@@ -29,7 +29,7 @@ const teacherCardsData = [
   {
     name: 'Lessons',
     image: "https://movementor.s3.ap-southeast-2.amazonaws.com/OptionsNavigation/optionsClassMoves.png",
-    route: '/lessons',
+    route: '/lessonlist',
     color: '#bcd5cf',
     altTag: 'Lessons',
   },

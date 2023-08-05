@@ -1,21 +1,19 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import HeaderTop from "../../components/MainLayout/HeaderTop";
 import Footer from "../../components/MainLayout/Footer";
 
 const CategoryMoveCard = ({ move }) => {
   return (
     <div className="card" style={{ margin: "15px" }}>
-      <Link to={`/moves/${move._id}`}>
-        <img
-          src={move.moveImage}
-          className="card-img-top"
-          alt={move.moveName}
-          style={{ maxHeight: "25rem" }}
-        />
-        <div style={{ textAlign: "center" }}>{move.moveName}</div>
-      </Link>
+      <img
+        src={move.moveImage}
+        className="card-img-top"
+        alt={move.moveName}
+        style={{ maxHeight: "25rem" }}
+      />
+      <div style={{ textAlign: "center" }}>{move.moveName}</div>
     </div>
   );
 };

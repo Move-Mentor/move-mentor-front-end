@@ -14,6 +14,7 @@ const api = process.env.REACT_APP_DATABASE_URL;
 const RegisterForm = () => {
   const { setToken } = useToken(); 
   const [registered, setRegistered] = useState(false);
+  const [error, setError] = useState('');
   const navigate = useNavigate();
   const [formData, setFormData] = useState({ 
     firstName: "", 
@@ -43,11 +44,18 @@ const RegisterForm = () => {
 
       // Set the registered state of the student to trigger a redirect to the options page after successful registration
       setRegistered(true);
+
     } catch (error) {
-      console.error('Registration failed:', error);
-    }
-  };
-      
+      if (error.response?.data?.errors) {
+        // If the server sends validation errors, extract and display them
+        const errorMessages = error.response.data.errors.map((err) => err.msg).join('\n');
+        setError(errorMessages);
+      } else {
+        setError('There was an error with your registration. Please try again.');
+      }
+      }
+    };  
+
   // Function to handle form field changes
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -132,6 +140,15 @@ const RegisterForm = () => {
         </Form.Label>
         <Col sm={11}>
           <SelectClassToggle onLessonSelect={handleLessonSelect} />
+        </Col>
+      </Form.Group>
+
+      <Form.Group as={Row} className="mb-3">
+        <Col sm={{ span: 10, offset: 2 }}>
+          {/* Display the error message if there is an error */}
+          {error && (
+            <div className="error-message" style={{color:"red", fontSize:"14px"}}>{error}</div>
+          )}
         </Col>
       </Form.Group>
 

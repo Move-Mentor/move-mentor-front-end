@@ -5,7 +5,7 @@ import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
 import LoginForm from "../../components/Login/LoginForm";
 
-const HomeLayout = ({ loginAsRole }) => {
+const Login = ({ loginAsRole }) => {
   const imageClass =
     loginAsRole === "teacher"
       ? "left-side-image-card-teacher"
@@ -31,4 +31,4 @@ const HomeLayout = ({ loginAsRole }) => {
   );
 };
 
-export default HomeLayout;
+export default Login;

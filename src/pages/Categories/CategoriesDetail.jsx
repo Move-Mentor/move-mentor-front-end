@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import "../SingleMove/SingleMovePage.css";
 import HeaderTop from "../../components/MainLayout/HeaderTop";
 import Footer from "../../components/MainLayout/Footer";
@@ -8,7 +8,7 @@ import Footer from "../../components/MainLayout/Footer";
 const CategoryMoveCard = ({ move }) => {
   return (
     <div className="card" style={{ margin: "15px" }}>
-      {/* <Link to={single move}> */}
+      <Link to={`/moves/${move._id}`}>
         <img
           src={move.moveImage}
           className="card-img-top"
@@ -16,7 +16,7 @@ const CategoryMoveCard = ({ move }) => {
           style={{ maxHeight: "25rem" }}
         />
         <div style={{ textAlign: "center" }}>{move.moveName}</div>
-      {/* </Link> */}
+      </Link>
     </div>
   );
 };

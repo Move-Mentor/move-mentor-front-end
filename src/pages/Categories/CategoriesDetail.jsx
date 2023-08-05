@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { Link, useParams } from 'react-router-dom';
-import "../SingleMove/SingleMovePage.css";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { Link, useParams } from "react-router-dom";
 import HeaderTop from "../../components/MainLayout/HeaderTop";
 import Footer from "../../components/MainLayout/Footer";
 
@@ -21,7 +20,7 @@ const CategoryMoveCard = ({ move }) => {
   );
 };
 
-const api = process.env.REACT_APP_DATABASE_URL
+const api = process.env.REACT_APP_DATABASE_URL;
 
 // Function to fetch categories and display their associated moves
 export const CategoriesDetail = () => {
@@ -29,13 +28,14 @@ export const CategoriesDetail = () => {
   const [categoryData, setCategoryData] = useState([]);
 
   useEffect(() => {
-    axios.get(`${api}/moves/categories/${encodeURIComponent(category)}`)
+    axios
+      .get(`${api}/moves/categories/${encodeURIComponent(category)}`)
       .then((response) => {
         setCategoryData(response.data);
-        console.log(response.data);  // log received data in the console for testing
+        console.log(response.data); // log received data in the console for testing
       })
       .catch((error) => {
-        console.error('Error fetching category data:', error);
+        console.error("Error fetching category data:", error);
         setCategoryData([]);
       });
   }, [category]);
@@ -43,7 +43,7 @@ export const CategoriesDetail = () => {
   return (
     <div>
       <HeaderTop />
-        {categoryData && (
+      {categoryData && (
         <div className="d-flex flex-wrap justify-content-center">
           {categoryData.map((move) => (
             <div className="col-md-3">
@@ -51,10 +51,10 @@ export const CategoriesDetail = () => {
             </div>
           ))}
         </div>
-        )}
-        <Footer />
+      )}
+      <Footer />
     </div>
   );
-}
+};
 
 export default CategoriesDetail;

@@ -1,21 +1,20 @@
-import Footer from "../../components/MainLayout/Footer"
-import HeaderTop from "../../components/MainLayout/HeaderTop"
-import { SingleMoveFetch } from "../../components/SingleMoveNav/SingleMoveFetch"
-import "./SingleMovePage.css";
+import Footer from "../../components/MainLayout/Footer";
+import HeaderTop from "../../components/MainLayout/HeaderTop";
+import { SingleMoveFetch } from "../../components/SingleMoveNav/SingleMoveFetch";
 import "../../App.css";
 
 function SingleMovePageAlt() {
-return (
-  <div>
+  return (
+    <div>
       <HeaderTop />
       <div className="single-move-div">
         <div style={{ textAlign: "center" }}>
-          <SingleMoveFetch/>
+          <SingleMoveFetch />
         </div>
-      <Footer />
+        <Footer />
       </div>
-  </div>
-);
+    </div>
+  );
 }
 
 export default SingleMovePageAlt;

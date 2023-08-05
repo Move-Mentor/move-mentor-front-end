@@ -1,8 +1,6 @@
 import React from "react";
 import HeaderTop from "../../components/MainLayout/HeaderTop";
 import Footer from "../../components/MainLayout/Footer";
-
-import "./SingleMovePage.css";
 import SingleMoveNav from "../../components/SingleMoveNav/SingleMoveNav";
 import AddToClass from "../../components/AddToClass/AddToClass";
 import "../../App.css";

@@ -11,35 +11,68 @@ import "./LoginForm.css";
 const api = process.env.REACT_APP_DATABASE_URL;
 
 const LoginForm = () => {
-  const { setToken }  = useToken(); 
+  const { setToken } = useToken();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState(''); 
   const [loggedIn, setLoggedIn] = useState(false);
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
     // If user is logged in, redirect to /options page
     if (loggedIn) {
-      navigate("/options");
+      navigate('/options');
     }
   }, [loggedIn, navigate]);
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+
     try {
-      const response = await axios.post(`${api}/users/login/${role}`, { email, password }); // Use the role in the API endpoint
+      // Send the login request as a teacher
+      const response = await axios.post(`${api}/users/login/teacher`, {
+        email,
+        password,
+      });
       const { token } = response.data;
 
-      // Save the token in local storage
-      localStorage.setItem(`${role}Token`, token); // Use the role in the localStorage key
-      setToken(token, role); // Update the token state and set the role
+      // Save the token in local storage with a constant key for teacher
+      localStorage.setItem('userToken', token);
+
+      // Update the token state and set the role as teacher
+      setToken(token, 'teacher');
 
       // Set the logged in state of the user to true to trigger a redirect to the options page after successful login
       setLoggedIn(true);
 
-    } catch (error) {
-      console.error('Authentication failed:', error.response?.data?.Error || 'Unknown error');
+      // Clear any previous errors if login is successful
+      setError('');
+
+    } catch (teacherError) {
+      // If login as teacher fails, try as a student
+      try {
+        const response = await axios.post(`${api}/users/login/student`, {
+          email,
+          password,
+        });
+        const { token } = response.data;
+
+        // Save the token in local storage with a constant key for student
+        localStorage.setItem('userToken', token);
+
+        // Update the token state and set the role as student
+        setToken(token, 'student');
+
+        // Set the logged in state of the user to true to trigger a redirect to the options page after successful login
+        setLoggedIn(true);
+
+        // Clear any previous errors if login is successful
+        setError('');
+
+      } catch (studentError) {
+        // Set the error message from the server response in the error state
+        setError(studentError.response?.data?.Error || 'Unknown error');
+      }
     }
   };
   
@@ -72,32 +105,23 @@ const LoginForm = () => {
           />
         </Col>
       </Form.Group>
-      
+
       <Form.Group as={Row} className="mb-3">
         <Col sm={{ span: 10, offset: 2 }}>
-          <Form.Check
-            type="radio"
-            label="Student"
-            name="role"
-            value="student"
-            checked={role === "student"}
-            onChange={() => setRole("student")}
-          />
-          <Form.Check
-            type="radio"
-            label="Teacher"
-            name="role"
-            value="teacher"
-            checked={role === "teacher"}
-            onChange={() => setRole("teacher")}
-          />
+          {/* Display the error message if there is an error */}
+          {error && (
+            <div className="error-message" style={{color:"red", fontSize:"14px"}}>{error}</div>
+          )}
         </Col>
       </Form.Group>
+    
       <Form.Group as={Row} className="mb-3">
         <Col sm={{ span: 10, offset: 2 }}>
-          <Button type="submit">Login</Button>
+          <Button type="submit" style={{backgroundColor:"#f3b89c", border:"none", color:"black"}}>Login</Button>
+          <Button href="/" style={{backgroundColor:"#f1daae", border:"none", color:"black", marginLeft:"1rem"}}>Back to Home</Button>
         </Col>
       </Form.Group>
+
     </Form>
   );
 }

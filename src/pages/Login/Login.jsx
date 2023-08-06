@@ -9,7 +9,7 @@ const Login = ({ loginAsRole }) => {
   const imageClass =
     loginAsRole === "teacher"
       ? "card-left-side-image-teacher"
-      : "card-left-side-image-student ";
+      : "card-left-side-image-student";
 
   return (
     <div className="login-page main-body-layout ">

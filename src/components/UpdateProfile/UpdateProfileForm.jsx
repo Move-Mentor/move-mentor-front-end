@@ -11,7 +11,7 @@ import { useToken } from "../../contexts/TokenContext";
 const api = process.env.REACT_APP_DATABASE_URL;
 
 const UpdateProfileForm = () => {
-  const { token } = useToken();
+  const { token, role } = useToken();
   const [successMessage, setSuccessMessage] = useState("");
   const [error, setError] = useState("");
   const [formData, setFormData] = useState({
@@ -22,11 +22,9 @@ const UpdateProfileForm = () => {
     lessons: [],
   });
 
-  const { role } = useToken();
-
   useEffect(() => {
-    // Fetch the current student details from the backend
-    const fetchStudentDetails = async () => {
+    // Fetch the current student/teacher details from the backend
+    const fetchDetails = async () => {
       try {
         const config = {
           headers: {
@@ -34,7 +32,7 @@ const UpdateProfileForm = () => {
           },
         };
         const response = await axios.get(
-          `${api}/users/profile/student`,
+          `${api}/users/profile/${role}`, // Use the role in the API endpoint
           config
         );
         const { firstName, lastName, email, lessons } = response.data;
@@ -46,13 +44,13 @@ const UpdateProfileForm = () => {
           lessons: lessons,
         });
       } catch (error) {
-        // Handle error when fetching student details
-        setError("Error fetching student details.");
+        // Handle error when fetching details
+        setError("Error fetching details.");
       }
     };
 
-    fetchStudentDetails();
-  }, [token]);
+    fetchDetails();
+  }, [token, role]);
 
   // Handle actions on form submission
   const handleFormSubmit = async (event) => {
@@ -63,7 +61,7 @@ const UpdateProfileForm = () => {
           Authorization: `Bearer ${token}`,
         },
       };
-      await axios.put(`${api}/users/profile/student`, formData, config);
+      await axios.put(`${api}/users/profile/${role}`, formData, config); // Use the role in the API endpoint
       setSuccessMessage("Profile updated successfully!");
     } catch (error) {
       if (error.response?.data?.errors) {
@@ -71,7 +69,10 @@ const UpdateProfileForm = () => {
         const errorMessages = error.response.data.errors
           .map((err) => err.msg)
           .join("\n");
-        setError(errorMessages);
+        // Show the error message only if the user is a student
+        if (role === "student") {
+          setError(errorMessages);
+        }
       } else {
         setError(
           "There was an error with updating your profile. Please try again."
@@ -157,22 +158,33 @@ const UpdateProfileForm = () => {
         </Col>
       </Form.Group>
       {/* /PASSWORD */}
-      {/* /LESSON */}
-      <Form.Group as={Row} className="mb-3" controlId="formHorizontalLesson">
-        <Form.Label data-testid="password" column sm={1}>
-          Class:
-        </Form.Label>
-        <Col sm={11}>
-          {role !== "teacher" && (
+
+      {/* LESSON */}
+      {role === "student" && (
+        <Form.Group as={Row} className="mb-3" controlId="formHorizontalLesson">
+          <Form.Label data-testid="password" column sm={1}>
+            Class:
+          </Form.Label>
+          <Col sm={11}>
             <SelectClassToggle onLessonSelect={handleLessonSelect} />
-          )}
-        </Col>
-      </Form.Group>
+          </Col>
+        </Form.Group>
+      )}
+      {/* /LESSON */}
 
       <Form.Group as={Row} className="mb-3">
         <Col sm={{ span: 10, offset: 2 }}>
-          {/* Display the error message if there is an error */}
-          {error && (
+          {/* Display the error message if there is an error and the user is a student */}
+          {error && role === "student" && (
+            <div
+              className="error-message"
+              style={{ color: "red", fontSize: "14px" }}
+            >
+              {error}
+            </div>
+          )}
+          {/* Display the error message if there is an error and the user is a teacher */}
+          {error && role === "teacher" && (
             <div
               className="error-message"
               style={{ color: "red", fontSize: "14px" }}
@@ -202,7 +214,9 @@ const UpdateProfileForm = () => {
               color: "black",
             }}
           >
-            Update my Profile
+            {role === "teacher"
+              ? "Update my Teacher Profile"
+              : "Update my Profile"}
           </Button>
           <Button
             href="/options"

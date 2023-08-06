@@ -7,6 +7,7 @@ import { useToken } from "../../contexts/TokenContext";
 import CategoryMoveCard from "../../components/CategoryCard/CategoryMoveCard";
 import CategoryNav from "../../components/CategoryNav/CategoryNav";
 
+
 const api = process.env.REACT_APP_DATABASE_URL;
 
 // Function to fetch categories and display their associated moves

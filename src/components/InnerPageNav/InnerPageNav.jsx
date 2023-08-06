@@ -15,7 +15,7 @@ function CategoryNav() {
         </Link>
       </Card>
       <Card style={{ border: "none" }}>
-        <Link className="nav-link btn" to={"/moves/categories"}>
+        <Link className="nav-link btn" to={"/lessons"}>
           <p className="all-moves-and-classes-nav" variant="link">
             Lessons
           </p>

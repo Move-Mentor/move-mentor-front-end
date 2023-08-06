@@ -45,8 +45,23 @@ export const LessonProvider = ({ children }) => {
     setLessons([...lessons]);
   }
 
+  async function fetchLessonMoves(lesson) {
+    const moves = [];
+    // iterate over each moveId in the lesson to get the move details
+    for (const moveId of lesson.moves) {
+      if (!moveId) {
+        continue;
+      }
+      const move = await fetchMoveById(token, moveId);
+      moves.push(move);
+    }
+    return moves;
+  }
+
   return (
-    <LessonContext.Provider value={{ lessons, toggleMoveInLesson }}>
+    <LessonContext.Provider
+      value={{ lessons, toggleMoveInLesson, fetchLessonMoves }}
+    >
       {children}
     </LessonContext.Provider>
   );
@@ -83,6 +98,26 @@ async function updateLesson(token, lesson) {
       config
     );
     return response.data.lessons;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function fetchMoveById(token, moveId) {
+  try {
+    // Create a configuration object with the authorization header containing the JWT
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+
+    const response = await axios.get(
+      `${api}/moves/${encodeURIComponent(moveId)}`,
+      config
+    );
+
+    return response.data;
   } catch (error) {
     console.error(error);
   }

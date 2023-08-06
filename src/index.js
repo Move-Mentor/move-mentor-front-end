@@ -6,11 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import { TokenProvider } from './contexts/TokenContext';
+import { LessonProvider } from './contexts/LessonContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <TokenProvider>
-      <App />
+      <LessonProvider>
+        <App />
+      </LessonProvider>
     </TokenProvider>
   </React.StrictMode>
 );

@@ -1,19 +1,17 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import HeaderTop from "../../components/MainLayout/HeaderTop";
-import Footer from "../../components/MainLayout/Footer";
 import { useToken } from "../../contexts/TokenContext";
-import CategoryMoveCard from "../../components/CategoryCard/CategoryMoveCard";
-import CategoryNav from "../../components/CategoryNav/CategoryNav";
-
+import CategoryMoveCard from "./CategoryMoveCard";
+import { useLessonContext } from "../../contexts/LessonContext";
 
 const api = process.env.REACT_APP_DATABASE_URL;
 
 // Function to fetch categories and display their associated moves
-export const CategoriesDetail = () => {
+export const CategoryMovesFetch = () => {
   const { category } = useParams();
   const [categoryData, setCategoryData] = useState([]);
+  const { lessons } = useLessonContext();
 
   const { role } = useToken();
   console.info("role", role);
@@ -33,20 +31,17 @@ export const CategoriesDetail = () => {
 
   return (
     <div>
-      <HeaderTop />
-      <CategoryNav />
       {categoryData && (
         <div className="d-flex flex-wrap justify-content-center">
           {categoryData.map((move) => (
             <div className="col-md-3" key={move._id}>
-              <CategoryMoveCard move={move} role={role} />
+              <CategoryMoveCard move={move} role={role} lessons={lessons}/>
             </div>
           ))}
         </div>
       )}
-      <Footer />
     </div>
   );
 };
 
-export default CategoriesDetail;
+export default CategoryMovesFetch;

@@ -7,6 +7,7 @@ import CategoriesMain from './pages/Categories/CategoriesMain';
 import CategoriesDetail from './pages/Categories/CategoriesDetail';
 import LessonsMain from './pages/Lessons/LessonsMain';
 import LessonsDetail from './pages/Lessons/LessonsDetail';
+import LessonListPage from './pages/Lessons/LessonList';
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/options" element={<OptionsMain />} />
           <Route path="/moves/categories" element={<CategoriesMain />} />
           <Route path="/moves/categories/:category" element={<CategoriesDetail />} />
+          <Route path="/lessonlist" element={<LessonListPage />} />
           <Route path="/lessons" element={<LessonsMain />} />
           <Route path="/lessons/:name" element={<LessonsDetail />} />
         </Routes>

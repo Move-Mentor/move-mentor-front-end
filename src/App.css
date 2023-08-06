@@ -12,6 +12,12 @@
   gap: 10px; /* Add some gap between the cards */
 }
 
+.nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 /* Assuming the CategoryCard component generates cards with a class name "category-card" */
 .category-card {
   flex-basis: calc(

@@ -47,7 +47,7 @@ const Card = ({ name, image, route, color, altTag }) => {
 
 const HomeNavOptions = () => {
   return (
-    <div className="d-flex flex-wrap justify-content-center">
+    <div className="nav-container">
       {navOptions.map((option, index) => (
         <div key={index} className="col-md-6">
           <Card {...option} />

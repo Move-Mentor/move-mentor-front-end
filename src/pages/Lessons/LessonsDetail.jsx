@@ -34,19 +34,15 @@ function LessonsDetail() {
   return (
     <div>
       <HeaderTop />
-      <div className="single-move-div">
-        <div style={{ textAlign: "center" }}>
-          <CategoryNav />
-        </div>
-        <div className="d-flex flex-wrap justify-content-center">
-          {lesson.moves.map((move, index) => (
-            <div key={index} className="col-md-3">
-              <Card {...move} />
-            </div>
-          ))}
-        </div>
-        <Footer />
+      <CategoryNav />
+      <div className="d-flex flex-wrap justify-content-center">
+        {lesson.moves.map((move, index) => (
+          <div key={index} className="col-md-3">
+            <Card {...move} />
+          </div>
+        ))}
       </div>
+      <Footer />
     </div>
   );
 }

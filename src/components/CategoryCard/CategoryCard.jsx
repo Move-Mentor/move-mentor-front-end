@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "../../App.css";
 
 const CategoryCard = ({ category }) => {
   console.log("Category prop:", category);

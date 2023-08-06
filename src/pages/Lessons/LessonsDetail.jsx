@@ -10,7 +10,7 @@ import { useParams } from "react-router-dom";
 const Card = ({ name, image, route, altTag }) => {
   return (
     <div className="card" style={{ margin: "15px" }}>
-      <Link to={route}>
+      <Link className="nav-link btn" to={route}>
         <img
           src={image}
           className="card-img-top"

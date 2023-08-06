@@ -8,14 +8,14 @@ function CategoryNav() {
   return (
     <CardGroup>
       <Card style={{ border: "none" }}>
-        <Link to={"/moves/categories"}>
+        <Link className="nav-link btn" to={"/moves/categories"}>
           <p className="all-moves-and-classes-nav" variant="link">
             All Moves
           </p>
         </Link>
       </Card>
       <Card style={{ border: "none" }}>
-        <Link to={"/moves/categories"}>
+        <Link className="nav-link btn" to={"/moves/categories"}>
           <p className="all-moves-and-classes-nav" variant="link">
             Lessons
           </p>

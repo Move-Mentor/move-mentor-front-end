@@ -14,7 +14,7 @@ const studentCardsData = [
     name: "Profile",
     image:
       "https://movementor.s3.ap-southeast-2.amazonaws.com/OptionsNavigation/optionsSearch.png",
-    route: "/login",
+    route: "/users/profile/student",
     color: "#bcd5cf",
     altTag: "Profile",
   },
@@ -41,7 +41,7 @@ const teacherCardsData = [
     name: "Profile",
     image:
       "https://movementor.s3.ap-southeast-2.amazonaws.com/OptionsNavigation/optionsSearch.png",
-    route: "/login",
+    route: "/users/profile/teacher",
     color: "#bcd5cf",
     altTag: "Profile",
   },

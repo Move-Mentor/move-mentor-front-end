@@ -11,8 +11,7 @@ import { useToken } from "../../contexts/TokenContext";
 const api = process.env.REACT_APP_DATABASE_URL;
 
 const UpdateProfileForm = () => {
-  const { token, storeCredentials } = useToken();
-  const [setRegistered] = useState(false);
+  const { token } = useToken();
   const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     firstName: "",
@@ -56,18 +55,12 @@ const UpdateProfileForm = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.put(
-        `${api}/users/profile/student`,
-        formData
-      );
-      const { token } = response.data;
-
-      // Save the token in local storage
-      localStorage.setItem(`studentToken`, token); // Use the role in the localstorage key
-      storeCredentials(token, "student"); // Update the token state and set the role
-
-      // Set the registered state of the student to trigger a redirect to the options page after successful registration
-      setRegistered(true);
+      const config = {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      };
+      await axios.put(`${api}/users/profile/student`, formData, config);
     } catch (error) {
       if (error.response?.data?.errors) {
         // If the server sends validation errors, extract and display them

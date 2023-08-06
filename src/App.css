@@ -2,7 +2,6 @@
   display: grid;
   grid-template-rows: 1fr auto;
   min-height: 100vh;
-  background-color: #f1daae !important;
 }
 
 .category-card-container {
@@ -23,11 +22,6 @@
   flex-basis: calc(
     33.33% - 20px
   ); /* To make the cards appear in rows, set their width to 33.33% and subtract the gaps */
-}
-
-.left-side-image-card {
-  background-color: #f1daae !important;
-  border: none !important;
 }
 
 .left-side-image-card-student {

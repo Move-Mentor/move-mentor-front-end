@@ -3,20 +3,12 @@ import "../../App.css";
 
 const studentCardsData = [
   {
-<<<<<<< HEAD
-    name: 'Lesson Moves',
-    image: "https://movementor.s3.ap-southeast-2.amazonaws.com/OptionsNavigation/optionsClassMoves.png",
-    route: '/lessonlist',
-    color: '#bcd5cf',
-    altTag: 'Lesson Moves',
-=======
     name: "Lesson Moves",
     image:
       "https://movementor.s3.ap-southeast-2.amazonaws.com/OptionsNavigation/optionsClassMoves.png",
     route: "/lessonmoves",
     color: "#bcd5cf",
     altTag: "Lesson Moves",
->>>>>>> a00577bea539bd5a929a667a048f33dbbcc83f90
   },
   {
     name: "Profile",
@@ -38,20 +30,12 @@ const studentCardsData = [
 
 const teacherCardsData = [
   {
-<<<<<<< HEAD
-    name: 'Lessons',
-    image: "https://movementor.s3.ap-southeast-2.amazonaws.com/OptionsNavigation/optionsClassMoves.png",
-    route: '/lessonlist',
-    color: '#bcd5cf',
-    altTag: 'Lessons',
-=======
     name: "Lessons",
     image:
       "https://movementor.s3.ap-southeast-2.amazonaws.com/OptionsNavigation/optionsClassMoves.png",
     route: "/lessons",
     color: "#bcd5cf",
     altTag: "Lessons",
->>>>>>> a00577bea539bd5a929a667a048f33dbbcc83f90
   },
   {
     name: "Profile",

@@ -17,6 +17,10 @@
   justify-content: center;
 }
 
+.nav-link a {
+  text-decoration: none;
+}
+
 /* Assuming the CategoryCard component generates cards with a class name "category-card" */
 .category-card {
   flex-basis: calc(
@@ -42,12 +46,6 @@
   background-color: transparent;
   border: none;
   text-align: center;
-}
-
-@media (min-width: 1200px) {
-  .main-img-card {
-    margin-top: 5rem !important;
-  }
 }
 
 .main-div {
@@ -78,10 +76,6 @@
   margin-top: 2rem;
   font-weight: 600;
   text-align: center;
-}
-
-a {
-  text-decoration: none !important;
 }
 
 .header-teacher {

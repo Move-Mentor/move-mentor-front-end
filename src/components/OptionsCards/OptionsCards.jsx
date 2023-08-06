@@ -58,7 +58,7 @@ const teacherCardsData = [
 const Card = ({ name, image, route, color, altTag }) => {
   return (
     <div className="card" style={{ margin: "15px" }}>
-      <Link to={route}>
+      <Link className="nav-link btn" to={route}>
         <img
           src={image}
           className="card-img-top"

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "../../App.css";
 
-const CategoryCard = ({ category }) => {
+const CategoryCard = ({ category, className }) => {
   console.log("Category prop:", category);
   // Define category image url and alt tag mappings
   const categoryImageUrls = {
@@ -41,7 +41,10 @@ const CategoryCard = ({ category }) => {
 
   return (
     <div className="card" style={{ margin: "15px" }}>
-      <Link to={`/moves/categories/${encodeURIComponent(category)}`}>
+      <Link
+        className="nav-link btn"
+        to={`/moves/categories/${encodeURIComponent(category)}`}
+      >
         <img
           src={url}
           className="card-img-top"

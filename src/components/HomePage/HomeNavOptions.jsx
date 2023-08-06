@@ -31,10 +31,14 @@ export const navOptions = [
 
 const Card = ({ name, image, route, color, altTag }) => {
   return (
-    <Link to={route} className="btn" data-testid="home-nav-card">
+    <Link to={route} className="nav-link btn" data-testid="home-nav-card">
       <div
         className="card"
-        style={{ marginBottom: "15px", marginTop: "30px", marginRight: "15px" }}
+        style={{
+          marginBottom: "15px",
+          marginTop: "30px",
+          marginRight: "15px",
+        }}
       >
         <img src={image} alt={altTag} style={{ maxHeight: "20rem" }} />
         <div style={{ backgroundColor: color, textAlign: "center" }}>

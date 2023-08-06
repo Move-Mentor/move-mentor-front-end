@@ -5,8 +5,7 @@ import HeaderTop from "../../components/MainLayout/HeaderTop";
 import Footer from "../../components/MainLayout/Footer";
 import { useToken } from "../../contexts/TokenContext";
 import CategoryMoveCard from "../../components/CategoryCard/CategoryMoveCard";
-import CategoryNav from "../../components/CategoryNav/CategoryNav";
-
+import InnerPageNav from "../../components/InnerPageNav/InnerPageNav";
 
 const api = process.env.REACT_APP_DATABASE_URL;
 
@@ -34,7 +33,7 @@ export const CategoriesDetail = () => {
   return (
     <div>
       <HeaderTop />
-      <CategoryNav />
+      <InnerPageNav />
       {categoryData && (
         <div className="d-flex flex-wrap justify-content-center">
           {categoryData.map((move) => (

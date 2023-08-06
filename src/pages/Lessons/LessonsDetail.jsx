@@ -1,7 +1,7 @@
 import React from "react";
 import HeaderTop from "../../components/MainLayout/HeaderTop";
 import Footer from "../../components/MainLayout/Footer";
-import CategoryNav from "../../components/CategoryNav/CategoryNav";
+import InnerPageNav from "../../components/InnerPageNav/InnerPageNav";
 import { Link } from "react-router-dom";
 import { lessons } from "../../lessons";
 
@@ -34,7 +34,7 @@ function LessonsDetail() {
   return (
     <div>
       <HeaderTop />
-      <CategoryNav />
+      <InnerPageNav />
       <div className="d-flex flex-wrap justify-content-center">
         {lesson.moves.map((move, index) => (
           <div key={index} className="col-md-3">

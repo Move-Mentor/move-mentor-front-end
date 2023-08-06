@@ -8,11 +8,11 @@ import LoginForm from "../../components/Login/LoginForm";
 const Login = ({ loginAsRole }) => {
   const imageClass =
     loginAsRole === "teacher"
-      ? "left-side-image-card-teacher"
-      : "left-side-image-card-student";
+      ? "card-left-side-image-teacher"
+      : "card-left-side-image-student ";
 
   return (
-    <div className={`main-body-layout`}>
+    <div className="login-page main-body-layout ">
       <CardGroup>
         <Card data-testid="log" className={imageClass}>
           <Card.Body>

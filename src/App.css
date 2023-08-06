@@ -24,14 +24,14 @@
   ); /* To make the cards appear in rows, set their width to 33.33% and subtract the gaps */
 }
 
-.left-side-image-card-student {
-  background-color: #bcd5cf !important;
-  border: none !important;
+.login-page .card-left-side-image-student {
+  background-color: #bcd5cf;
+  border: none;
 }
 
-.left-side-image-card-teacher {
-  background-color: #dec4f3 !important;
-  border: none !important;
+.login-page .card-left-side-image-teacher {
+  background-color: #dec4f3;
+  border: none;
 }
 
 .background-teacher {

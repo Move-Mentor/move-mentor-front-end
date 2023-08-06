@@ -3,7 +3,7 @@ import "../../App.css";
 import HomeMainImage from "../../components/HomePage/HomeMainImage";
 import Card from "react-bootstrap/Card";
 import CardGroup from "react-bootstrap/CardGroup";
-import UpdateProfileForm from "../../components/UpdateProfile/UpdateProfileFormOriginal";
+import UpdateProfileForm from "../../components/UpdateProfile/UpdateProfileForm";
 
 const ProfileLayout = ({ loginAsRole }) => {
   const imageClass =

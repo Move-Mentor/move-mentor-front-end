@@ -56,7 +56,10 @@ const UpdateProfileForm = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.put(`${api}/users/update/student`, formData);
+      const response = await axios.put(
+        `${api}/users/profile/student`,
+        formData
+      );
       const { token } = response.data;
 
       // Save the token in local storage

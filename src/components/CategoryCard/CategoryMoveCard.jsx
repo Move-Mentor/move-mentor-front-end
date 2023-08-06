@@ -30,10 +30,10 @@ const CategoryMoveCard = ({ move, lessons }) => {
       />
       <div style={{ textAlign: "center" }}>{move.moveName}</div>
       <div>
-        <Accord lessons={lessons}/>
+        <Accord lessons={lessons} />
       </div>
     </div>
   );
 };
 
-export default CategoryMoveCard
+export default CategoryMoveCard;

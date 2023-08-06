@@ -11,7 +11,7 @@ import { useToken } from "../../contexts/TokenContext";
 const api = process.env.REACT_APP_DATABASE_URL;
 
 const UpdateProfileForm = () => {
-  const { storeCredentials } = useToken();
+  const { token, storeCredentials } = useToken();
   const [setRegistered] = useState(false);
   const [error, setError] = useState("");
   const [formData, setFormData] = useState({
@@ -26,7 +26,15 @@ const UpdateProfileForm = () => {
     // Fetch the current student details from the backend
     const fetchStudentDetails = async () => {
       try {
-        const response = await axios.get(`${api}/users/student`);
+        const config = {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        };
+        const response = await axios.get(
+          `${api}/users/profile/student`,
+          config
+        );
         const { firstName, lastName, email, lessons } = response.data;
         setFormData({
           firstName: firstName,
@@ -42,7 +50,7 @@ const UpdateProfileForm = () => {
     };
 
     fetchStudentDetails();
-  }, []);
+  }, [token]);
 
   // Handle actions on form submission
   const handleFormSubmit = async (event) => {

@@ -12,6 +12,7 @@ const api = process.env.REACT_APP_DATABASE_URL;
 
 const UpdateProfileForm = () => {
   const { token } = useToken();
+  const [successMessage, setSuccessMessage] = useState("");
   const [error, setError] = useState("");
   const [formData, setFormData] = useState({
     firstName: "",
@@ -61,6 +62,7 @@ const UpdateProfileForm = () => {
         },
       };
       await axios.put(`${api}/users/profile/student`, formData, config);
+      setSuccessMessage("Profile updated successfully!");
     } catch (error) {
       if (error.response?.data?.errors) {
         // If the server sends validation errors, extract and display them
@@ -172,6 +174,15 @@ const UpdateProfileForm = () => {
               style={{ color: "red", fontSize: "14px" }}
             >
               {error}
+            </div>
+          )}
+          {/* Display the success message if available */}
+          {successMessage && (
+            <div
+              className="success-message"
+              style={{ color: "green", fontSize: "14px" }}
+            >
+              {successMessage}
             </div>
           )}
         </Col>

@@ -22,6 +22,8 @@ const UpdateProfileForm = () => {
     lessons: [],
   });
 
+  const { role } = useToken();
+
   useEffect(() => {
     // Fetch the current student details from the backend
     const fetchStudentDetails = async () => {
@@ -161,7 +163,9 @@ const UpdateProfileForm = () => {
           Class:
         </Form.Label>
         <Col sm={11}>
-          <SelectClassToggle onLessonSelect={handleLessonSelect} />
+          {role !== "teacher" && (
+            <SelectClassToggle onLessonSelect={handleLessonSelect} />
+          )}
         </Col>
       </Form.Group>
 

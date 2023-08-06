@@ -23,6 +23,10 @@
     33.33% - 20px
   ); /* To make the cards appear in rows, set their width to 33.33% and subtract the gaps */
 }
+.login-page .card-left-side-image-generic {
+  background-color: #f1daae;
+  border: none;
+}
 
 .login-page .card-left-side-image-student {
   background-color: #bcd5cf;
@@ -34,20 +38,10 @@
   border: none;
 }
 
-.background-teacher {
-  background-color: transparent !important;
-  text-align: center !important;
-  border: none !important;
-}
-
-.background-student {
-  background-color: transparent !important;
-  text-align: center !important;
-  border: none !important;
-}
-
---bs-card-bg {
-  background-color: none !important;
+.login-page .card-left-side-silhouette {
+  background-color: transparent;
+  border: none;
+  text-align: center;
 }
 
 @media (min-width: 1200px) {

@@ -8,8 +8,8 @@ import "../App.css";
 function HomeLayout() {
   return (
     <div className="main-body-layout">
-      <CardGroup>
-        <Card style={{ backgroundColor: "#f1daae", border: "none" }}>
+      <CardGroup className="login-page card-left-side-silhouette">
+        <Card className="card-left-side-image-generic">
           <Card.Body>
             <HomeMainImage />
           </Card.Body>

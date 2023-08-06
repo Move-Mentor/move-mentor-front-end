@@ -2,12 +2,9 @@ import Card from "react-bootstrap/Card";
 import MainImage from "../../images/landing_logo.png";
 import "../../App.css";
 
-const HomeMainImage = ({ userRole }) => {
-  const imageClass =
-    userRole === "teacher" ? "background-teacher" : "background-student";
-
+const HomeMainImage = () => {
   return (
-    <Card className={imageClass}>
+    <Card className="login-page card-left-side-silhouette">
       <Card.Body>
         <img src={MainImage} alt="white silhouette of a pole dancer" />
       </Card.Body>

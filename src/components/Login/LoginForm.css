@@ -2,10 +2,6 @@
   margin-top: 20rem;
 }
 
-a {
-  color: black !important;
-}
-
 @media (max-width: 1375px) {
   .form-top-space {
     margin-top: 1rem;

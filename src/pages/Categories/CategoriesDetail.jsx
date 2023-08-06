@@ -4,28 +4,8 @@ import { useParams } from "react-router-dom";
 import HeaderTop from "../../components/MainLayout/HeaderTop";
 import Footer from "../../components/MainLayout/Footer";
 import { useToken } from "../../contexts/TokenContext";
-import Accord from "../../components/AddToClass/AddToClass";
+import CategoryMoveCard from "../../components/CategoryCard/CategoryMoveCard";
 import CategoryNav from "../../components/CategoryNav/CategoryNav";
-
-const CategoryMoveCard = ({ move, role }) => {
-  return (
-    <div className="card" style={{ margin: "15px" }}>
-      <img
-        src={move.moveImage}
-        className="card-img-top"
-        alt={move.moveName}
-        style={{ maxHeight: "25rem" }}
-      />
-      <div style={{ textAlign: "center" }}>{move.moveName}</div>
-      {/* Teacher Actions */}
-      {role === "teacher" && (
-        <div>
-          <Accord />
-        </div>
-      )}
-    </div>
-  );
-};
 
 const api = process.env.REACT_APP_DATABASE_URL;
 

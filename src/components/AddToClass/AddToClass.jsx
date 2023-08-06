@@ -1,41 +1,57 @@
-import Accordion from "react-bootstrap/Accordion";
+import BootstrapAccordion from "react-bootstrap/Accordion";
 import Form from "react-bootstrap/Form";
 import { useLessonContext } from "../../contexts/LessonContext";
-import { useToken } from "../../contexts/TokenContext"
+import { useToken } from "../../contexts/TokenContext";
 
-function Accord() {
-    // Use the useToken hook to access the user's role
+function AddToClassAccordion({ move }) {
+  // Use the useToken hook to access the user's role
   const { role } = useToken();
 
   // Use the lesson context hook to access the lessons prop
-  const { lessons } = useLessonContext();
+  const { toggleMoveInLesson, lessons } = useLessonContext();
 
   // Check if the user is a teacher before rendering the Accord component
-  if (role !== 'teacher') {
+  if (role !== "teacher") {
     return <div>Sorry, this functionality is only available for teachers.</div>;
   }
 
+  function isMoveInLesson(lesson) {
+    return lesson.moves.some((moveId) => moveId === move._id);
+  }
+
+  function toggleMoveLesson(lesson) {
+    toggleMoveInLesson(lesson._id, move._id);
+  }
+
   return (
-    <Accordion>
-      <Accordion.Item eventKey="addMove"> {/* Set a common eventKey for all accordion items */}
-        <Accordion.Header>Add Move to Class</Accordion.Header>
-        <Accordion.Body>
+    <BootstrapAccordion>
+      <BootstrapAccordion.Item eventKey="addMove">
+        {/* Set a common eventKey for all accordion items */}
+        <BootstrapAccordion.Header>Add Move to Class</BootstrapAccordion.Header>
+        <BootstrapAccordion.Body>
           <Form>
             {lessons.map((lesson) => (
-              <div key={lesson._id} className="mb-3">
+              <div
+                key={lesson._id}
+                className="mb-3"
+                data-is-in-lesson={isMoveInLesson(lesson)}
+              >
                 <Form.Check
                   inline
-                  label={lesson.lessonName}
+                  value={isMoveInLesson(lesson)}
+                  checked={isMoveInLesson(lesson)}
+                  label={`${lesson.lessonName} - ${lesson.lessonDay}`}
                   type="checkbox"
                   id={`inline-checkbox-${lesson._id}`}
+                  onChange={() => toggleMoveLesson(lesson)}
                 />
               </div>
             ))}
           </Form>
-        </Accordion.Body>
-      </Accordion.Item>
-    </Accordion>
+        </BootstrapAccordion.Body>
+      </BootstrapAccordion.Item>
+    </BootstrapAccordion>
   );
 }
 
-export default Accord;
+export default AddToClassAccordion;

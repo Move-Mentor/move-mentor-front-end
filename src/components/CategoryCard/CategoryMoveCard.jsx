@@ -1,8 +1,7 @@
-import "./CategoryCard.css";
 import Accord from "../../components/AddToClass/AddToClass";
 import { useToken } from "../../contexts/TokenContext";
 
-const CategoryMoveCard = ({ move, lessons }) => {
+const CategoryMoveCard = ({ move }) => {
   const { role } = useToken();
 
   // Check if the user is a teacher before rendering the Accord component
@@ -30,7 +29,7 @@ const CategoryMoveCard = ({ move, lessons }) => {
       />
       <div style={{ textAlign: "center" }}>{move.moveName}</div>
       <div>
-        <Accord lessons={lessons} />
+        <Accord move={move} />
       </div>
     </div>
   );

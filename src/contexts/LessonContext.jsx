@@ -23,10 +23,30 @@ export const LessonProvider = ({ children }) => {
     fetchLessons(token, role).then((lessons) => {
       setLessons(lessons);
     });
+    console.info("useEffect");
   }, [role, token]);
 
+  /**
+   * Adds a lesson to a move if exists, otherwise removes
+   */
+  async function toggleMoveInLesson(lessonId, moveId) {
+    const lesson = lessons.find((l) => l._id === lessonId);
+    if (!lesson) {
+      throw Error("Cannot find lesson");
+    }
+    if (lesson.moves.find((id) => id === moveId)) {
+      // already in list, remove from lesson
+      lesson.moves = lesson.moves.filter((id) => id !== moveId);
+    } else {
+      // not already in list, add to lesson
+      lesson.moves.push(moveId);
+    }
+    await updateLesson(token, lesson);
+    setLessons([...lessons]);
+  }
+
   return (
-    <LessonContext.Provider value={{ lessons }}>
+    <LessonContext.Provider value={{ lessons, toggleMoveInLesson }}>
       {children}
     </LessonContext.Provider>
   );
@@ -42,6 +62,26 @@ async function fetchLessons(token, role) {
     };
 
     const response = await axios.get(`${api}/users/profile/${role}`, config);
+    return response.data.lessons;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function updateLesson(token, lesson) {
+  try {
+    // Create a configuration object with the authorization header containing the JWT
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    };
+
+    const response = await axios.put(
+      `${api}/lessons/${lesson._id}`,
+      lesson,
+      config
+    );
     return response.data.lessons;
   } catch (error) {
     console.error(error);

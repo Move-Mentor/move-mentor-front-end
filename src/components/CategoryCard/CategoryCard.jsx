@@ -51,7 +51,13 @@ const CategoryCard = ({ category, className }) => {
           alt={alt}
           style={{ maxHeight: "25rem" }}
         />
-        <div style={{ backgroundColor: "#bcd5cf", textAlign: "center" }}>
+        <div
+          style={{
+            backgroundColor: "#1f4b98",
+            textAlign: "center",
+            color: "white",
+          }}
+        >
           {category}
         </div>
       </Link>

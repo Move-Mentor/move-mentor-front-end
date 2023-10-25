@@ -67,18 +67,6 @@
   text-align: center;
 }
 
-.header-teacher {
-  background-color: #dec4f3; /* Purple color for teachers (admins) */
-}
-
-.header-student {
-  background-color: #bcd5cf; /* Green color for students (non-admins) */
-}
-
-.fallback-color {
-  background-color: #f1daae; /* Yelllow colour for a backup*/
-}
-
 .App {
   text-align: center;
 }

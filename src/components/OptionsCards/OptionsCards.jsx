@@ -7,7 +7,8 @@ const studentCardsData = [
     image:
       "https://movementor.s3.ap-southeast-2.amazonaws.com/OptionsNavigation/optionsClassMoves.png",
     route: "/lessons/:id",
-    color: "#bcd5cf",
+    color: "#4895ef",
+    text: "white",
     altTag: "Lesson Moves",
   },
   {
@@ -15,7 +16,8 @@ const studentCardsData = [
     image:
       "https://movementor.s3.ap-southeast-2.amazonaws.com/OptionsNavigation/optionsSearch.png",
     route: "/users/profile/student",
-    color: "#bcd5cf",
+    color: "#4895ef",
+    text: "white",
     altTag: "Profile",
   },
   {
@@ -23,7 +25,8 @@ const studentCardsData = [
     image:
       "https://movementor.s3.ap-southeast-2.amazonaws.com/OptionsNavigation/optionsCategories.png",
     route: "/moves/categories",
-    color: "#bcd5cf",
+    color: "#4895ef",
+    text: "white",
     altTag: "All Moves",
   },
 ];
@@ -34,7 +37,8 @@ const teacherCardsData = [
     image:
       "https://movementor.s3.ap-southeast-2.amazonaws.com/OptionsNavigation/optionsClassMoves.png",
     route: "/lessons",
-    color: "#bcd5cf",
+    color: "#1F4B98",
+    text: "white",
     altTag: "Lessons",
   },
   {
@@ -42,7 +46,8 @@ const teacherCardsData = [
     image:
       "https://movementor.s3.ap-southeast-2.amazonaws.com/OptionsNavigation/optionsSearch.png",
     route: "/users/profile/teacher",
-    color: "#bcd5cf",
+    color: "#1F4B98",
+    text: "white",
     altTag: "Profile",
   },
   {
@@ -50,12 +55,13 @@ const teacherCardsData = [
     image:
       "https://movementor.s3.ap-southeast-2.amazonaws.com/OptionsNavigation/optionsCategories.png",
     route: "/moves/categories",
-    color: "#bcd5cf",
+    color: "#1F4B98",
+    text: "white",
     altTag: "All",
   },
 ];
 
-const Card = ({ name, image, route, color, altTag }) => {
+const Card = ({ name, image, route, color, altTag, text }) => {
   return (
     <div className="card" style={{ margin: "15px" }}>
       <Link className="nav-link btn" to={route}>
@@ -65,7 +71,9 @@ const Card = ({ name, image, route, color, altTag }) => {
           alt={altTag}
           style={{ maxHeight: "25rem" }}
         />
-        <div style={{ backgroundColor: color, textAlign: "center" }}>
+        <div
+          style={{ backgroundColor: color, textAlign: "center", color: text }}
+        >
           {name}
         </div>
       </Link>
@@ -99,6 +107,5 @@ const OptionsNav = ({ role }) => {
     </div>
   );
 };
-
 
 export default OptionsNav;

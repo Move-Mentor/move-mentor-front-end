@@ -53,7 +53,7 @@ const CategoryCard = ({ category, className }) => {
         />
         <div
           style={{
-            backgroundColor: "#1f4b98",
+            backgroundColor: "#DEC4F3",
             textAlign: "center",
             color: "white",
           }}

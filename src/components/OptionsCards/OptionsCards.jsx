@@ -7,8 +7,7 @@ const studentCardsData = [
     image:
       "https://movementor.s3.ap-southeast-2.amazonaws.com/OptionsNavigation/optionsClassMoves.png",
     route: "/lessons/:id",
-    color: "#4895ef",
-    text: "white",
+    color: "#BCD5CF",
     altTag: "Lesson Moves",
   },
   {
@@ -16,8 +15,7 @@ const studentCardsData = [
     image:
       "https://movementor.s3.ap-southeast-2.amazonaws.com/OptionsNavigation/optionsSearch.png",
     route: "/users/profile/student",
-    color: "#4895ef",
-    text: "white",
+    color: "#BCD5CF",
     altTag: "Profile",
   },
   {
@@ -25,8 +23,7 @@ const studentCardsData = [
     image:
       "https://movementor.s3.ap-southeast-2.amazonaws.com/OptionsNavigation/optionsCategories.png",
     route: "/moves/categories",
-    color: "#4895ef",
-    text: "white",
+    color: "#BCD5CF",
     altTag: "All Moves",
   },
 ];
@@ -37,8 +34,7 @@ const teacherCardsData = [
     image:
       "https://movementor.s3.ap-southeast-2.amazonaws.com/OptionsNavigation/optionsClassMoves.png",
     route: "/lessons",
-    color: "#1F4B98",
-    text: "white",
+    color: "#DEC4F3",
     altTag: "Lessons",
   },
   {
@@ -46,8 +42,7 @@ const teacherCardsData = [
     image:
       "https://movementor.s3.ap-southeast-2.amazonaws.com/OptionsNavigation/optionsSearch.png",
     route: "/users/profile/teacher",
-    color: "#1F4B98",
-    text: "white",
+    color: "#DEC4F3",
     altTag: "Profile",
   },
   {
@@ -55,13 +50,12 @@ const teacherCardsData = [
     image:
       "https://movementor.s3.ap-southeast-2.amazonaws.com/OptionsNavigation/optionsCategories.png",
     route: "/moves/categories",
-    color: "#1F4B98",
-    text: "white",
+    color: "#DEC4F3",
     altTag: "All",
   },
 ];
 
-const Card = ({ name, image, route, color, altTag, text }) => {
+const Card = ({ name, image, route, color, altTag }) => {
   return (
     <div className="card" style={{ margin: "15px" }}>
       <Link className="nav-link btn" to={route}>
@@ -71,9 +65,7 @@ const Card = ({ name, image, route, color, altTag, text }) => {
           alt={altTag}
           style={{ maxHeight: "25rem" }}
         />
-        <div
-          style={{ backgroundColor: color, textAlign: "center", color: text }}
-        >
+        <div style={{ backgroundColor: color, textAlign: "center" }}>
           {name}
         </div>
       </Link>

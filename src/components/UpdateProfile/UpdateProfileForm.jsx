@@ -227,7 +227,7 @@ const UpdateProfileForm = () => {
               marginLeft: "1rem",
             }}
           >
-            Back to Home
+            Back Home
           </Button>
         </Col>
       </Form.Group>

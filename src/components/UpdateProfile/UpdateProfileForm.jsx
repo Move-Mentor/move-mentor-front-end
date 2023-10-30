@@ -229,6 +229,17 @@ const UpdateProfileForm = () => {
           >
             Back Home
           </Button>
+          <Button
+            href="/users/profile/delete"
+            style={{
+              backgroundColor: "#BCD5CF",
+              border: "none",
+              color: "black",
+              marginLeft: "1rem",
+            }}
+          >
+            {role === "student" ? "More Settings" : ""}
+          </Button>
         </Col>
       </Form.Group>
     </Form>

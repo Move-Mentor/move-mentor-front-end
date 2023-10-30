@@ -8,6 +8,7 @@ import CategoriesDetail from './pages/Categories/CategoriesDetail';
 import LessonsMain from './pages/Lessons/LessonsMain';
 import LessonsDetail from './pages/Lessons/LessonsDetail';
 import Profile from './pages/Profile/Profile';
+import DeleteProfile from './pages/Profile/DeleteProfile';
 
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/lessons/:id" element={<LessonsDetail />} />
           <Route path="/users/profile/student" element={<Profile loginAsRole="student" />} />
           <Route path="/users/profile/teacher" element={<Profile loginAsRole="teacher" />} />
+          <Route path="/users/profile/delete" element={<DeleteProfile loginAsRole="student" />} />
         </Routes>
       </BrowserRouter>
     </div >
